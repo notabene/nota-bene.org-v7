@@ -1,0 +1,46 @@
+#CACHE{15*24*3600}
+<BOUCLE_principale(DOCUMENTS){id_document}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="#LANG" xml:lang="#LANG">
+<head>
+<title>Photo : [(#TITRE|strip_tags)] (description longue) [#NOM_SITE_SPIP]</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="imagetoolbar" content="no" />
+
+
+<style type="text/css" media="all">
+<!--
+body { background:#FFF; color:#000; margin:1em; font:100% Arial,helvetica,sans-serif;}
+-->
+</style>
+
+</head>
+
+<body id="www-nota-bene-org">
+
+<div id="container">
+
+<h1>[(#TITRE)]</h1>
+
+<div id="content">
+<a name="a_content"></a>
+
+<div id="texte">
+
+[(#TEXTE)]
+
+<div id="longdesc">
+[(#DESCRIPTIF)]
+</div><!-- fin longdesc -->
+
+</div><!-- fin texte -->
+
+</div><!-- fin content -->
+
+
+</div><!-- fin container -->
+
+
+</body>
+</html>
+</BOUCLE_principale>

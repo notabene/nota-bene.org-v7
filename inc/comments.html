@@ -1,0 +1,46 @@
+#CACHE{24*3600}
+<BOUCLE_principale(ARTICLES){id_article}>
+<!-- *************** forums ************************* -->
+<hr />
+<h2 id="comments"><:commentaires:></h2>
+
+[(#REM) Cette balise (invisible) provoque le recalcul du forum
+la premiere fois qu'un message est poste (cf. inc/invalideur). ]
+[(#PARAMETRES_FORUM|?{''})]
+
+<B_forums>
+<ul class="forum-total">
+<BOUCLE_forums(FORUMS){plat}{id_article}{par date}>
+
+<li class="forum forum#ID_AUTEUR">
+
+<div class="forum-titre">
+<h3[ class="(#EMAIL|nb_gravatar)"]>
+<a name="forum#ID_FORUM" title="<:permalien_commentaire:>" href="#forum#ID_FORUM" class="forum-lien"><span class="nom">[(#NOM|?{#NOM,<:anonyme:>})]</span></a></h3>
+</div>
+
+<ul class="forum-meta">
+	<li>[(#DATE|nb_FuzzyDate)]</li>
+    <BOUCLE_forumparent(FORUMS){id_enfant}><li><:en_reponse_a:>
+    <a href="#forum#ID_FORUM" class="forum-lien">[(#NOM|?{#NOM,<:anonyme:>})]</a></li>
+    </BOUCLE_forumparent>
+</ul>
+
+<div class="forum-texte"[ lang="(#TEXTE|detecter_langue)"]>
+[(#TEXTE|paragrapher|nb_abbr|nofollow)]
+[<p><a href="(#URL_SITE)" class="spip_out" rel="nofollow">#NOM_SITE</a></p>]
+</div>
+[<p class="forum-repondre"><a href="?page=forum&(#PARAMETRES_FORUM)" data-id-forum="#ID_FORUM" class="forum-lien"><:repondre_a:> [(#NOM|?{#NOM,<:anonyme:>})]</a></p>]
+
+</li><!-- /class forum forum#ID_AUTEUR -->
+</BOUCLE_forums>
+</ul>
+
+</B_forums>
+
+        #FORMULAIRE_FORUM
+
+[(#REM) pour pas faire trop moche si pas de commentaires]
+[(#PARAMETRES_FORUM|non) ]
+
+</BOUCLE_principale>

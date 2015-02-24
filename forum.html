@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="#LANG" class="article">
+<head>
+<title><:laisser_commentaire:> | #NOM_SITE_SPIP</title>
+<INCLURE(inc/head){skel=#SQUELETTE}>
+<meta name="robots" content="none" />
+
+</head>
+
+<body>
+
+<div class="outer">
+	<div class="inner">
+
+		<BOUCLE_prepend(ARTICLES){id_article}>
+		<INCLURE(inc/body/prepend){skel=#SQUELETTE}{contexte=forum}{id_article}>
+		</BOUCLE_prepend>
+
+		<article>
+
+
+		<section class="texte">
+
+
+		<BOUCLE_forum_parent(FORUMS) {id_forum}>
+		<h1 class="titre"><:en_reponse:> <a href="#URL_FORUM">[(#NOM|?{#NOM,<:anonyme:>})]</a></h1>
+		[<div>(#INTRODUCTION)</div>]
+		<small>[(#DATE|affdate_jourcourt)][&nbsp;(#DATE|heures)][:(#DATE|minutes)]</small>
+		</BOUCLE_forum_parent>
+
+		<BOUCLE_article(ARTICLES) {id_article}>
+		<h1 class="titre"><:en_reponse:> <a href="#URL_ARTICLE">#TITRE</a></h1>
+		[<div>(#INTRODUCTION)</div>]
+		<small>[(#DATE|affdate_jourcourt)][, <:par_auteur:> (#LESAUTEURS)]</small>
+		</BOUCLE_article>
+
+
+		<//B_forum_parent>
+
+
+		</section>
+
+						#FORMULAIRE_FORUM
+
+
+
+
+		</article>
+
+	</div><!-- /.inner -->
+</div><!-- /.outer -->
+
+<INCLURE(inc/body/append){skel=#SQUELETTE}>
+</body>
+</html>

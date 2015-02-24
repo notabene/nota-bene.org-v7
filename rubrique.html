@@ -1,0 +1,36 @@
+<BOUCLE_principale(RUBRIQUES){id_rubrique}>
+<!doctype html>
+<html lang="#LANG" class="rubrique rubrique#ID_RUBRIQUE">
+<head>
+<title>[(#TITRE|textebrut)] | #NOM_SITE_SPIP</title>
+<INCLURE(inc/head){skel=#SQUELETTE}>
+</head>
+<body>
+
+<INCLURE(inc/body/prepend){id_rubrique}>
+
+<article class="outer">
+	<div class="inner">
+<h1>#TITRE</h1>
+
+[<section class="descriptif">
+(#TEXTE|nb_abbr)
+</section>]
+
+<section class="texte">
+<B_articles>
+[<p class="pagine">[(#ANCRE_PAGINATION)](#PAGINATION)</p>]
+<BOUCLE_articles(ARTICLES){id_rubrique}{!par date}{pagination 20}>
+<a href="#URL_ARTICLE">#TITRE</a><br>
+</BOUCLE_articles>
+[<p class="pagine cleanup">(#PAGINATION)</p>]
+</B_articles>
+</section>
+
+	</div><!-- /.inner -->
+</article><!-- /article principal -->
+
+<INCLURE(inc/body/append){id_rubrique}>
+</body>
+</html>
+</BOUCLE_principale>

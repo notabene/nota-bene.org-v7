@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="#LANG" class="sommaire">
+<head>
+<title>#NOM_SITE_SPIP</title>
+[<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|attribut_html)" />]
+<INCLURE(inc/head){skel=#SQUELETTE}>
+
+</head>
+<body>
+
+<INCLURE(inc/body/prepend){skel=#SQUELETTE}>
+
+<section class="about outer"><div class="inner">
+<p lang="fr">Vous voilà chez
+ <BOUCLE_auteurs(AUTEURS){" et "}><a href="#URL_AUTEUR">#NOM</a></BOUCLE_auteurs>.
+ Stéphane est expert accessibilité web et Stéphanie est professeur des écoles.
+</p>
+<p lang="en">This is the personal site of
+ <BOUCLE_auteurs2(AUTEURS){" and "}><a href="#URL_AUTEUR">#NOM</a></BOUCLE_auteurs2>.
+ Stéphane is a web accessibility expert and Stéphanie is a school teacher.
+</p>
+</div><!-- /.inner -->
+</section><!-- /.about -->
+
+
+[(#REM) La une]
+<section class="outer">
+	<div class="inner">
+
+	<?php
+	$une = array();
+	?>
+	[(#REM) 1. 10 derniers articles]
+	<BOUCLE_articles_recents(ARTICLES){!par date}{0,10} >
+	<?php
+	$une['[(#DATE)]'] = array(
+		'url' => '#URL_ARTICLE',
+		'class' => '[(#TITRE|heading_class)]',
+		'lang' => '#LANG',
+		'titre' => '[(#TITRE|attribut_html)]',
+		'date' => '[(#DATE|nb_FuzzyDate|attribut_html)]',
+		'origine' => '[(#NOM_SITE_SPIP|attribut_html)]'
+		);
+	?>
+	</BOUCLE_articles_recents>
+
+	[(#REM) 2. 10 derniers articles ailleurs]
+	<BOUCLE_ailleurs(SYNDIC_ARTICLES){lesauteurs == 'Stéphane Deschamps'}{!par date}{0,10} >
+	[(#SET{origine,''})]
+	[(#NOM_SITE|match{seenthis,i}|oui)  #SET{origine,'Seenthis'}]
+	[(#NOM_SITE|match{openweb,i}|oui)  #SET{origine,'Openweb'}]
+	<?php
+	$une['[(#DATE)]'] = array(
+		'url' => '#URL_ARTICLE',
+		'class' => '[(#TITRE|heading_class)]',
+		'lang' => '[(#TITRE|detecter_langue)]',
+		'titre' => '[(#TITRE|attribut_html)]',
+		'date' => '[(#DATE|nb_FuzzyDate|attribut_html)]',
+		'origine' => '[(#GET{origine}|attribut_html)]'
+		);
+	?>
+	</BOUCLE_ailleurs>
+
+
+	<?php
+	krsort($une);
+	echo '<ul>';
+	foreach ($une as $dateune => $contenu) {
+		echo "<li>";
+		echo "
+			<a href='{$contenu['url']}' class='{$contenu['class']}'>{$contenu['titre']}</a>
+			<br>
+			{$contenu['date']} sur {$contenu['origine']}
+			";
+		echo "</li>
+			";
+	}
+	echo '</ul>';
+	?>
+
+	</div><!-- /.inner -->
+</section><!-- /.outer -->
+
+<INCLURE(inc/body/append){skel=#SQUELETTE}>
+
+</body>
+</html>

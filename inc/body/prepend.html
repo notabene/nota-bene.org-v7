@@ -1,0 +1,37 @@
+<div class="outer"><div class="inner">
+	<a href="/">home</a><br>
+<strong>
+	prepend.html #ENV
+</strong><br>
+
+	<B_hier_article>
+	<a href="/" rel="top">#NOM_SITE_SPIP</a> &gt;
+	<BOUCLE_hier_article(ARTICLES){id_article}>
+	<BOUCLE_hier_art(HIERARCHIE){id_article}{id_rubrique != 19}>
+	<a href="#URL_RUBRIQUE" rel="up">#TITRE</a> &gt;
+	</BOUCLE_hier_art>
+	#TITRE
+	</BOUCLE_hier_article>
+
+	<B_hier_rubrique>
+	<a href="/" rel="top">#NOM_SITE_SPIP</a> &gt;
+	<BOUCLE_hier_rubrique(RUBRIQUES){id_rubrique}>
+	<BOUCLE_hier_rub(HIERARCHIE){id_rubrique}>
+	<a href="#URL_RUBRIQUE">#TITRE</a> &gt;
+	</BOUCLE_hier_rub>
+	#TITRE
+	</BOUCLE_hier_rubrique>
+
+	<B_hier_auteur>
+	<a href="/" rel="top">#NOM_SITE_SPIP</a> &gt;
+	<BOUCLE_hier_auteur(AUTEURS){id_auteur}>
+	#NOM
+	</BOUCLE_hier_auteur>
+
+	<B_hier_mot>
+	<a href="/" rel="top">#NOM_SITE_SPIP</a> &gt;
+	<BOUCLE_hier_mot(MOTS){id_mot}>
+	#TITRE
+	</BOUCLE_hier_mot>
+
+</div></div>

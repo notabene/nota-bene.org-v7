@@ -1,0 +1,103 @@
+<BOUCLE_principale(ARTICLES){id_article}>
+<!doctype html>
+<html lang="#LANG" class="article rubrique#ID_RUBRIQUE">
+<head>
+<title>[(#TITRE|textebrut)] | #NOM_SITE_SPIP</title>
+[<meta name="description" content="(#DESCRIPTIF|attribut_html)" />]
+<INCLURE(inc/head){skel=#SQUELETTE}>
+
+<!-- URL article : #URL_ARTICLE -->
+<link rel="canonical" href="http://nota-bene.org/#URL_ARTICLE" />
+</head>
+
+<body>
+
+<INCLURE(inc/body/prepend){skel=#SQUELETTE}{id_article}>
+
+
+<article class="outer">
+	<div class="inner">
+		<h1>#TITRE</h1>
+
+		[<section class="descriptif">
+		(#DESCRIPTIF)
+		</section>]
+
+		[(#ID_RUBRIQUE|=={15}|oui)
+		<INCLURE(inc/article_photo){id_article=#ID_ARTICLE}>
+		]
+		[<section class="#EDIT{texte} texte">
+
+		(#TEXTE|nb_abbr)
+		</section>]
+
+		[<section class="ps">
+			<h2><:info_post_scriptum:></h2>
+			(#PS|paragrapher)
+		</section>]
+
+		[<section class="notes">
+			<hr />
+			<h2><:info_notes:></h2>
+		(#NOTES)
+		</section>]
+
+		<section class="forum">
+		<INCLURE(inc/comments){id_article}>
+		</section>
+
+		<section class="about">
+			<h2 class="hideme"><:aproposdecetarticle:></h2>
+			<BOUCLE_auteurs(AUTEURS){id_article}{", "}>
+			[(#GET{mobile}|non)
+			<p[ (#LOGO_AUTEUR||?{style="padding-top:[(#LOGO_AUTEUR||image_reduire{112}|hauteur)]px",""})]><:an_article_by:>
+			<a href="#URL_AUTEUR">#NOM[(#LOGO_AUTEUR||image_reduire{112})]</a>
+			</p>
+			][(#GET{mobile}|oui)
+			<p><:an_article_by:> <a href="#URL_AUTEUR">#NOM</a>
+			</p>
+			]
+			</BOUCLE_auteurs>
+			<p><:publishedon:> <span>[(#DATE|affdate)]</span></p>
+			<p><:short_url:> <a href="http://nota-bene.org/#ID_ARTICLE">http://nota-bene.org/#ID_ARTICLE</a></p>
+			<BOUCLE_traductions(ARTICLES){traduction}{exclus}>
+			<p lang="#LANG" ><:traduction:> <a rel="alternate" href="#URL_ARTICLE">#TITRE</a></p>
+			</BOUCLE_traductions>
+			<p><BOUCLE_compterforums(FORUMS){plat}{id_article}></BOUCLE_compterforums>
+			<a href="#comments">#_compterforums:TOTAL_BOUCLE <:commentaire_min:>[(#_compterforums:TOTAL_BOUCLE|>{1}|?{s,""})]</a>
+			<//BOUCLE_compterforums></p>
+			<B_tags>
+				<h3><:tags:></h3>
+				<p><BOUCLE_tags(MOTS){id_article}{id_groupe!=2}{id_groupe!=5}{", "}><a href="#URL_MOT" rel="tag">#TITRE</a></BOUCLE_tags></p>
+			</B_tags>
+		</section>[(#REM) /.about ]
+
+
+
+	</div><!-- /.inner -->
+</article>
+
+[(#REM) on ne fait un prev/next que si on n'est pas en 19]
+<BOUCLE_prevnext(ARTICLES){id_article}{id_rubrique!=19}>
+<section class="outer">
+	<div class="inner">
+
+	<BOUCLE_precedent(ARTICLES){id_secteur!=19}{age_relatif>=0}{par date}{inverse}{1,1}>
+	<div class="footercontainer column1">
+	<a rel="prev" href="#URL_ARTICLE" lang="#LANG" title="<:article_precedent:> [(#TITRE|attribut_html)]"><:article_precedent:> <span>#TITRE</span></a>
+	</div>
+	</BOUCLE_precedent>
+
+	<BOUCLE_suivant(ARTICLES){id_secteur!=19}{age_relatif<0}{par date}{0,1}>
+	<div class="footercontainer column2">
+	<a rel="next" href="#URL_ARTICLE" lang="#LANG" title="<:article_suivant:> [(#TITRE|attribut_html)]"><:article_suivant:> <span>#TITRE</span></a>
+	</div>
+	</BOUCLE_suivant>
+	</div><!-- /.inner -->
+</section>
+</BOUCLE_prevnext>
+
+<INCLURE(inc/body/append){skel=#SQUELETTE}{id_article}>
+</body>
+</html>
+</BOUCLE_principale>

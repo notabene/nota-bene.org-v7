@@ -1,0 +1,17 @@
+// Body : layout
+//
+// Mise en page par défault : rien. Les marges seront portées par les conteneurs internes.
+//
+// Markup:
+// <div class="outer">
+// 	<div class="inner">Le texte est dans le double conteneur
+// 		<code>.outer</code> &gt; <code>.inner</code>.
+// 	</div>
+// </div>
+//
+// Styleguide 1.layout
+
+.inner {
+	width:94%;
+	margin: auto;
+}

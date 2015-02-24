@@ -1,0 +1,63 @@
+module.exports = function(grunt) {
+
+  // Project configuration.
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    sass: {
+      dist: {
+        options: {
+          // style: 'expanded', // Output style. Can be nested, compact, compressed, expanded.
+          lineNumbers:true
+        },
+        files: [{
+                expand: true,
+                cwd: 'sass',
+                src: ['*.scss'],
+                dest: 'css',
+                ext: '.css'
+              }]
+      },
+      build: {
+        options: {
+          style: 'compressed',
+          sourcemap:'none'
+        },
+        files: [{
+                expand: true,
+                cwd: 'sass',
+                src: ['*.scss'],
+                dest: 'css',
+                ext: '.css'
+              }]
+      }
+    },
+
+    kss: {
+      options: {
+        css: '../css/styles.css'
+      },
+      dist: {
+        files: {
+          'styleguide':'sass'
+        }
+      }
+    },
+
+    watch: {
+      files: ['sass/**/*.scss'],
+      tasks: ['sass:dist']
+    }
+  });
+
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-kss');
+
+  // Default task(s).
+  grunt.registerTask('default', ['sass:dist']);
+  grunt.registerTask('styleguide', 'kss');
+
+  // Final build
+  grunt.registerTask('build', ['sass:build']);
+
+};

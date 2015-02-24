@@ -1,0 +1,37 @@
+Squelettes de base:
+  ✔ sommaire @done (15-02-22 18:35)
+  ✔ article @done (15-02-22 19:05)
+  ✔ inc/comments @done (15-02-22 18:35)
+  ✔ forum @done (15-02-22 19:26)
+  ✔ rubrique @done (15-02-22 19:46)
+  ✔ 404 @done (15-02-22 19:39)
+  ✔ RSS2 - RSS2 comments (juste à copier) + inc-rss-item @done (15-02-23 08:38)
+  ☐ auteur
+  ☐ recherche + filtre "recherche_extrait"
+  ✔ longdesc @done (15-02-23 08:39)
+  ☐ modeles/img
+  ✔ favicon.ico @done (15-02-23 08:40)
+  ☐ Archives par année
+  ☐ Item de liste : photo + harmoniser liste sommaire et liste rubrique et liste recherche
+
+Sémantique HTML:
+  ☐ sommaire
+  ☐ article
+  ☐ inc/comments
+  ☐ forum
+  ☐ rubrique
+  ☐ 404
+  ☐ auteur
+  ☐ recherche + filtre "recherche_extrait"
+  ☐ longdesc
+  ☐ Archives par année
+
+JS:
+  ☐ commentaires "répondre à" : vérifier que l'id parent est bien rempli + event https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+  ☐ pullquotes au-delà de https://developer.mozilla.org/en-US/docs/Web/API/window.matchMedia
+
+Contrôle:
+  ☐ Brèves
+  ☐ A propos
+  ☐ image + alt
+  ☐ Fixer des caches conservateurs pour les squelettes

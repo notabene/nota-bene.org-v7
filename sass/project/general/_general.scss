@@ -1,0 +1,51 @@
+// Général
+//
+// ------------------
+//
+// Styles par défaut pour tous les composants
+//
+// Sont utilisés avant de faire du RWD, approche *mobile-first*
+//
+// Styleguide 1
+
+// Body
+//
+// Style par défaut pour tous les documents
+//
+// Styleguide 1.body
+body {
+	font-size:100%;
+	font-family: arial,helvetica,sans-serif;
+	color:#333;
+}
+
+// Titres
+//
+// Titres de rangs `hn`
+//
+// Markup: headings.hbs
+//
+// Styleguide 1.titres
+%titres {
+	font-weight: bold;
+}
+
+h1 {
+	@extend %titres;
+}
+h2 {
+	@extend %titres;
+}
+h3 {
+	@extend %titres;
+}
+
+// Typographie
+//
+// ----------------------------------------
+//
+// Toute la typographie ci-dessous (stockée dans `_general.scss`)
+//
+// Markup: typography.hbs
+//
+// Styleguide Typography

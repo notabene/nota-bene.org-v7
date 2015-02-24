@@ -1,0 +1,18 @@
+// 1. non-RWD for everyone
+
+@import "libs/normalize";
+
+/*! nota-bene.org V7 CSS */
+@import "project/mixins";
+@import "project/general/general";
+@import "project/general/layout";
+@import "project/general/forms";
+
+// for debuggind purposes
+// @import "project/debug";
+
+
+// 2. RWD
+@media screen and (min-width: 40.1em) {
+	// @import "project/rwd/40em";
+}

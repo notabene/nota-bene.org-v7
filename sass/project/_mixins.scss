@@ -1,0 +1,15 @@
+// Mixins
+// 
+// Styleguide mixins
+
+// Display test : `display-test`
+// 
+// Afficher le texte `@include display-test;` en Redacted Script
+// 
+// Markup: <span style="font-family:'Redacted Script'">Texte d'exemple stylé en Redacted Script.
+// Au passage on note que Redacted Script ne gère pas les accents</span>
+// 
+// Styleguide mixins.display-test
+@mixin display-test {
+	font-family: 'Redacted Script';
+}
