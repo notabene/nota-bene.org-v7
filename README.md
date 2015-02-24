@@ -7,3 +7,5 @@ Démarche d'appropriation de :
 
 - Grunt / grunt-contrib-sass / grunt-kss
 - Github via un développement public direct
+- Licence : GNU GPL v2
+
