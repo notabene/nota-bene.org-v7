@@ -1,0 +1,54 @@
+<BOUCLE_principale(AUTEURS){id_auteur}>
+<html lang="#LANG" class="auteur">
+<head>
+<title>[(#NOM|textebrut)] | #NOM_SITE_SPIP</title>
+<INCLURE(inc/head){skel=#SQUELETTE}>
+</head>
+
+<body>
+<INCLURE(inc/body/prepend){id_auteur}>
+
+
+<article class="outer">
+	<div class="inner">
+		<h1>#NOM</h1>
+
+		<section class="about">
+			<p>[(#LOGO_AUTEUR||image_reduire{112})]</p>
+			<BOUCLE_creditphoto(AUTEURS){id_auteur}{id_auteur==1}>
+			<p>Photo&nbsp;: <a href="http://www.mathieu-drouet.com/" style="display:block; ">&copy; Mathieu Drouet</a></p>
+			</BOUCLE_creditphoto>
+		</section>[(#REM) /.about ]
+
+
+
+		<section class="texte">
+
+		[(#BIO|nb_abbr|image_reduire{#GET{reduction_image}})]
+
+		#FORMULAIRE_ECRIRE_AUTEUR
+
+		[(#REM) Articles de l'auteur ]
+		<B_articles>
+			#ANCRE_PAGINATION
+			<h2><:articles_auteur:> (#GRAND_TOTAL)</h2>
+			<ul>
+				<BOUCLE_articles(ARTICLES) {id_auteur} {!par date} {pagination 10}>
+				<li><a href="#URL_ARTICLE">#TITRE</a></li>
+				</BOUCLE_articles>
+			</ul>
+			[<p class="pagination">(#PAGINATION)</p>]
+		</B_articles>
+
+		</section>
+
+
+	</div><!-- /.inner -->
+</article>
+
+
+
+<INCLURE(inc/body/append)>
+</body>
+</html>
+</BOUCLE_principale>
