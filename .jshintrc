@@ -1,6 +1,7 @@
 {
     // Settings taken from https://github.com/m4dz/prwd-workshop/blob/master/.jshintrc
     // with muchas gracias to Matthias
+    // -- customed to my purpose and liking
 
     // Settings
     "passfail"      : false,  // Stop on first error.
