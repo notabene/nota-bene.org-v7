@@ -49,14 +49,9 @@
 		<section class="about">
 			<h2 class="hideme"><:aproposdecetarticle:></h2>
 			<BOUCLE_auteurs(AUTEURS){id_article}{", "}>
-			[(#GET{mobile}|non)
-			<p[ (#LOGO_AUTEUR||?{style="padding-top:[(#LOGO_AUTEUR||image_reduire{112}|hauteur)]px",""})]><:an_article_by:>
+			<p><:an_article_by:>
 			<a href="#URL_AUTEUR">#NOM[(#LOGO_AUTEUR||image_reduire{112})]</a>
 			</p>
-			][(#GET{mobile}|oui)
-			<p><:an_article_by:> <a href="#URL_AUTEUR">#NOM</a>
-			</p>
-			]
 			</BOUCLE_auteurs>
 			<p><:publishedon:> <span>[(#DATE|affdate)]</span></p>
 			<p><:short_url:> <a href="http://nota-bene.org/#ID_ARTICLE">http://nota-bene.org/#ID_ARTICLE</a></p>
