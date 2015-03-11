@@ -11,6 +11,7 @@ Squelettes de base:
   ✔ longdesc @done (15-02-23 08:39)
   ✔ modeles/img @done (15-02-24 17:01)
   ✔ favicon.ico @done (15-02-23 08:40)
+  ☐ mot
   ☐ Archives par année
   ☐ Item de liste : photo + harmoniser liste sommaire et liste rubrique et liste recherche
 
@@ -24,6 +25,7 @@ Sémantique HTML:
   ☐ auteur
   ☐ recherche + filtre "recherche_extrait"
   ☐ longdesc
+  ☐ mot
   ☐ Archives par année
 
 JS:

@@ -44,20 +44,23 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      files: ['sass/**/*.scss'],
-      tasks: ['sass:dist']
+      css: {
+        files: ['sass/**/*.scss'],
+        tasks: ['sass:dist']
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-kss');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task(s).
   grunt.registerTask('default', ['sass:dist']);
   grunt.registerTask('styleguide', 'kss');
 
   // Final build
-  grunt.registerTask('build', ['sass:build']);
+  grunt.registerTask('build', ['sass:build','styleguide']);
 
 };
