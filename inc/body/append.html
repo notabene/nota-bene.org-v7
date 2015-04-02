@@ -1,19 +1,31 @@
 <div class="outer"><div class="inner">
 
-<h1><:par_annee:></h1>
+<h1><:navigation:></h1>
+	<h2>Français</h2>
+		<ul>
+		<BOUCLE_rub_fr(RUBRIQUES){par titre}{lang=fr}{id_rubrique!=19}>
+			<li lang="#LANG"><a href="#URL_RUBRIQUE">#TITRE</a></li>
+		</BOUCLE_rub_fr>
+		</ul>
+	<h2>English</h2>
+		<ul>
+		<BOUCLE_rub_en(RUBRIQUES){par titre}{lang=en}{id_rubrique!=19}>
+			<li lang="#LANG"><a href="#URL_RUBRIQUE">#TITRE</a></li>
+		</BOUCLE_rub_en>
+		</ul>
+	<h2><:par_annee:></h2>
+		<ul class="year">
+			<?php
+			$origin_year = 1999;
+			$current_year = date("Y");
 
-<ul class="year">
-	<?php
-	$origin_year = 1999;
-	$current_year = date("Y");
+			for($i = $origin_year ; $i <= $current_year ; $i++) {
+				echo '<li>';
+				echo "<a href='spip.php?page=year&year={$i}'>{$i}</a>";
+				echo '</li>';
+			}
+			?>
+		</ul>
 
-	for($i = $origin_year ; $i <= $current_year ; $i++) {
-		echo '<li>';
-		echo "<a href='spip.php?page=year&year={$i}'>{$i}</a>";
-		echo '</li>';
-	}
-	?>
-
-</ul>
 
 </div></div>
