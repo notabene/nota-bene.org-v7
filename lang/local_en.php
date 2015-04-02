@@ -21,6 +21,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'no_comment' => '(Comments closed for this article)',
 	'notes' => 'Notes',
 	'not_found' => 'Page not found',
+	'par_annee' => 'Navigate by year',
 	'permalien_commentaire' => 'Permanent link to this comment',
 	'pied_de_page' => 'See also',
 	'publishedon' => 'Published on',

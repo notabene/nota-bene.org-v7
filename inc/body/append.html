@@ -1,4 +1,19 @@
-<div class="outer"><div class="inner"><strong>
-	append.html
-</strong>
+<div class="outer"><div class="inner">
+
+<h1><:par_annee:></h1>
+
+<ul class="year">
+	<?php
+	$origin_year = 1999;
+	$current_year = date("Y");
+
+	for($i = $origin_year ; $i <= $current_year ; $i++) {
+		echo '<li>';
+		echo "<a href='spip.php?page=year&year={$i}'>{$i}</a>";
+		echo '</li>';
+	}
+	?>
+
+</ul>
+
 </div></div>
