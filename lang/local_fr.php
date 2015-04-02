@@ -2,8 +2,6 @@
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
-	'afficher_la_version_desktop' => 'Afficher la version Bureau',
-	'afficher_la_version_mobile' => 'Afficher la version Mobile',
 	'an_article_by' => 'Un article de',
 	'anonyme' => 'Anonyme',
 	'a_propos_de_ce_site' => '&Agrave; propos de ce site',
@@ -11,8 +9,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'archive' => 'Archive&nbsp;: ',
 	'article_precedent' => 'article pr&eacute;c&eacute;dent (fr)',
 	'article_suivant' => 'article suivant (fr)',
-	'ceci_est_la_version_desktop' => 'Ceci est la version Bureau',
-	'ceci_est_la_version_mobile' => 'Ceci est la version Mobile',
+	'aucun_resultat' => 'Désolé&nbsp;: aucun résultat pour cette recherche.',
 	'commentaire_min' => 'commentaire',
 	'commentaires' => 'Commentaires',
 	'date_prise_de_vue' => 'prise le',
@@ -27,6 +24,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'permalien_commentaire' => 'Lien permanent vers ce commentaire',
 	'pied_de_page' => '&Agrave; voir aussi',
 	'publishedon' => 'Publi&eacute; le',
+	'quote_open' => '«&nbsp;',
+	'quote_close' => '&nbsp;»',
 	'repondre_a' => "R&eacute;pondre &agrave;",
 	'short_url' => 'URL courte&nbsp;:',
 	'sur' => 'sur',

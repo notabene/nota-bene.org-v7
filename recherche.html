@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="#LANG" class="recherche">
+<head>
+<title><:resultats_recherche:> | #NOM_SITE_SPIP</title>
+<INCLURE(inc/head){skel=#SQUELETTE}>
+</head>
+<body>
+
+<INCLURE(inc/body/prepend){skel=#SQUELETTE}>
+
+<article class="outer">
+	<div class="inner">
+<h1><:info_rechercher:>[ &gt; <strong class="on">(#RECHERCHE)</strong>]</h1>
+
+<section class="texte">
+<B_articles>
+[<p class="pagine">[(#ANCRE_PAGINATION)](#PAGINATION)</p>]
+<ul>
+<BOUCLE_articles(ARTICLES) {recherche} {!par points} {pagination 20}>
+<li>
+	<a href="#URL_ARTICLE" class="[(#TITRE|heading_class)]">#TITRE</a>
+	[<p>(#TEXTE|recherche_extrait{#RECHERCHE})</p>]
+	<B_mots><p><:tags:> <BOUCLE_mots(MOTS){id_article}{par titre}><a href="#URL_MOT">#TITRE</a></BOUCLE_mots></p></B_mots>
+</li>
+</BOUCLE_articles>
+</ul>
+[<p class="pagine cleanup">(#PAGINATION)</p>]
+</B_articles>
+<p><:aucun_resultat:></p>
+<//B_articles>
+</section>
+
+	</div><!-- /.inner -->
+</article><!-- /article principal -->
+
+<INCLURE(inc/body/append){skel=#SQUELETTE}>
+</body>
+</html>
