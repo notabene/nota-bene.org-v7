@@ -30,9 +30,15 @@
 	#TITRE
 	</BOUCLE_hier_mot>
 
+<!-- skel : #ENV{skel} -->
+
 [(#ENV{skel}|match{recherche}|oui)
 	<a href="/" rel="top">#NOM_SITE_SPIP</a> &gt;
 	<:info_rechercher:>[ <strong class="on">(#RECHERCHE)</strong>]
+]
+[(#ENV{skel}|match{year}|oui)
+	<a href="/" rel="top">#NOM_SITE_SPIP</a> &gt;
+	<:year:> #ENV{year}
 ]
 
 	#FORMULAIRE_RECHERCHE

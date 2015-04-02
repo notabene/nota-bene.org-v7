@@ -14,6 +14,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'commentaires' => 'Comments',
 	'date_prise_de_vue' => 'taken on',
 	'derniers_commentaires' => 'Last comments',
+	'en' => 'in',
 	'en_reponse_a' => 'in reply to',
 	'favoris_sur_twitter' => 'I liked this on Twitter',
 	'info_creation_paragraphe' => 'To create paragraphs, simply leave blank lines. All outgoing links will feature an attribute <code>rel="nofollow"</code>. Please do not spam.',
@@ -33,6 +34,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'sur_twitter' => 'On Twitter (<a href="http://twitter.com/notabene">@notabene</a>)',
 	'tags' => 'Tags',
 	'traduction' => 'This article also exists in English:',
+	'year' => 'Year',
 
 	'fuzzy_today' => 'today',
 	'fuzzy_yesterday' => 'yesterday',

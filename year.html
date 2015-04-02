@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="#LANG" class="rubrique annee">
+<head>
+<title><:year:> [(#ENV{year})] | #NOM_SITE_SPIP</title>
+<INCLURE(inc/head){skel=#SQUELETTE}>
+</head>
+<body>
+
+<INCLURE(inc/body/prepend){year=#ENV{year}}{skel=#SQUELETTE}>
+
+<article class="outer">
+	<div class="inner">
+<h1><:year:> [(#ENV{year})]</h1>
+
+[<section class="descriptif">
+(#TEXTE|nb_abbr)
+</section>]
+
+<section class="texte">
+<B_articles>
+[<p class="pagine">[(#ANCRE_PAGINATION)](#PAGINATION)</p>]
+<ul>
+<BOUCLE_articles(ARTICLES){date>=(#ENV{year})-01-01}{date>=(#ENV{year})-01-01}{date<=(#ENV{year})-12-31}{par date}{pagination 20}>
+	<li><a href="#URL_ARTICLE">#TITRE</a> [(#DATE|affdate)] </li>
+</BOUCLE_articles>
+</ul>
+[<p class="pagine cleanup">(#PAGINATION)</p>]
+<p>(#_articles:GRAND_TOTAL articles <:en:> #ENV{year})</p>
+</B_articles>
+</section>
+
+	</div><!-- /.inner -->
+</article><!-- /article principal -->
+
+<INCLURE(inc/body/append){year=#ENV{year}}{skel=#SQUELETTE}>
+</body>
+</html>
