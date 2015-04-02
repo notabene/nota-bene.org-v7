@@ -1,4 +1,4 @@
-<BOUCLE_principale(RUBRIQUES){id_rubrique}>
+<BOUCLE_principale(MOTS){id_mot}>
 <!doctype html>
 <html lang="#LANG" class="rubrique rubrique#ID_RUBRIQUE">
 <head>
@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<INCLURE(inc/body/prepend){id_rubrique}>
+<INCLURE(inc/body/prepend){id_mot}>
 
 <article class="outer">
 	<div class="inner">
@@ -21,8 +21,8 @@
 <B_articles>
 [<p class="pagine">[(#ANCRE_PAGINATION)](#PAGINATION)</p>]
 <ul>
-<BOUCLE_articles(ARTICLES){id_rubrique}{!par date}{pagination 20}>
-	<li><a href="#URL_ARTICLE">#TITRE</a></li>
+<BOUCLE_articles(ARTICLES){id_mot}{!par date}{pagination 20}>
+<li><a href="#URL_ARTICLE">#TITRE</a></li>
 </BOUCLE_articles>
 </ul>
 [<p class="pagine cleanup">(#PAGINATION)</p>]
@@ -32,7 +32,7 @@
 	</div><!-- /.inner -->
 </article><!-- /article principal -->
 
-<INCLURE(inc/body/append){id_rubrique}>
+<INCLURE(inc/body/append){id_mot}>
 </body>
 </html>
 </BOUCLE_principale>
