@@ -62,14 +62,14 @@ function nb_abbr($str) {
 /**
  * nb_FuzzyDate
  * donne des dates plus sympas dans les forums
- * @return 
+ * @return
  * @param $date Object
  */
 function nb_FuzzyDate($date) {
 	if($date!='') {
 		// this is now
 		$now = date("U");
-		// a day is 
+		// a day is
 		$oneday = 3600 * 24;
 
 		// reconstructing a proper date from what's in the database
@@ -78,7 +78,7 @@ function nb_FuzzyDate($date) {
 		$M = $matches[0][2];
 		$D = $matches[0][4];
 		$computed = date("U", mktime(0,0,0,$M,$D,$Y) );
-		
+
 		// $diff is the number of days between $now and $computed
 		$diff = floor(($now-$computed)/$oneday);
 
@@ -99,7 +99,7 @@ function nb_FuzzyDate($date) {
 /**
  * nb_commentaires_nofollow
  * ajouter un attribut nofollow aux liens en commentaires
- * @return 
+ * @return
  * @param $str Object
  */
 function nb_commentaires_nofollow($str) {
@@ -107,7 +107,7 @@ function nb_commentaires_nofollow($str) {
 		$str = preg_replace("/rel=\".*\"/","",$str);
 		$str = preg_replace("/a href=/","a rel=\"nofollow\" href=",$str);
 	}
-	
+
 	return $str;
 }
 
@@ -149,7 +149,7 @@ function nb_dateexif($array) {
 	if(is_array($array)) {
 		$str = $array['DateTime'];
 		// EXIF 2011:04:21 20:51:05
-		// format attendu : 2011-04-21 20:51:05 
+		// format attendu : 2011-04-21 20:51:05
 		$str = substr($str,0,4) . "-" . substr($str,5,2) . "-" . substr($str,8,2) . " 00:00:00";
 		$str = affdate($str);
 	}
@@ -158,7 +158,7 @@ function nb_dateexif($array) {
 
 /* ajout detecter_langue d'arno mais pas en plugin
 	Les sources sont dans squelettes/plugins/detecter_langue histoire de voir a quelle version cela correcpond
-	*/ 
+	*/
 
 function detecter_langue($texte) {
 	include_spip("inc/detecter_langue");
@@ -206,21 +206,29 @@ function recherche_extrait($str,$recherche) {
 	$str = strip_tags($str);
 	$strlowercase = strtolower($str);
 	$recherche = strtolower(strip_tags(safehtml($recherche)));
-	
+
 	// position de la chaine trouvée et longueur
 	$pos = strpos($strlowercase,$recherche);
 	$longueur = strlen($recherche);
-	
+
 	if($pos>0) { // si on a trouvé la chaine dans le texte
+		$pos_avant = $pos-$combien_autour;
+		$combien_avant = $combien_autour;
+		if($pos-$combien_autour < 0) {
+			// avec substr on repart de la fin du texte si le substr est trop long
+			// il faut donc rogner à 0
+			$pos_avant = 0;
+			$combien_avant = $pos;
+		}
 		$resultat = "[…]&nbsp;"
-			. recherche_propre_before(substr($str,$pos-$combien_autour,$combien_autour))
+			. recherche_propre_before(substr($str,$pos_avant,$combien_avant))
 			. "<strong>"
 			. substr($str,$pos,$longueur)
 			. "</strong>"
 			. recherche_propre_after(substr($str,$pos+$longueur,$combien_autour))
 			. "&nbsp;[…]";
 	}
-	
+
 	return safehtml($resultat);
 
 }
