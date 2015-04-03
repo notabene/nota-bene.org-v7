@@ -508,6 +508,13 @@ body {
 h1, h2, h3 {
   font-weight: bold; }
 
+/* line 53, ../sass/project/general/_general.scss */
+li {
+  margin: 1em 0; }
+  /* line 55, ../sass/project/general/_general.scss */
+  .footer li {
+    margin: 0; }
+
 /* line 14, ../sass/project/general/_layout.scss */
 .inner {
   width: 94%;

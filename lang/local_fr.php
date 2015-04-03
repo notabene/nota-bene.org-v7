@@ -19,6 +19,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'favoris_sur_twitter' => 'J&#8217;ai aim&eacute; sur Twitter',
 	'info_creation_paragraphe' => 'Pour cr&eacute;er des paragraphes, laissez simplement des lignes vides. Tous les liens sortants comporteront un attribut <code>rel="nofollow"</code>. Merci de ne pas spammer.',
 	'laisser_commentaire' => 'Laisser un commentaire',
+	'naviguer_dans_le_site' => 'Naviguer dans le site',
 	'no_comment' => '(Commentaires fermés pour cet article)',
 	'notes' => 'Notes',
 	'not_found' => 'Page non trouvée',

@@ -49,3 +49,10 @@ h3 {
 // Markup: typography.hbs
 //
 // Styleguide Typography
+
+li {
+	margin: 1em 0;
+	.footer & {
+		margin:0;
+	}
+}

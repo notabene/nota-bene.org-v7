@@ -1,13 +1,13 @@
-<div class="outer"><div class="inner">
+<div class="outer footer"><div class="inner">
 
-<h1><:navigation:></h1>
-	<h2>Français</h2>
+<h1><:naviguer_dans_le_site:></h1>
+	<h2 lang="fr">Français</h2>
 		<ul>
 		<BOUCLE_rub_fr(RUBRIQUES){par titre}{lang=fr}{id_rubrique!=19}>
 			<li lang="#LANG"><a href="#URL_RUBRIQUE">#TITRE</a></li>
 		</BOUCLE_rub_fr>
 		</ul>
-	<h2>English</h2>
+	<h2 lang="en">English</h2>
 		<ul>
 		<BOUCLE_rub_en(RUBRIQUES){par titre}{lang=en}{id_rubrique!=19}>
 			<li lang="#LANG"><a href="#URL_RUBRIQUE">#TITRE</a></li>
@@ -16,7 +16,7 @@
 	<h2><:par_annee:></h2>
 		<ul class="year">
 			<?php
-			$origin_year = 1999;
+			$origin_year = 1998;
 			$current_year = date("Y");
 
 			for($i = $origin_year ; $i <= $current_year ; $i++) {
