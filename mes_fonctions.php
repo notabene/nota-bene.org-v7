@@ -214,7 +214,7 @@ function recherche_extrait($str,$recherche) {
 	if($pos>0) { // si on a trouvé la chaine dans le texte
 		$pos_avant = $pos-$combien_autour;
 		$combien_avant = $combien_autour;
-		if($pos-$combien_autour < 0) {
+		if($pos_avant < 0) {
 			// avec substr on repart de la fin du texte si le substr est trop long
 			// il faut donc rogner à 0
 			$pos_avant = 0;
