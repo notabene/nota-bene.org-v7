@@ -513,4 +513,9 @@ h1, h2, h3 {
   width: 94%;
   margin: auto; }
 
+/* line 18, ../sass/project/general/_layout.scss */
+img {
+  max-width: 100%;
+  height: auto !important; }
+
 /*# sourceMappingURL=styles.css.map */
