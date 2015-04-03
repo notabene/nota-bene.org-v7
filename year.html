@@ -1,3 +1,4 @@
+#HTTP_HEADER{Content-language:#LANG}
 <!doctype html>
 <html lang="#LANG" class="rubrique annee">
 <head>
@@ -12,12 +13,13 @@
 	<div class="inner">
 <h1><:year:> [(#ENV{year})]</h1>
 
-[<section class="descriptif">
-(#TEXTE|nb_abbr)
-</section>]
+<B_articles>
+
+<section class="descriptif">
+<p>(#_articles:GRAND_TOTAL articles <:en:> #ENV{year})</p>
+</section>
 
 <section class="texte">
-<B_articles>
 [<p class="pagine">[(#ANCRE_PAGINATION)](#PAGINATION)</p>]
 <ul>
 <BOUCLE_articles(ARTICLES){date>=(#ENV{year})-01-01}{date>=(#ENV{year})-01-01}{date<=(#ENV{year})-12-31}{par date}{pagination 20}>
@@ -25,7 +27,6 @@
 </BOUCLE_articles>
 </ul>
 [<p class="pagine cleanup">(#PAGINATION)</p>]
-<p>(#_articles:GRAND_TOTAL articles <:en:> #ENV{year})</p>
 </B_articles>
 </section>
 

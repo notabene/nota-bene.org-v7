@@ -13,16 +13,25 @@ Squelettes de base:
   ✔ favicon.ico @done (15-02-23 08:40)
   ✔ mot @done (15-04-02 17:42)
   ✔ Archives par année @done (15-04-02 18:25)
-  ☐ Item de liste : photo + harmoniser liste sommaire et liste rubrique et liste recherche
+  ✔ article si photo @done (15-04-03 09:53)
+  ☐ Item de liste : photo
+  ☐ harmoniser liste sommaire et liste rubrique et liste recherche
   ✔ Navigation top @done (15-04-02 18:06)
   ✔ Navigation bottom @done (15-04-02 18:06)
-  ☐ Finir headers langue puis mettre en ligne
+  Header HTTP Content-language:
+    ☐ Notifier spip-dev du manque ?
+    ✔ 404 @done (15-04-03 09:35)
+    ✔ article @done (15-03-25 15:31)
+    ✔ auteur @done (15-04-03 09:36)
+    ✔ forum @done (15-04-03 09:36)
+    ✔ longdesc @done (15-04-03 09:38)
+    ✔ mot @done (15-04-03 09:38)
+    ✔ recherche @done (15-04-03 09:56)
+    ✔ rubrique @done (15-04-03 09:56)
+    ✔ sommaire @done (15-03-25 15:31)
+    ✔ year @done (15-04-03 09:57)
+  ☐ Mettre en ligne après tous les headers
 
-Header HTTP Content-language:
-  ☐ Notifier spip-dev du manque ?
-  ✔ article @done (15-03-25 15:31)
-  ✔ sommaire @done (15-03-25 15:31)
-  ☐ [insérer les autres squelettes]
 
 Sémantique HTML:
   ☐ sommaire
