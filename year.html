@@ -23,7 +23,7 @@
 [<p class="pagine">[(#ANCRE_PAGINATION)](#PAGINATION)</p>]
 <ul>
 <BOUCLE_articles(ARTICLES){date>=(#ENV{year})-01-01}{date>=(#ENV{year})-01-01}{date<=(#ENV{year})-12-31}{par date}{pagination 20}>
-	<li><a href="#URL_ARTICLE">#TITRE</a> [(#DATE|affdate)] </li>
+	<li lang="#LANG"><a href="#URL_ARTICLE">#TITRE</a> [(#DATE|affdate)] </li>
 </BOUCLE_articles>
 </ul>
 [<p class="pagine cleanup">(#PAGINATION)</p>]
