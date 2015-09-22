@@ -18,6 +18,7 @@ Squelettes de base:
   ☐ harmoniser liste sommaire et liste rubrique et liste recherche
   ✔ Navigation top @done (15-04-02 18:06)
   ✔ Navigation bottom @done (15-04-02 18:06)
+  ☐ modeles/img → mettre des longdesc partout et arrêter figure/figcaption
   Header HTTP Content-language:
     ☐ Notifier spip-dev du manque ?
     ✔ 404 @done (15-04-03 09:35)
@@ -32,7 +33,7 @@ Squelettes de base:
     ✔ year @done (15-04-03 09:57)
 
   ✔ Langue : sur la home attention les dates des items sont en français @done (15-04-03 10:17)
-  ☐ Mettre en ligne après tous les headers
+  ☐ Header de cache…?
 
 
 Sémantique HTML:
@@ -52,7 +53,7 @@ JS:
   ☐ commentaires "répondre à" : vérifier que l'id parent est bien rempli + event https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
   ☐ pullquotes au-delà de https://developer.mozilla.org/en-US/docs/Web/API/window.matchMedia
 
-Contrôle:
+Contrôler:
   ☐ Brèves
   ☐ A propos
   ☐ image + alt
