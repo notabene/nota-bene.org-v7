@@ -19,6 +19,7 @@ Squelettes de base:
   ✔ Navigation top @done (15-04-02 18:06)
   ✔ Navigation bottom @done (15-04-02 18:06)
   ☐ modeles/img → mettre des longdesc partout et arrêter figure/figcaption
+
   Header HTTP Content-language:
     ☐ Notifier spip-dev du manque ?
     ✔ 404 @done (15-04-03 09:35)
@@ -53,6 +54,7 @@ Sémantique HTML:
 JS:
   ☐ commentaires "répondre à" : vérifier que l'id parent est bien rempli + event https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
   ☐ pullquotes au-delà de https://developer.mozilla.org/en-US/docs/Web/API/window.matchMedia
+  ☐ Dyslexie / Confort+ ?
 
 Contrôler:
   ☐ Brèves
