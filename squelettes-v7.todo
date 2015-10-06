@@ -48,6 +48,7 @@ Sémantique HTML:
   ☐ longdesc
   ☐ mot
   ☐ Archives par année
+  ☐ Twitter card / OpenGraph
 
 JS:
   ☐ commentaires "répondre à" : vérifier que l'id parent est bien rempli + event https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
