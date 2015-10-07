@@ -48,6 +48,7 @@ Sémantique HTML:
   ☐ recherche + filtre "recherche_extrait"
   ☐ longdesc
   ☐ mot
+  ☐ blockquote → footer → cite
   ☐ Archives par année
   ☐ Twitter card / OpenGraph
 
