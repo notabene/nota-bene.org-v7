@@ -28,56 +28,12 @@
 <section class="outer">
 	<div class="inner">
 
-	<?php
-	$une = array();
-	?>
-	[(#REM) 1. 10 derniers articles]
-	<BOUCLE_articles_recents(ARTICLES){!par date}{0,10} >
-	<?php
-	$une['[(#DATE)]'] = array(
-		'url' => '#URL_ARTICLE',
-		'class' => '[(#TITRE|heading_class)]',
-		'lang' => '#LANG',
-		'titre' => '[(#TITRE|attribut_html)]',
-		'date' => '[(#DATE|nb_FuzzyDate|attribut_html)]',
-		'origine' => '[(#NOM_SITE_SPIP|attribut_html)]'
-		);
-	?>
-	</BOUCLE_articles_recents>
-
-	[(#REM) 2. 10 derniers articles ailleurs]
-	<BOUCLE_ailleurs(SYNDIC_ARTICLES){lesauteurs == 'Stéphane Deschamps'}{!par date}{0,10} >
-	[(#SET{origine,''})]
-	[(#NOM_SITE|match{seenthis,i}|oui)  #SET{origine,'Seenthis'}]
-	[(#NOM_SITE|match{openweb,i}|oui)  #SET{origine,'Openweb'}]
-	<?php
-	$une['[(#DATE)]'] = array(
-		'url' => '#URL_ARTICLE',
-		'class' => '[(#TITRE|heading_class)]',
-		'lang' => '[(#TITRE|detecter_langue)]',
-		'titre' => '[(#TITRE|attribut_html)]',
-		'date' => '[(#DATE|nb_FuzzyDate|attribut_html)]',
-		'origine' => '[(#GET{origine}|attribut_html)]'
-		);
-	?>
-	</BOUCLE_ailleurs>
-
-
-	<?php
-	krsort($une);
-	echo '<ul>';
-	foreach ($une as $dateune => $contenu) {
-		echo "<li>";
-		echo "
-			<a lang='{$contenu['lang']}' href='{$contenu['url']}' class='{$contenu['class']}'>{$contenu['titre']}</a>
-			<br>
-			{$contenu['date']} ({$contenu['origine']})
-			";
-		echo "</li>
-			";
-	}
-	echo '</ul>';
-	?>
+<h1>Une</h1>
+<ul><BOUCLE_une(ARTICLES){!par date}{0,10}>
+	<li><a href="#URL_ARTICLE" lang="#LANG">#TITRE</a> | [(#DATE|nb_FuzzyDate)]
+	#INTRODUCTION
+	</li>
+</BOUCLE_une></ul>
 
 	</div><!-- /.inner -->
 </section><!-- /.outer -->
