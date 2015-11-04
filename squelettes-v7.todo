@@ -51,6 +51,7 @@ Sémantique HTML:
   ☐ blockquote → footer → cite
   ☐ Archives par année
   ☐ Twitter card / OpenGraph
+  ☐ footer page : retirer les `blockquote`
 
 JS:
   ☐ commentaires "répondre à" : vérifier que l'id parent est bien rempli + event https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
