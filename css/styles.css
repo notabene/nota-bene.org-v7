@@ -500,18 +500,16 @@ table {
 /*! nota-bene.org V7 CSS */
 /* line 16, ../sass/project/general/_general.scss */
 body {
-  font-size: 100%;
-  font-family: arial,helvetica,sans-serif;
-  color: #333; }
+  font-size: 100%; }
 
-/* line 29, ../sass/project/general/_general.scss */
+/* line 27, ../sass/project/general/_general.scss */
 h1, h2, h3 {
   font-weight: bold; }
 
-/* line 53, ../sass/project/general/_general.scss */
+/* line 51, ../sass/project/general/_general.scss */
 li {
   margin: 1em 0; }
-  /* line 55, ../sass/project/general/_general.scss */
+  /* line 53, ../sass/project/general/_general.scss */
   .footer li {
     margin: 0; }
 
@@ -524,5 +522,11 @@ li {
 img {
   max-width: 100%;
   height: auto !important; }
+
+/* line 21, ../sass/project/general/_fonts_colors.scss */
+body {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  background: #fff;
+  color: #333; }
 
 /*# sourceMappingURL=styles.css.map */
