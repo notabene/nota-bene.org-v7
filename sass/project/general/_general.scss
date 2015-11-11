@@ -8,12 +8,30 @@
 //
 // Styleguide 1
 
+// Constants
+//
+// Constantes dans le projet
+//
+// Styleguide 1.constants
+
+$serif: Georgia,Cambria,"Times New Roman",Times,serif;
+$serif_richer: "Palatino Linotype",Baskerville,Georgia,Cambria,"Times New Roman",Times,serif;
+$sans: Arial,Helvetica,sans-serif;
+$color_prime: #333;
+$color_prime_contasted: #000;
+$color_second: #fff;
+
+
 // Body
 //
 // Style par défaut pour tous les documents
 //
 // Styleguide 1.body
+
 body {
+	font-family: $serif_richer;
+	background: $color_second;
+	color: $color_prime;
 	font-size:100%;
 }
 
@@ -26,6 +44,7 @@ body {
 // Styleguide 1.titres
 %titres {
 	font-weight: bold;
+	font-family: $serif_richer;
 }
 
 h1 {
