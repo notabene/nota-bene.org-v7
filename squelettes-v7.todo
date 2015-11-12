@@ -1,5 +1,4 @@
 Squelettes de base:
-  ✔ sommaire @done (15-02-22 18:35)
   ✔ article @done (15-02-22 19:05)
   ✔ inc/comments @done (15-02-22 18:35)
   ✔ forum @done (15-02-22 19:26)
@@ -14,7 +13,8 @@ Squelettes de base:
   ✔ mot @done (15-04-02 17:42)
   ✔ Archives par année @done (15-04-02 18:25)
   ✔ article si photo @done (15-04-03 09:53)
-  ☐ Item de liste : photo
+  ☐ Item de liste : photo + texte
+  ☐ sommaire une fois les items de liste faits : 1 bloc texte, 1 bloc photos, 1 bloc syndication
   ☐ harmoniser liste sommaire et liste rubrique et liste recherche
   ✔ Navigation top @done (15-04-02 18:06)
   ✔ Navigation bottom @done (15-04-02 18:06)
