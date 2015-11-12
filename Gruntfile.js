@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          // style: 'expanded', // Output style. Can be nested, compact, compressed, expanded.
+          style: 'expanded', // Output style. Can be nested, compact, compressed, expanded.
           lineNumbers:true
         },
         files: [{
@@ -59,6 +59,7 @@ module.exports = function(grunt) {
   // Default task(s).
   grunt.registerTask('default', ['sass:dist']);
   grunt.registerTask('styleguide', 'kss');
+  grunt.registerTask('w', 'watch');
 
   // Final build
   grunt.registerTask('build', ['sass:build','styleguide']);
