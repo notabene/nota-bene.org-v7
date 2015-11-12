@@ -498,43 +498,43 @@ table {
   border-spacing: 0; }
 
 /*! nota-bene.org V7 CSS */
-/* line 31, ../sass/project/general/_general.scss */
+/* line 32, ../sass/project/general/_general.scss */
 body {
   font-family: "Palatino Linotype", Baskerville, Georgia, Cambria, "Times New Roman", Times, serif;
   background: #fff;
   color: #333;
   font-size: 100%; }
 
-/* line 45, ../sass/project/general/_general.scss */
+/* line 46, ../sass/project/general/_general.scss */
 h1, h2, h3 {
   font-weight: bold;
   font-family: "Palatino Linotype", Baskerville, Georgia, Cambria, "Times New Roman", Times, serif; }
 
-/* line 70, ../sass/project/general/_general.scss */
+/* line 71, ../sass/project/general/_general.scss */
 li {
   margin: 1em 0; }
-  /* line 72, ../sass/project/general/_general.scss */
+  /* line 73, ../sass/project/general/_general.scss */
   .footer li {
     margin: 0; }
 
-/* line 86, ../sass/project/general/_general.scss */
+/* line 87, ../sass/project/general/_general.scss */
 em, i, blockquote, q, cite {
   font-style: italic; }
 
-/* line 87, ../sass/project/general/_general.scss */
+/* line 88, ../sass/project/general/_general.scss */
 q em, blockquote em, q i, blockquote i, q cite, blockquote cite {
   font-style: normal; }
 
 /* Footers */
-/* line 89, ../sass/project/general/_general.scss */
+/* line 90, ../sass/project/general/_general.scss */
 blockquote footer {
   font-style: normal; }
 
-/* line 90, ../sass/project/general/_general.scss */
+/* line 91, ../sass/project/general/_general.scss */
 blockquote footer:before {
   content: '\2014\00A0'; }
 
-/* line 91, ../sass/project/general/_general.scss */
+/* line 92, ../sass/project/general/_general.scss */
 blockquote footer i, blockquote footer em, blockquote footer cite {
   font-style: italic; }
 
