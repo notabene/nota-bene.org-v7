@@ -549,7 +549,7 @@ table {
 }
 
 /*! nota-bene.org V7 CSS */
-/* line 52, ../sass/project/_typography.scss */
+/* line 64, ../sass/project/_typography.scss */
 body {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   background: #fff;
@@ -557,55 +557,67 @@ body {
   font-size: 100%;
 }
 
-/* line 66, ../sass/project/_typography.scss */
+/* line 78, ../sass/project/_typography.scss */
 h1, h2, h3 {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* line 83, ../sass/project/_typography.scss */
+/* line 95, ../sass/project/_typography.scss */
 li {
   margin: 1em 0;
 }
-/* line 85, ../sass/project/_typography.scss */
+/* line 97, ../sass/project/_typography.scss */
 .footer li {
   margin: 0;
 }
 
-/* line 99, ../sass/project/_typography.scss */
+/* line 111, ../sass/project/_typography.scss */
 em, i, blockquote, q, cite {
   font-style: italic;
 }
 
-/* line 101, ../sass/project/_typography.scss */
+/* line 113, ../sass/project/_typography.scss */
 q em, q i, q cite, blockquote em, blockquote i, blockquote cite {
   font-style: normal;
 }
 
 /* Footers */
-/* line 106, ../sass/project/_typography.scss */
+/* line 118, ../sass/project/_typography.scss */
 blockquote footer {
   font-style: normal;
 }
-/* line 108, ../sass/project/_typography.scss */
+/* line 120, ../sass/project/_typography.scss */
 blockquote footer:before {
   content: '\2014\00A0';
 }
-/* line 111, ../sass/project/_typography.scss */
+/* line 123, ../sass/project/_typography.scss */
 blockquote footer i, blockquote footer em, blockquote footer cite {
   font-style: italic;
 }
 
 /* line 14, ../sass/project/_layout.scss */
-.inner {
-  width: 94%;
-  margin: auto;
+body {
+  padding: 0.5em;
 }
 
 /* line 18, ../sass/project/_layout.scss */
 img {
   max-width: 100%;
   height: auto !important;
+}
+
+/* line 13, ../sass/project/_forms.scss */
+.formulaire_spip ul, .formulaire_spip li {
+  list-style: none;
+  padding: 0;
+  margin: auto 0;
+}
+/* line 18, ../sass/project/_forms.scss */
+.formulaire_spip input[type=text], .formulaire_spip textarea {
+  display: block;
+  width: 90%;
+  margin: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

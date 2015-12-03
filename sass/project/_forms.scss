@@ -8,3 +8,16 @@
 form {
 
 }
+
+.formulaire_spip {
+	ul,li {
+		list-style:none;
+		padding:0;
+		margin:auto 0;
+	}
+	input[type=text], textarea {
+		display:block;
+		width:90%;
+		margin: auto;
+	}
+}
