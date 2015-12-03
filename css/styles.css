@@ -615,13 +615,13 @@ li {
 }
 
 /* line 13, ../sass/project/_forms.scss */
-.formulaire_spip ul, .formulaire_spip li {
+.formulaire_forum ul, .formulaire_forum li {
   list-style: none;
   padding: 0;
   margin: auto 0;
 }
 /* line 18, ../sass/project/_forms.scss */
-.formulaire_spip input[type=text], .formulaire_spip textarea {
+.formulaire_forum input[type=text], .formulaire_forum textarea {
   display: block;
   width: 90%;
   margin: auto;
