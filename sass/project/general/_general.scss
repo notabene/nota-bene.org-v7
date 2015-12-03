@@ -16,6 +16,7 @@
 
 $serif: Georgia,Cambria,"Times New Roman",Times,serif;
 $serif_richer: "Palatino Linotype",Baskerville,Georgia,Cambria,"Times New Roman",Times,serif;
+$serif_frime: AUdimat,$serif;
 $sans: Arial,Helvetica,sans-serif;
 $color_prime: #333;
 $color_prime_contasted: #000;
@@ -30,7 +31,7 @@ $base-font-size: 16px; // to be converted to em using the em() mixin
 // Styleguide 1.body
 
 body {
-	font-family: $serif_richer;
+	font-family: $serif;
 	background: $color_second;
 	color: $color_prime;
 	font-size:100%;
@@ -45,7 +46,7 @@ body {
 // Styleguide 1.titres
 %titres {
 	font-weight: bold;
-	font-family: $serif_richer;
+	font-family: $serif_frime;
 }
 
 h1 {
@@ -85,8 +86,18 @@ li {
 // Styleguide Typography.blockquote
 
 em,i, blockquote, q, cite { font-style:italic; }
-q em, blockquote em, q i, blockquote i, q cite, blockquote cite { font-style:normal; }
+q, blockquote {
+	em, i, cite {
+		font-style: normal;
+	}
+}
 /* Footers */
-blockquote footer { font-style:normal; }
-blockquote footer:before { content: '\2014\00A0';}
-blockquote footer i, blockquote footer em, blockquote footer cite { font-style:italic; }
+blockquote footer {
+	font-style: normal;
+	&:before {
+		content: '\2014\00A0';
+	}
+	i, em, cite {
+		font-style: italic;
+	}
+}

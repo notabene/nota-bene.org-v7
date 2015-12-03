@@ -19,6 +19,7 @@ Squelettes de base:
   ✔ Navigation top @done (15-04-02 18:06)
   ✔ Navigation bottom @done (15-04-02 18:06)
   ☐ modeles/img → mettre des longdesc partout et arrêter figure/figcaption
+  ☐ article-15.html : photo (un skel à part finalement)
 
   Header HTTP Content-language:
     ☐ Notifier spip-dev du manque ?
@@ -32,6 +33,7 @@ Squelettes de base:
     ✔ rubrique @done (15-04-03 09:56)
     ✔ sommaire @done (15-03-25 15:31)
     ✔ year @done (15-04-03 09:57)
+    ☐ article-15.html
 
     ✔ Langue : sur la home attention les dates des items sont en français @done (15-04-03 10:17)
     ☐ Header de cache…?
@@ -40,6 +42,7 @@ Squelettes de base:
 Sémantique HTML:
   ☐ sommaire
   ☐ article
+  ☐ artice-15
   ☐ inc/comments
   ☐ forum
   ☐ rubrique
