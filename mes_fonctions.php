@@ -242,5 +242,32 @@ function recherche_propre_after($str) {
 	return $str;
 }
 
+/**
+ * enlève les retours chariot dans les listitems
+ * @param unknown_type $str
+ */
+function nb_propre($str) {
+	if($str!="") {
+		$str = preg_replace("/(\r|\n|\r\n)/"," ",$str);
+	}
+	return $str;
+}
+
+/**
+ * ajoute un alt et un longdesc à une image #FICHIER
+ * @param unknown_type $str
+ * @param unknown_type $alt
+ * @param unknown_type $longdesc
+ * @param unknown_type $id_document
+ */
+function alt_et_longdesc($str,$alt,$longdesc='',$id_document='') {
+	if($str != '') {
+		$str = preg_replace("/img /","img alt='" . $alt . "' ",$str);
+		if(strlen($longdesc)>0) {
+			$str = preg_replace("/img /","img longdesc='/spip.php?page=longdesc&id_document=" . $id_document . "' ",$str);
+		}
+	}
+	return $str;
+}
 
 ?>

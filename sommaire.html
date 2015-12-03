@@ -28,12 +28,36 @@
 <section class="outer">
 	<div class="inner">
 
-<h1>Une</h1>
-<ul><BOUCLE_une(ARTICLES){!par date}{0,10}>
-	<li><a href="#URL_ARTICLE" lang="#LANG">#TITRE</a> | [(#DATE|nb_FuzzyDate)]
-	#INTRODUCTION
-	</li>
+<h1>Des articles</h1>
+<ul class="listitems"><BOUCLE_une(ARTICLES){!par date}{0,10}{id_rubrique!=15}>
+	<li><INCLURE(inc/listitem){id_article}{skel=#SQUELETTE}></li>
 </BOUCLE_une></ul>
+
+	</div><!-- /.inner -->
+</section><!-- /.outer -->
+
+[(#REM) Photos]
+<section class="outer">
+	<div class="inner">
+
+<h1>Des photos</h1>
+<ul class="listitems"><BOUCLE_photos(ARTICLES){!par date}{0,10}{id_rubrique=15}>
+	<li><INCLURE(inc/listitem-15){id_article}{skel=#SQUELETTE}></li>
+</BOUCLE_photos></ul>
+
+	</div><!-- /.inner -->
+</section><!-- /.outer -->
+
+[(#REM) Liens]
+<section class="outer">
+	<div class="inner">
+
+<h1>Des liens</h1>
+<ul class="listitems">
+<BOUCLE_liens(SYNDIC_ARTICLES){!par date}{0,10}{id_syndic==123|126}>
+	<li><INCLURE(inc/listitem-syndic){id_syndic_article}{skel=#SQUELETTE}></li>
+</BOUCLE_liens>
+</ul>
 
 	</div><!-- /.inner -->
 </section><!-- /.outer -->
