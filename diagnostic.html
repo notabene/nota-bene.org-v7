@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Longdesc</title>
+	<style>
+	table, td, th {
+		border:1px solid #ddd;
+		border-collapse: collapse;
+	}
+	th, td {
+		padding:2px;
+	}
+	</style>
+</head>
+<body>
+
+<?php
+
+$cp_articles = 0;
+$cp_longdesc = 0;
+?>
+<table>
+<tr>
+	<th>date</th>
+	<th>Titre</th>
+	<th>illus</th>
+	<th>longdesc</th>
+</tr>
+<BOUCLE_photos(ARTICLES){id_rubrique=15}{par date}>
+<?php
+$cp_articles++;
+?>
+<tr valign="top">
+	<td>#DATE</td>
+	<td><a href="#URL_ARTICLE">#TITRE</a></td>
+	<BOUCLE_longdesc(DOCUMENTS){id_article}{extension==(png|jpg|gif)}{0,1}>
+	<td>[(#FICHIER|image_reduire{200})]</td>
+	<td>
+		[(#DESCRIPTIF|oui) YES <?php $cp_longdesc++; ?> ]
+		#DESCRIPTIF
+	</td>
+	</BOUCLE_longdesc>
+</tr>
+</BOUCLE_photos>
+</table>
+
+<?php
+
+echo "<pre>
+articles : $cp_articles
+longdesc : $cp_longdesc
+% : ";
+echo round($cp_longdesc / $cp_articles * 100, 0);
+echo "</pre>
+";
+
+?>
+
+</body>
+</html>

@@ -549,7 +549,7 @@ table {
 }
 
 /*! nota-bene.org V7 CSS */
-/* line 33, ../sass/project/general/_general.scss */
+/* line 52, ../sass/project/_typography.scss */
 body {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   background: #fff;
@@ -557,52 +557,52 @@ body {
   font-size: 100%;
 }
 
-/* line 47, ../sass/project/general/_general.scss */
+/* line 66, ../sass/project/_typography.scss */
 h1, h2, h3 {
   font-weight: bold;
-  font-family: AUdimat, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* line 72, ../sass/project/general/_general.scss */
+/* line 83, ../sass/project/_typography.scss */
 li {
   margin: 1em 0;
 }
-/* line 74, ../sass/project/general/_general.scss */
+/* line 85, ../sass/project/_typography.scss */
 .footer li {
   margin: 0;
 }
 
-/* line 88, ../sass/project/general/_general.scss */
+/* line 99, ../sass/project/_typography.scss */
 em, i, blockquote, q, cite {
   font-style: italic;
 }
 
-/* line 90, ../sass/project/general/_general.scss */
+/* line 101, ../sass/project/_typography.scss */
 q em, q i, q cite, blockquote em, blockquote i, blockquote cite {
   font-style: normal;
 }
 
 /* Footers */
-/* line 95, ../sass/project/general/_general.scss */
+/* line 106, ../sass/project/_typography.scss */
 blockquote footer {
   font-style: normal;
 }
-/* line 97, ../sass/project/general/_general.scss */
+/* line 108, ../sass/project/_typography.scss */
 blockquote footer:before {
   content: '\2014\00A0';
 }
-/* line 100, ../sass/project/general/_general.scss */
+/* line 111, ../sass/project/_typography.scss */
 blockquote footer i, blockquote footer em, blockquote footer cite {
   font-style: italic;
 }
 
-/* line 14, ../sass/project/general/_layout.scss */
+/* line 14, ../sass/project/_layout.scss */
 .inner {
   width: 94%;
   margin: auto;
 }
 
-/* line 18, ../sass/project/general/_layout.scss */
+/* line 18, ../sass/project/_layout.scss */
 img {
   max-width: 100%;
   height: auto !important;

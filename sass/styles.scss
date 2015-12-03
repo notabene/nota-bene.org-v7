@@ -4,9 +4,9 @@
 
 /*! nota-bene.org V7 CSS */
 @import "project/mixins";
-@import "project/general/general";
-@import "project/general/layout";
-@import "project/general/forms";
+@import "project/typography";
+@import "project/layout";
+@import "project/forms";
 
 // for debuggind purposes
 // @import "project/debug";
@@ -14,5 +14,5 @@
 
 // 2. RWD
 @media screen and (min-width: 40.1em) {
-	// @import "project/rwd/40em";
+
 }

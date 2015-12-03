@@ -1,25 +1,53 @@
-// Général
+// Typographie
 //
-// ------------------
+// ----------------------------------------
+//
+// Toute la typographie
 //
 // Styles par défaut pour tous les composants
 //
 // Sont utilisés avant de faire du RWD, approche *mobile-first*
 //
-// Styleguide 1
+// Styleguide Typography
+
 
 // Constants
 //
 // Constantes dans le projet
 //
-// Styleguide 1.constants
+// Weight: -10
+//
+//  Styleguide Typography.constants
+
+// Polices
+//
+// - `$serif`
+// - `$serif_richer` si besoin
+// - `$sans`
+//
+// Styleguide Typography.constants.1
+
+// Couleurs
+//
+// - `$color_prime` couleur sur écran
+// - `$color_prime_contrasted` couleur sur mobile
+// - `$color_second` couleur de fond
+//
+// Note : prime et second peuvent être inversées sur certains blocs
+//
+// Styleguide Typography.constants.2
+
+// Font size de base
+//
+// - `$base`-font-size
+//
+// Styleguide Typography.constants.3
 
 $serif: Georgia,Cambria,"Times New Roman",Times,serif;
 $serif_richer: "Palatino Linotype",Baskerville,Georgia,Cambria,"Times New Roman",Times,serif;
-$serif_frime: AUdimat,$serif;
 $sans: Arial,Helvetica,sans-serif;
 $color_prime: #333;
-$color_prime_contasted: #000;
+$color_prime_contrasted: #000;
 $color_second: #fff;
 $base-font-size: 16px; // to be converted to em using the em() mixin
 
@@ -28,7 +56,10 @@ $base-font-size: 16px; // to be converted to em using the em() mixin
 //
 // Style par défaut pour tous les documents
 //
-// Styleguide 1.body
+// Markup:
+// <p>Du texte sans stylage (juste un petit paragraphe)</p>
+//
+// Styleguide Typography.body
 
 body {
 	font-family: $serif;
@@ -43,10 +74,10 @@ body {
 //
 // Markup: headings.hbs
 //
-// Styleguide 1.titres
+// Styleguide Typography.titres
 %titres {
 	font-weight: bold;
-	font-family: $serif_frime;
+	font-family: $sans;
 }
 
 h1 {
@@ -59,15 +90,7 @@ h3 {
 	@extend %titres;
 }
 
-// Typographie
-//
-// ----------------------------------------
-//
-// Toute la typographie ci-dessous (stockée dans `_general.scss`)
-//
-// Markup: typography.hbs
-//
-// Styleguide Typography
+
 
 li {
 	margin: 1em 0;
@@ -101,3 +124,9 @@ blockquote footer {
 		font-style: italic;
 	}
 }
+
+// Rendu global
+//
+// Rendu de tous les styles
+//
+// Markup: typography.hbs

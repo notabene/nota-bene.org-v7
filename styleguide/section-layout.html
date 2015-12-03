@@ -31,9 +31,9 @@
         </a>
       </li>
       <li class="kss-nav__menu-item">
-        <a href="section-body.html">
+        <a href="section-forms.html">
           <span class="kss-nav__ref">1</span
-          ><span class="kss-nav__name">Body</span>
+          ><span class="kss-nav__name">Formulaires</span>
         </a>
       </li>
       <li class="kss-nav__menu-item">
@@ -45,9 +45,15 @@
         </ul>
       </li>
       <li class="kss-nav__menu-item">
-        <a href="section-rwd.html">
+        <a href="section-mixins.html">
           <span class="kss-nav__ref">3</span
-          ><span class="kss-nav__name">Responsive</span>
+          ><span class="kss-nav__name">Mixins</span>
+        </a>
+      </li>
+      <li class="kss-nav__menu-item">
+        <a href="section-typography.html">
+          <span class="kss-nav__ref">4</span
+          ><span class="kss-nav__name">Typographie</span>
         </a>
       </li>
     </ul>
@@ -68,7 +74,7 @@
 
 
       <div class="kss-description">
-        <p>Mise en page par défault : rien ou presque</p>
+        <p>Mise en page par défault : rien. Les marges seront portées par les conteneurs internes.</p>
 
       </div>
     </div>
@@ -78,12 +84,20 @@
           Example
         </div>
         <div class="kss-modifier__example">
-          <body>Ceci est un corps de document</body>
+          <div class="outer">
+	<div class="inner">Le texte est dans le double conteneur
+		<code>.outer</code> &gt; <code>.inner</code>.
+	</div>
+</div>
         </div>
       </div>
 
       <div class="kss-markup kss-style">
-        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;body&gt;Ceci est un corps de document&lt;/body&gt;</code></pre>
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;outer&quot;&gt;
+	&lt;div class=&quot;inner&quot;&gt;Le texte est dans le double conteneur
+		&lt;code&gt;.outer&lt;/code&gt; &amp;gt; &lt;code&gt;.inner&lt;/code&gt;.
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
       </div>
 
       </div>
