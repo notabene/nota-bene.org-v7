@@ -43,7 +43,7 @@ Dans ce dernier cas, le `hbs` inclut du code *Handlebar* qui va parcourir les cl
 2.	**Affichage de toutes les classes listées**
 	(autrement dit ici les 3 classes listées)
 
-Par exemple, `headings.hbs` :
+Par example, `headings.hbs` :
 
 	<h2 class="{{modifier_class}}">Titre de rang 2</h2>
 
