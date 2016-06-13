@@ -182,7 +182,7 @@ function detecter_plages_utf($texte) {
 
 // Premiere passe: detecter dans quel alphabet le texte est écrit
 // ce qui permet de limiter le nombre de réponse 
-// (par exemple: des caractères «arabes» ne peuvent être que de l'arabe, du farsi, du pachtourne ou du urdu)
+// (par example: des caractères «arabes» ne peuvent être que de l'arabe, du farsi, du pachtourne ou du urdu)
 // Deuxieme passe: faire un test classique sur les trigrams (uniquement sur les langues possibles de la première passe)
 
 function _detecter_langue($texte) {
