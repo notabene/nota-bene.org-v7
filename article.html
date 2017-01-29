@@ -4,7 +4,7 @@
 <html lang="#LANG" class="article rubrique#ID_RUBRIQUE">
 <head>
 <title>[(#TITRE|textebrut)] | #NOM_SITE_SPIP</title>
-[<meta name="description" content="(#DESCRIPTIF|attribut_html)" />]
+[<meta name="description" content="(#INTRODUCTION|attribut_html)" />]
 <INCLURE(inc/head){skel=#SQUELETTE}>
 
 <!-- URL article : #URL_ARTICLE -->
@@ -47,11 +47,11 @@
 		<INCLURE(inc/comments){id_article}>
 		</section>
 
-		<section class="about">
+		<aside class="about">
 			<h2 class="hideme"><:aproposdecetarticle:></h2>
 			<BOUCLE_auteurs(AUTEURS){id_article}{", "}>
 			<p><:an_article_by:>
-			<a href="#URL_AUTEUR">#NOM[(#LOGO_AUTEUR||image_reduire{112})]</a>
+			<a href="#URL_AUTEUR">#NOM</a>
 			</p>
 			</BOUCLE_auteurs>
 			<p><:publishedon:> <span>[(#DATE|affdate)]</span></p>
@@ -59,14 +59,14 @@
 			<BOUCLE_traductions(ARTICLES){traduction}{exclus}>
 			<p lang="#LANG" ><:traduction:> <a rel="alternate" href="#URL_ARTICLE">#TITRE</a></p>
 			</BOUCLE_traductions>
-			<p><BOUCLE_compterforums(FORUMS){plat}{id_article}></BOUCLE_compterforums>
+			<p class="compterforums"><BOUCLE_compterforums(FORUMS){plat}{id_article}></BOUCLE_compterforums>
 			<a href="#comments">#_compterforums:TOTAL_BOUCLE <:commentaire_min:>[(#_compterforums:TOTAL_BOUCLE|>{1}|?{s,""})]</a>
 			<//BOUCLE_compterforums></p>
 			<B_tags>
 				<h3><:tags:></h3>
 				<p><BOUCLE_tags(MOTS){id_article}{id_groupe!=2}{id_groupe!=5}{", "}><a href="#URL_MOT" rel="tag">#TITRE</a></BOUCLE_tags></p>
 			</B_tags>
-		</section>[(#REM) /.about ]
+		</aside>[(#REM) /.about ]
 
 
 
@@ -76,20 +76,20 @@
 [(#REM) on ne fait un prev/next que si on n'est pas en 19]
 <BOUCLE_prevnext(ARTICLES){id_article}{id_rubrique!=19}>
 <section class="outer">
-	<div class="inner">
+	<ul class="inner">
 
 	<BOUCLE_precedent(ARTICLES){id_secteur!=19}{age_relatif>=0}{par date}{inverse}{1,1}>
-	<div class="footercontainer column1">
+	<li class="footercontainer column1">
 	<a rel="prev" href="#URL_ARTICLE" lang="#LANG" title="<:article_precedent:> [(#TITRE|attribut_html)]"><:article_precedent:> <span>#TITRE</span></a>
-	</div>
+	</li>
 	</BOUCLE_precedent>
 
 	<BOUCLE_suivant(ARTICLES){id_secteur!=19}{age_relatif<0}{par date}{0,1}>
-	<div class="footercontainer column2">
+	<li class="footercontainer column2">
 	<a rel="next" href="#URL_ARTICLE" lang="#LANG" title="<:article_suivant:> [(#TITRE|attribut_html)]"><:article_suivant:> <span>#TITRE</span></a>
-	</div>
+	</li>
 	</BOUCLE_suivant>
-	</div><!-- /.inner -->
+	</ul><!-- /.inner -->
 </section>
 </BOUCLE_prevnext>
 

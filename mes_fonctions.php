@@ -48,7 +48,7 @@ function nb_abbr($str) {
         $str = '' . $coll[0]; // on prend le premier morceau, qu'il soit vide ou pas
         for($i=1;$i<count($coll);$i++) {
             $coll[$i] = '<' . $coll[$i];
-            if(!preg_match('/(<abbr|<abbr)/i',$coll[$i])) { // si le tag n'est ni abbr ni acronym
+            if(!preg_match('/(<abbr)/i',$coll[$i])) { // si le tag n'est ni abbr ni acronym
                 $str .= substr($coll[$i],0,strpos($coll[$i],'>')+1)
                     . preg_replace(array_keys($array_acronyms), array_values($array_acronyms) , substr($coll[$i],strpos($coll[$i],'>')+1));
             } else { // sinon passer tel quel et aller au tag suivant
@@ -161,11 +161,10 @@ function nb_dateexif($array) {
 	*/
 
 function detecter_langue($texte) {
-	include_spip("inc/detecter_langue");
+	include_once("plugins/detecter_langue/inc/detecter_langue.php");
 	return _detecter_langue($texte);
 
 }
-
 
 /**
  * Renvoie une classe en fonction de la longueur de $str

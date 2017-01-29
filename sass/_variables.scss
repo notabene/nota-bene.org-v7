@@ -1,0 +1,18 @@
+//_variables.scss
+
+$borders:0.3em silver solid;
+
+.borders {
+	border-top:$borders;
+	padding-top: 0.7em;
+}
+
+@mixin borders($fs:1em) {
+	border-top:(0.3em / $fs * 1em) silver solid;
+	padding-top: (0.7em / $fs * 1em);
+}
+
+@mixin borders-none {
+	border-top:none;
+	padding-top: 0;
+}

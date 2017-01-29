@@ -1,30 +1,30 @@
 <div class="outer footer"><div class="inner">
 
 <h1><:naviguer_dans_le_site:></h1>
-	<h2 lang="fr">Français</h2>
 		<ul>
-		<BOUCLE_rub_fr(RUBRIQUES){par titre}{lang=fr}{id_rubrique!=19}>
+		<BOUCLE_rub_fr(RUBRIQUES){par titre}{id_rubrique!=19}>
 			<li lang="#LANG"><a href="#URL_RUBRIQUE">#TITRE</a></li>
 		</BOUCLE_rub_fr>
 		</ul>
-	<h2 lang="en">English</h2>
-		<ul>
-		<BOUCLE_rub_en(RUBRIQUES){par titre}{lang=en}{id_rubrique!=19}>
-			<li lang="#LANG"><a href="#URL_RUBRIQUE">#TITRE</a></li>
-		</BOUCLE_rub_en>
-		</ul>
 	<h2><:par_annee:></h2>
-		<ul class="year">
-			<?php
-			$origin_year = 1998;
-			$current_year = date("Y");
+<div style="background:silver">
 
-			for($i = $origin_year ; $i <= $current_year ; $i++) {
-				echo '<li>';
-				echo "<a href='spip.php?page=year&year={$i}'>{$i}</a>";
-				echo '</li>';
-			}
-			?>
+</div>
+		<ul class="year">
+		[(#REM) boucle par années
+		1. on récupère la dernière année où des articles sont publiés
+			BOUCLE_annees_lastarticle
+		2. on itère sur toutes les années de 1998 à dernière année
+			BOUCLE_annees
+		3. dans cette boucle on compte le nombre d'articles par an
+			BOUCLE_articles_par_an : TOTAL_BOUCLE
+		]
+		<BOUCLE_annees_lastarticle(ARTICLES){0,1}{!par date}>#SET{current_year,(#DATE|annee)}</BOUCLE_annees_lastarticle>
+		<BOUCLE_annees(DATA){enum 1998,#GET{current_year}}>
+		#SET{year,#VALEUR}
+			<BOUCLE_articles_par_an(ARTICLES){date>=(#GET{year})-01-01}{date<=(#GET{year})-12-31}></BOUCLE_articles_par_an>
+			<li><a href='spip.php?page=year&amp;year=#VALEUR'>#VALEUR (#_articles_par_an:TOTAL_BOUCLE [(#_articles_par_an:TOTAL_BOUCLE|>{1}?{"articles", "article"})])</a></li>
+		</BOUCLE_annees>
 		</ul>
 
 

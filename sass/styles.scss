@@ -1,18 +1,91 @@
-// 1. non-RWD for everyone
+//styles.scss
 
-@import "libs/normalize";
-
-/*! nota-bene.org V7 CSS */
-@import "project/mixins";
-@import "project/typography";
-@import "project/layout";
-@import "project/forms";
-
-// for debuggind purposes
-// @import "project/debug";
+@import "variables";
+@import "forms";
 
 
-// 2. RWD
-@media screen and (min-width: 40.1em) {
+/*
+ =LAYOUTS
+ */
+body {
+	font-family: Arial,Helvetica,sans-serif;
+	color: #222;
+	background: #fff;
+	margin:0;
+	padding:1em 5%;
+	border-top: $borders;
+	border-bottom: $borders;
+	font-size: 1em;
+}
+.outer {
+	width:auto;
+	margin:auto;
+	max-width:60em;
+}
 
+/*
+ =BLOCKS
+ */
+h1,h2 {
+	font-family: 'Book Antiqua', Garamond, Times, serif;
+}
+h1 {
+	font-size:2em;
+	@include borders(2em);
+}
+h2 {
+	font-size: 1.5em;
+	@include borders(1.5em);
+	li & {
+		@include borders-none;
+	}
+}
+h3 {
+	font-size: 1em;
+}
+
+blockquote {
+	font-style: italic;
+	margin-left:-5.5555556%;
+	margin-right:-5.5555556%;
+	overflow: hidden;
+	& > * {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	background: #eee;
+	@media screen and (min-width: 30em) {
+		margin-left: 3em;
+		margin-right: 3em;
+		overflow: inherit;
+		> * {
+			margin-left:auto;
+			margin-right:auto;
+		}
+		background: none;
+		color:#444;
+	}
+	q, em {
+		font-style: normal;
+	}
+	footer {
+		font-style: normal;
+		q, em {
+			font-style: italic;
+		}
+	}
+}
+p.compterforums {
+	display:none;
+}
+
+/*
+ =things
+ */
+img {
+	max-width: 100%;
+	height: auto;
+}
+hr {
+	display: none;
 }
