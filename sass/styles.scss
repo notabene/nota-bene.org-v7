@@ -13,6 +13,7 @@ body {
 	background: #fff;
 	margin:0;
 	padding:1em 5%;
+	$borders:0.5em $borderstyle;
 	border-top: $borders;
 	border-bottom: $borders;
 	font-size: 1em;

@@ -10,7 +10,9 @@ Démarche d'appropriation de :
 - Licence : GNU GPL v2
 
 TODO
+- skel PHOTOS :	 article=15.html
 - bottom : legal link
+- logo
 - border-colors + link colors according to title string (fun !)
 - rwd
 - gravatars
