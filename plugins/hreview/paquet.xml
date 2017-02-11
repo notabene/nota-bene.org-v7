@@ -1,0 +1,13 @@
+<paquet
+	prefix="hreview"
+	categorie="divers"
+	version="0.1"
+	etat="dev"
+	compatibilite="[3;[">
+	<nom>hreview</nom>
+
+	<auteur lien="http://nota-bene.org/">Stephane Deschamps</auteur>
+
+	<pipeline nom="post_propre" inclure="hreview_fonctions.php" />
+
+</paquet>

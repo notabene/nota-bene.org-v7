@@ -125,7 +125,12 @@ blockquote footer q, blockquote footer em {
   font-style: italic;
 }
 
-/* line 78, ../sass/styles.scss */
+/* line 79, ../sass/styles.scss */
+figure {
+  margin: 1em 0;
+}
+
+/* line 84, ../sass/styles.scss */
 p.compterforums {
   display: none;
 }
@@ -133,13 +138,13 @@ p.compterforums {
 /*
  =things
  */
-/* line 85, ../sass/styles.scss */
+/* line 91, ../sass/styles.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 89, ../sass/styles.scss */
+/* line 95, ../sass/styles.scss */
 hr {
   display: none;
 }
