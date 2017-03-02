@@ -29,16 +29,19 @@ body {
  */
 h1,h2 {
 	font-family: 'Book Antiqua', Garamond, Times, serif;
+	& a:link, & a:visited {
+		color:inherit;
+	}
 }
 h1 {
 	font-size:2em;
-	@include borders(2em);
+	@include heading-decoration(2em);
 }
 h2 {
 	font-size: 1.5em;
-	@include borders(1.5em);
+	@include heading-decoration(1.5em);
 	li & {
-		@include borders-none;
+		@include heading-decoration-none;
 	}
 }
 h3 {

@@ -5,7 +5,8 @@
 <head>
 <title>[(#TITRE|textebrut)] | #NOM_SITE_SPIP</title>
 [<meta name="description" content="(#INTRODUCTION|attribut_html)" />]
-<INCLURE(inc/head){skel=#SQUELETTE}>
+#SET{titrepourcouleur,{#TITRE}}
+<INCLURE(inc/head){skel=#SQUELETTE}{titrepourcouleur=#GET{titrepourcouleur}}>
 
 <!-- URL article : #URL_ARTICLE -->
 <link rel="canonical" href="http://nota-bene.org/#URL_ARTICLE" />

@@ -1,7 +1,15 @@
 /* line 3, ../sass/_forms.scss */
 #formulaire_forum {
-  border-top: 0.3em silver solid;
-  padding-top: 0.7em;
+  color: #66c;
+}
+/* line 9, ../sass/_variables.scss */
+#formulaire_forum:before {
+  display: block;
+  content: '';
+  height: 0.5em;
+  margin-bottom: 0.2em;
+  width: 2.4em;
+  background-color: #66c;
 }
 
 /* line 8, ../sass/_forms.scss */
@@ -40,8 +48,8 @@ body {
   background: #fff;
   margin: 0;
   padding: 1em 5%;
-  border-top: 0.5em silver solid;
-  border-bottom: 0.5em silver solid;
+  border-top: 0.5em #66c solid;
+  border-bottom: 0.5em #66c solid;
   font-size: 1em;
 }
 
@@ -59,32 +67,51 @@ body {
 h1, h2 {
   font-family: 'Book Antiqua', Garamond, Times, serif;
 }
+/* line 32, ../sass/styles.scss */
+h1 a:link, h1 a:visited, h2 a:link, h2 a:visited {
+  color: inherit;
+}
 
-/* line 33, ../sass/styles.scss */
+/* line 36, ../sass/styles.scss */
 h1 {
   font-size: 2em;
-  border-top: 0.15em silver solid;
-  padding-top: 0.35em;
+  color: #66c;
+}
+/* line 9, ../sass/_variables.scss */
+h1:before {
+  display: block;
+  content: '';
+  height: 0.25em;
+  margin-bottom: 0.1em;
+  width: 1.2em;
+  background-color: #66c;
 }
 
-/* line 37, ../sass/styles.scss */
+/* line 40, ../sass/styles.scss */
 h2 {
   font-size: 1.5em;
-  border-top: 0.2em silver solid;
-  padding-top: 0.46667em;
+  color: #66c;
 }
-/* line 40, ../sass/styles.scss */
-li h2 {
-  border-top: none;
-  padding-top: 0;
+/* line 9, ../sass/_variables.scss */
+h2:before {
+  display: block;
+  content: '';
+  height: 0.33333em;
+  margin-bottom: 0.13333em;
+  width: 1.6em;
+  background-color: #66c;
+}
+/* line 23, ../sass/_variables.scss */
+li h2:before {
+  display: none;
 }
 
-/* line 44, ../sass/styles.scss */
+/* line 47, ../sass/styles.scss */
 h3 {
   font-size: 1em;
 }
 
-/* line 48, ../sass/styles.scss */
+/* line 51, ../sass/styles.scss */
 blockquote {
   font-style: italic;
   margin-left: -5.5555556%;
@@ -92,13 +119,13 @@ blockquote {
   overflow: hidden;
   background: #eee;
 }
-/* line 53, ../sass/styles.scss */
+/* line 56, ../sass/styles.scss */
 blockquote > * {
   margin-left: 5%;
   margin-right: 5%;
 }
 @media screen and (min-width: 30em) {
-  /* line 48, ../sass/styles.scss */
+  /* line 51, ../sass/styles.scss */
   blockquote {
     margin-left: 3em;
     margin-right: 3em;
@@ -106,31 +133,31 @@ blockquote > * {
     background: none;
     color: #444;
   }
-  /* line 62, ../sass/styles.scss */
+  /* line 65, ../sass/styles.scss */
   blockquote > * {
     margin-left: auto;
     margin-right: auto;
   }
 }
-/* line 69, ../sass/styles.scss */
+/* line 72, ../sass/styles.scss */
 blockquote q, blockquote em {
   font-style: normal;
 }
-/* line 72, ../sass/styles.scss */
+/* line 75, ../sass/styles.scss */
 blockquote footer {
   font-style: normal;
 }
-/* line 74, ../sass/styles.scss */
+/* line 77, ../sass/styles.scss */
 blockquote footer q, blockquote footer em {
   font-style: italic;
 }
 
-/* line 80, ../sass/styles.scss */
+/* line 83, ../sass/styles.scss */
 figure {
   margin: 1em 0;
 }
 
-/* line 85, ../sass/styles.scss */
+/* line 88, ../sass/styles.scss */
 p.compterforums {
   display: none;
 }
@@ -138,13 +165,13 @@ p.compterforums {
 /*
  =things
  */
-/* line 92, ../sass/styles.scss */
+/* line 95, ../sass/styles.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 96, ../sass/styles.scss */
+/* line 99, ../sass/styles.scss */
 hr {
   display: none;
 }

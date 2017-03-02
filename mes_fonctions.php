@@ -13,50 +13,50 @@ $GLOBALS['fin_intertitre'] = "</h2>\n";
 	*           Julien Wajsberg et Gabriel Euzet pour l'aide a la simplification
 	* */
 function nb_abbr($str) {
-    // reste a finir : definitions comme mots entiers
-    $array_acronyms = array(
-        '/ALA/' => '<abbr title="A List Apart">\\0</abbr>',
+	// reste a finir : definitions comme mots entiers
+	$array_acronyms = array(
+		'/ALA/' => '<abbr title="A List Apart">\\0</abbr>',
 		'/ARIA/' => '<abbr title="Accessible Rich Internet Application">\\0</abbr>',
-        '/CSS/' => '<abbr title="Cascading Stylesheets">\\0</abbr>',
-        '/DOM/' => '<abbr title="Document Object Model">\\0</abbr>',
+		'/CSS/' => '<abbr title="Cascading Stylesheets">\\0</abbr>',
+		'/DOM/' => '<abbr title="Document Object Model">\\0</abbr>',
 		'/([^a-z])(etc\.)/' => '\\1<abbr title="et c&aelig;tera">\\2</abbr>',
-        '/GIF/' => '<abbr title="Graphic Interchange Format">\\0</abbr>',
-        '/([^A-Z])(HTML)/' => '\\1<abbr title="Hypertext Markup Language">\\2</abbr>',
-        '/JS/' => '<abbr title="Javascript">\\0</abbr>',
-        '/MDC/' => '<abbr title="Mozilla Developer Center">\\0</abbr>',
-        '/MSIE/' => '<abbr title="Microsoft Internet Explorer">\\1</abbr>',
-        '/([^A-Z])(IE)([^A-Z])/' => '\\1<abbr title="Microsoft Internet Explorer">\\2</abbr>\\3',
-        '/([^A-Z])(NN)([^A-Z])/' => '\\1<abbr title="Netscape Navigator">\\2</abbr>\\3',
-        '/PDF/' => '<abbr title="Portable Document Format">\\0</abbr>',
-        '/PNG/' => '<abbr title="Portable Network Graphics">\\0</abbr>',
-        '/RSS/' => '<abbr title="Really Simple Syndication">\\0</abbr>',
-        '/SEO/' => '<abbr title="Search Engine Optimization">\\0</abbr>',
-        '/W[aA][sS]P/' => '<abbr title="Web Standards Project">WaSP</abbr>',
-        '/W3C/' => '<abbr title="World Wide Web Consortium">\\0</abbr>',
-        '/WCAG/' => '<abbr title="Web Content Accessibility Guidelines">\\0</abbr>',
-        '/wifi/i' => '<abbr title="Wireless network">\\0</abbr>',
-        '/XHTML/i' => '<abbr title="eXtensible Hypertext Markup Language">\\0</abbr>',
-        '/XML/' => '<abbr title="eXtensible Markup Language">\\0</abbr>',
-        '/XSLT/' => '<abbr title="eXtensible Style Language Transformation">\\0</abbr>',
-        '/(XSL)([^A-Z])/' => '<abbr title="eXtensible Style Language">\\1</abbr>\\2'
-    );
+		'/GIF/' => '<abbr title="Graphic Interchange Format">\\0</abbr>',
+		'/([^A-Z])(HTML)/' => '\\1<abbr title="Hypertext Markup Language">\\2</abbr>',
+		'/JS/' => '<abbr title="Javascript">\\0</abbr>',
+		'/MDC/' => '<abbr title="Mozilla Developer Center">\\0</abbr>',
+		'/MSIE/' => '<abbr title="Microsoft Internet Explorer">\\1</abbr>',
+		'/([^A-Z])(IE)([^A-Z])/' => '\\1<abbr title="Microsoft Internet Explorer">\\2</abbr>\\3',
+		'/([^A-Z])(NN)([^A-Z])/' => '\\1<abbr title="Netscape Navigator">\\2</abbr>\\3',
+		'/PDF/' => '<abbr title="Portable Document Format">\\0</abbr>',
+		'/PNG/' => '<abbr title="Portable Network Graphics">\\0</abbr>',
+		'/RSS/' => '<abbr title="Really Simple Syndication">\\0</abbr>',
+		'/SEO/' => '<abbr title="Search Engine Optimization">\\0</abbr>',
+		'/W[aA][sS]P/' => '<abbr title="Web Standards Project">WaSP</abbr>',
+		'/W3C/' => '<abbr title="World Wide Web Consortium">\\0</abbr>',
+		'/WCAG/' => '<abbr title="Web Content Accessibility Guidelines">\\0</abbr>',
+		'/wifi/i' => '<abbr title="Wireless network">\\0</abbr>',
+		'/XHTML/i' => '<abbr title="eXtensible Hypertext Markup Language">\\0</abbr>',
+		'/XML/' => '<abbr title="eXtensible Markup Language">\\0</abbr>',
+		'/XSLT/' => '<abbr title="eXtensible Style Language Transformation">\\0</abbr>',
+		'/(XSL)([^A-Z])/' => '<abbr title="eXtensible Style Language">\\1</abbr>\\2'
+	);
 
-    if( !ereg('<',$str)) { // premier test pour le cas des titres
-        $str = preg_replace(array_keys($array_acronyms), array_values($array_acronyms) , $str);
-    } else {
-        $coll = explode('<',$str);
-        $str = '' . $coll[0]; // on prend le premier morceau, qu'il soit vide ou pas
-        for($i=1;$i<count($coll);$i++) {
-            $coll[$i] = '<' . $coll[$i];
-            if(!preg_match('/(<abbr)/i',$coll[$i])) { // si le tag n'est ni abbr ni acronym
-                $str .= substr($coll[$i],0,strpos($coll[$i],'>')+1)
-                    . preg_replace(array_keys($array_acronyms), array_values($array_acronyms) , substr($coll[$i],strpos($coll[$i],'>')+1));
-            } else { // sinon passer tel quel et aller au tag suivant
-                $str .= $coll[$i];
-            }
-        }
-    }
-    return $str;
+	if( !ereg('<',$str)) { // premier test pour le cas des titres
+		$str = preg_replace(array_keys($array_acronyms), array_values($array_acronyms) , $str);
+	} else {
+		$coll = explode('<',$str);
+		$str = '' . $coll[0]; // on prend le premier morceau, qu'il soit vide ou pas
+		for($i=1;$i<count($coll);$i++) {
+			$coll[$i] = '<' . $coll[$i];
+			if(!preg_match('/(<abbr)/i',$coll[$i])) { // si le tag n'est ni abbr ni acronym
+				$str .= substr($coll[$i],0,strpos($coll[$i],'>')+1)
+					. preg_replace(array_keys($array_acronyms), array_values($array_acronyms) , substr($coll[$i],strpos($coll[$i],'>')+1));
+			} else { // sinon passer tel quel et aller au tag suivant
+				$str .= $coll[$i];
+			}
+		}
+	}
+	return $str;
 }
 
 /**
@@ -116,17 +116,17 @@ function nb_commentaires_nofollow($str) {
  * @param unknown_type $str
  */
 function filtre_nofollow_dist($str){
-       if($str) {
-               $liens = extraire_balises($str,'a');
-               foreach($liens as $lien){
-                       $rel = extraire_attribut($lien,'rel');
-                       $rel = preg_replace("/follow/","",$rel);
-                       $rel = ($rel?"$rel ":"")."nofollow";
-                       $ln = inserer_attribut($lien,'rel',$rel);
-                       $str = str_replace($lien,$ln,$str);
-               }
-       }
-       return $str;
+	   if($str) {
+			   $liens = extraire_balises($str,'a');
+			   foreach($liens as $lien){
+					   $rel = extraire_attribut($lien,'rel');
+					   $rel = preg_replace("/follow/","",$rel);
+					   $rel = ($rel?"$rel ":"")."nofollow";
+					   $ln = inserer_attribut($lien,'rel',$rel);
+					   $str = str_replace($lien,$ln,$str);
+			   }
+	   }
+	   return $str;
 }
 
 /**
@@ -134,11 +134,11 @@ function filtre_nofollow_dist($str){
 	* */
 
 function nb_gravatar($str,$size=48) {
-    if($str!='') {
-        //$strtmp = 'http://www.gravatar.com/avatar.php?gravatar_id='.md5($str).'&amp;size='.$size.'&amp;rating=PG&amp;default=' . urlencode("http://www.nota-bene.org/rien.gif") ;
-        $str = "gravatar-" . md5($str);
-    }
-    return $str;
+	if($str!='') {
+		//$strtmp = 'http://www.gravatar.com/avatar.php?gravatar_id='.md5($str).'&amp;size='.$size.'&amp;rating=PG&amp;default=' . urlencode("http://www.nota-bene.org/rien.gif") ;
+		$str = "gravatar-" . md5($str);
+	}
+	return $str;
 }
 /**
  * Retourne la date d'après le champ #EXIF de spip
@@ -269,4 +269,111 @@ function alt_et_longdesc($str,$alt,$longdesc='',$id_document='') {
 	return $str;
 }
 
+/**
+ * Compares a Hexadecimal color to white/black and returns true if contrasted enough
+ * @param  (String) $hexcolor Hexadecimal color
+ * @return (Boolean)           If true, contrast is enough towards white
+ *
+ * Some PHP taken from https://24ways.org/2010/calculating-color-contrast/
+ * Calculus in this article came from https://www.w3.org/TR/AERT#color-contrast
+ */
+function getContrastOnWhite($hexcolor){
+	// a good contrast is 5:1
+	// https://www.w3.org/TR/2008/WD-UNDERSTANDING-WCAG20-20080430/visual-audio-contrast7.html
+	$r = hexdec(substr($hexcolor,0,2));
+	$g = hexdec(substr($hexcolor,2,2));
+	$b = hexdec(substr($hexcolor,4,2));
+	$yiq = (($r*299)+($g*587)+($b*114))/1000;
+	$white = 255;
+	return (($white+0.05)/($yiq+0.05) > 5);
+}
+function getContrastOnBlack($hexcolor){
+	// a VERY good contrast is 7:1
+	// https://www.w3.org/TR/2008/WD-UNDERSTANDING-WCAG20-20080430/visual-audio-contrast7.html
+	$r = hexdec(substr($hexcolor,0,2));
+	$g = hexdec(substr($hexcolor,2,2));
+	$b = hexdec(substr($hexcolor,4,2));
+	$yiq = (($r*299)+($g*587)+($b*114))/1000;
+	$black = 0;
+	return (($yiq+0.05)/($black+0.05) > 14);
+}
+
+/**
+ * Takes a Hexadecimal color and contrasts it just enough
+ * @param (String) $hexcolor Hexadecimal color
+ */
+function setContrastedColorOnWhite($hexcolor) {
+	while(!getContrastOnWhite($hexcolor)) {
+		$hexcolor = darken($hexcolor);
+	}
+	return $hexcolor;
+}
+function setContrastedColorOnBlack($hexcolor) {
+	$hexcolor = shiftColor($hexcolor,80);
+	while(!getContrastOnBlack($hexcolor)) {
+		$hexcolor = lighten($hexcolor);
+	}
+	return $hexcolor;
+}
+
+
+/**
+ * Darken/lighten by a step
+ * inspired by https://stackoverflow.com/questions/3512311/how-to-generate-lighter-darker-color-with-php#11951022
+ * and simplified
+ * @param  (String) $hexcolor Hexadecimal color
+ * @return (String)           Hexadecimal color
+ */
+function darken($hexcolor) {
+	$steps = -10;
+	return shiftColor($hexcolor,$steps);
+}
+function lighten($hexcolor) {
+	$steps = 10;
+	return shiftColor($hexcolor,$steps);
+}
+
+/**
+ * This is where the magic takes place
+ * @param  (String) $hexcolor Hexadecimal color
+ * @param  (Int) $steps       Steps either up or down to respectively lighten/darken
+ * @return (String)           Hexadecimal color
+ */
+function shiftColor($hexcolor,$steps) {
+	$colors = str_split($hexcolor,2);
+	$hexcolor = "";
+	foreach ($colors as $color) {
+		$color = hexdec($color) + $steps;
+		if($color < 0) $color = 0;
+		if($color > 255) $color = 255;
+		$color = dechex($color);
+		if(strlen($color) == 1) $color = "0" . $color;
+		$hexcolor .= $color;
+	}
+	return $hexcolor;
+}
+
+/**
+ * Takes a string and returns a Hexadecimal color string
+ * @param  (String) $str Any text
+ * @return (String)      Hexadecimal color
+ * Haha, this is exactly what tetue wanted to do https://zone.spip.org/trac/spip-zone/browser/_plugins_/numerology/todo.txt#L42
+ */
+function createHexFromText($str) {
+	// we split the string in 3 to have 3 RGB strings
+	$chunks = str_split($str, ceil(strlen($str)/3) );
+	$hexcolor = "";
+	// for each of them, we convert them to a hexadecimal value
+	foreach ($chunks as $chunk) {
+		$nb = 0;
+		for($i=0 ; $i < strlen($chunk) ; $i++) {
+			$nb += hexdec(bin2hex($chunk[$i]));
+		}
+		$nb = ($nb % 255);
+		$color = dechex($nb);
+		if(strlen($color) == 1) $color = "0" . $color;
+		$hexcolor .= $color;
+	}
+	return $hexcolor;
+}
 ?>

@@ -16,11 +16,23 @@
 <link rel="icon" href="/squelettes/favicon.ico" />
 <link rel="shortcut icon" href="/squelettes/favicon.ico" />
 
-[(#REM)
-TODO styles en fonction du titre de la page
+[(#ENV{titrepourcouleur}|strlen|>{0}|oui)
+<!-- S'IL Y A UN TITRE POUR LA COULEUR -->
+<!--
+COULEURS
+[couleur de base : #(#ENV{titrepourcouleur}|createHexFromText)]
+[couleur de fond très claire : #(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnBlack)]
+[couleur de texte contrasté : #(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite)]
+-->
 <style>
-	body, h1, h2, #formulaire_forum {
-		border-color:red;
+	body {
+		[border-color:#(#ENV{titrepourcouleur}|createHexFromText);]
 	}
+	[h1, h2 {
+		color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);
+	}]
+	[h1:before, h2:before, #formulaire_forum:before {
+		background-color:#(#ENV{titrepourcouleur}|createHexFromText);
+	}]
 </style>
 ]

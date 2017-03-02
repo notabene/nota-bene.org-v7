@@ -4,7 +4,10 @@
 <head>
 <title>#NOM_SITE_SPIP, chez Stéphane</title>
 [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|attribut_html)" />]
-<INCLURE(inc/head){skel=#SQUELETTE}>
+<BOUCLE_premierarticle(ARTICLES){!par date}{0,1}>
+#SET{titrepourcouleur,{#TITRE}}
+</BOUCLE_premierarticle>
+<INCLURE(inc/head){skel=#SQUELETTE}{titrepourcouleur=#GET{titrepourcouleur}}>
 
 </head>
 <body>
