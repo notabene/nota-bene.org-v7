@@ -2,7 +2,8 @@
 
 @import "variables";
 @import "forms";
-
+@import "logo";
+@import "lists";
 
 /*
  =LAYOUTS
@@ -57,16 +58,17 @@ blockquote {
 		margin-left: 5%;
 		margin-right: 5%;
 	}
-	background: #eee;
+	background: #fcfcfc;
 	@media screen and (min-width: 30em) {
-		margin-left: 3em;
+		border-left: (1/16)*1em solid $bordercolor;
+		margin-left: (15/16 + 2)*1em;
 		margin-right: 3em;
+		padding:0.5em 1em;
 		overflow: inherit;
 		> * {
 			margin-left:auto;
 			margin-right:auto;
 		}
-		background: none;
 		color:#444;
 	}
 	q, em {
@@ -97,5 +99,14 @@ img {
 	height: auto;
 }
 hr {
-	display: none;
+	visibility: hidden;
+	border:0;
+	&::after {
+		display:block;
+		visibility: visible;
+		content: " ";
+		height:0px;
+		overflow: hidden;
+		@include heading-decoration();
+	}
 }

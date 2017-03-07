@@ -2,6 +2,7 @@
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	'accueil' => "Home",
 	'an_article_by' => 'An article by',
 	'anonyme' => 'anonymous',
 	'a_propos_de_ce_site' => 'About this site',
@@ -30,6 +31,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'quote_open' => '“',
 	'quote_close' => '”',
 	'repondre_a' => "Reply to",
+	'retour_accueil' => 'Back to the home page',
 	'short_url' => 'Short URL:',
 	'sur' => 'on',
 	'sur_twitter' => 'On Twitter (<a href="http://twitter.com/notabene">@notabene</a>)',

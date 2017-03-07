@@ -1,0 +1,13 @@
+ul,ol {list-style: none; padding-left:0; }
+li { margin-left:1.5em; }
+li::before {color: $fontcolor;
+/* display: inline-block; */
+  width: 1.5em;
+  float:left;
+  position: relative;;
+  margin-left: -1.5em}
+
+ul li::before {content: "•"}
+
+ol {counter-reset: li;}
+ol li::before {content: counter(li)"."; counter-increment: li;}

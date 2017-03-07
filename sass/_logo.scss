@@ -1,0 +1,16 @@
+svg {
+	min-width:26em;
+	width:100%;
+	height:auto;
+	display: block;
+}
+path { fill:#000; }
+.decoration { fill:#333; }
+#logo-big { display:none;}
+@media screen and (min-width: 27em) {
+	#logo-big {display:inherit;}
+	#logo-small {display: none;}
+}
+@media screen and (min-width: 54em) {
+	#logo { width:54em; }
+}

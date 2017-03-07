@@ -1,20 +1,21 @@
 //_variables.scss
 
-$bordercolor:#66c;
+$fontcolor:#333;
+$bordercolor:#ccc;
 $borderstyle:$bordercolor solid;
 
 @mixin heading-decoration($fs:1em) {
-	// border-top:(0.3em / $fs * 1em) $borderstyle;
+	border-bottom:(0.0625em / $fs * 1em) $borderstyle;
 	// padding-top: (0.7em / $fs * 1em);
-	&:before {
-		display:block;
-		content:'';
-		height:(0.5em / $fs * 1em);
-		margin-bottom: (0.2em / $fs * 1em);
-		width:(2.4em / $fs * 1em);
-		background-color: $bordercolor;
-	}
-	color: $bordercolor;
+	// &:before {
+	// 	display:block;
+	// 	content:'';
+	// 	height:(0.5em / $fs * 1em);
+	// 	margin-bottom: (0.2em / $fs * 1em);
+	// 	width:(2.4em / $fs * 1em);
+	// 	background-color: $bordercolor;
+	// }
+	color: $fontcolor;
 }
 
 @mixin heading-decoration-none {

@@ -25,14 +25,15 @@ COULEURS
 [couleur de texte contrasté : #(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite)]
 -->
 <style>
-	body {
+	body, blockquote {
 		[border-color:#(#ENV{titrepourcouleur}|createHexFromText);]
 	}
-	[h1, h2 {
-		color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);
-	}]
-	[h1:before, h2:before, #formulaire_forum:before {
-		background-color:#(#ENV{titrepourcouleur}|createHexFromText);
-	}]
+	h1, h2, li::before, hr::after {
+		[color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
+		[border-color:#(#ENV{titrepourcouleur}|createHexFromText);]
+	}
+	.decoration {
+		[fill:#(#ENV{titrepourcouleur}|createHexFromText);]
+	}
 </style>
 ]
