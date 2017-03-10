@@ -72,34 +72,56 @@ ul, ol {
 }
 
 /* line 2, ../sass/_lists.scss */
-li {
-  margin-left: 1.5em;
+ol {
+  counter-reset: li;
 }
 
-/* line 3, ../sass/_lists.scss */
+/* line 4, ../sass/_lists.scss */
 li::before {
   color: #333;
-  /* display: inline-block; */
+}
+
+/* line 8, ../sass/_lists.scss */
+article li {
+  margin-left: 1.5em;
+}
+/* line 11, ../sass/_lists.scss */
+article li::before {
   width: 1.5em;
   float: left;
   position: relative;
   margin-left: -1.5em;
 }
 
-/* line 10, ../sass/_lists.scss */
-ul li::before {
+/* line 20, ../sass/_lists.scss */
+article ul li::before {
   content: "•";
 }
 
-/* line 12, ../sass/_lists.scss */
-ol {
-  counter-reset: li;
-}
-
-/* line 13, ../sass/_lists.scss */
-ol li::before {
+/* line 23, ../sass/_lists.scss */
+article ol li::before {
   content: counter(li) ".";
   counter-increment: li;
+}
+
+/* line 28, ../sass/_lists.scss */
+.footer ul, .footer li {
+  display: inline;
+}
+
+/* line 30, ../sass/_lists.scss */
+.footer li a:link, .footer li a:visited {
+  display: inline-block;
+  color: #fff;
+  background: #333;
+  padding: .5em;
+  margin: .5em;
+  border-radius: .5em;
+  text-decoration: none;
+}
+/* line 39, ../sass/_lists.scss */
+.footer li a:hover, .footer li a:active, .footer li a:focus {
+  background: #000 !important;
 }
 
 /*
@@ -215,17 +237,22 @@ p.compterforums {
  =things
  */
 /* line 97, ../sass/styles.scss */
+a:link, a:visited {
+  color: #000;
+}
+
+/* line 100, ../sass/styles.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 101, ../sass/styles.scss */
+/* line 104, ../sass/styles.scss */
 hr {
   visibility: hidden;
   border: 0;
 }
-/* line 104, ../sass/styles.scss */
+/* line 107, ../sass/styles.scss */
 hr::after {
   display: block;
   visibility: visible;

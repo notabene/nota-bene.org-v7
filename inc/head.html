@@ -32,6 +32,13 @@ COULEURS
 		[color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
 		[border-color:#(#ENV{titrepourcouleur}|createHexFromText);]
 	}
+	a:link, a:visited {
+		[color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
+	}
+	.footer li a:link, .footer li a:visited {
+		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);
+		color:#fff;]
+	}
 	.decoration {
 		[fill:#(#ENV{titrepourcouleur}|createHexFromText);]
 	}

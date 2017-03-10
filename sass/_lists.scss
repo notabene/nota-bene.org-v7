@@ -1,13 +1,42 @@
 ul,ol {list-style: none; padding-left:0; }
-li { margin-left:1.5em; }
-li::before {color: $fontcolor;
-/* display: inline-block; */
-  width: 1.5em;
-  float:left;
-  position: relative;;
-  margin-left: -1.5em}
-
-ul li::before {content: "•"}
-
 ol {counter-reset: li;}
-ol li::before {content: counter(li)"."; counter-increment: li;}
+
+li::before {
+	color: $fontcolor;
+}
+
+article li {
+	margin-left:1.5em;
+
+	&::before {
+		width: 1.5em;
+		float:left;
+		position: relative;
+		margin-left: -1.5em;
+	}
+
+}
+
+article ul li::before {
+	content: "•";
+}
+article ol li::before {
+	content: counter(li)".";
+	counter-increment: li;
+}
+
+.footer ul, .footer li { display:inline; }
+.footer li {
+	a:link, a:visited {
+		display: inline-block;
+		color:#fff;
+		background: #333;
+		padding:.5em;
+		margin:.5em;
+		border-radius: .5em;
+		text-decoration: none;
+	}
+	a:hover, a:active, a:focus {
+		background:#000 !important;
+	}
+}

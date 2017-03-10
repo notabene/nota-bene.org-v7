@@ -17,10 +17,10 @@
 			BOUCLE_articles_par_an : TOTAL_BOUCLE
 		]
 		<BOUCLE_annees_lastarticle(ARTICLES){0,1}{!par date}>#SET{current_year,(#DATE|annee)}</BOUCLE_annees_lastarticle>
-		<BOUCLE_annees(DATA){enum 1998,#GET{current_year}}>
+		<BOUCLE_annees(DATA){enum #GET{current_year},1998}>
 		#SET{year,#VALEUR}
 			<BOUCLE_articles_par_an(ARTICLES){date>=(#GET{year})-01-01}{date<=(#GET{year})-12-31}></BOUCLE_articles_par_an>
-			<li><a href='spip.php?page=year&amp;year=#VALEUR'>#VALEUR (#_articles_par_an:TOTAL_BOUCLE [(#_articles_par_an:TOTAL_BOUCLE|>{1}?{"articles", "article"})])</a></li>
+			<li><a href='spip.php?page=year&amp;year=#VALEUR' title='#VALEUR — #_articles_par_an:TOTAL_BOUCLE [(#_articles_par_an:TOTAL_BOUCLE|>{1}?{"articles", "article"})]' aria-label='#VALEUR — #_articles_par_an:TOTAL_BOUCLE [(#_articles_par_an:TOTAL_BOUCLE|>{1}?{"articles", "article"})]'>#VALEUR</a></li>
 		</BOUCLE_annees>
 		</ul>
 
