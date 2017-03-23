@@ -75,17 +75,17 @@
 
 [(#REM) on ne fait un prev/next que si on n'est pas en 19]
 <BOUCLE_prevnext(ARTICLES){id_article}{id_rubrique!=19}>
-<section class="outer">
+<section class="outer prevnext">
 	<ul class="inner">
 
 	<BOUCLE_precedent(ARTICLES){id_secteur!=19}{age_relatif>=0}{par date}{inverse}{1,1}>
-	<li class="footercontainer column1">
+	<li>
 	<a rel="prev" href="#URL_ARTICLE" lang="#LANG" title="<:article_precedent:> [(#TITRE|attribut_html)]"><:article_precedent:> <span>#TITRE</span></a>
 	</li>
 	</BOUCLE_precedent>
 
 	<BOUCLE_suivant(ARTICLES){id_secteur!=19}{age_relatif<0}{par date}{0,1}>
-	<li class="footercontainer column2">
+	<li>
 	<a rel="next" href="#URL_ARTICLE" lang="#LANG" title="<:article_suivant:> [(#TITRE|attribut_html)]"><:article_suivant:> <span>#TITRE</span></a>
 	</li>
 	</BOUCLE_suivant>

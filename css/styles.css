@@ -347,38 +347,74 @@ hr::after {
  =skiplinks
  */
 /* line 145, ../sass/styles.scss */
-.skiplinkcolors, .skiplinks {
+.invertedcolors, .skiplinks, .prevnext {
   background: #000;
   color: #fff;
 }
 @media screen and (min-width: 30em) {
   /* line 145, ../sass/styles.scss */
-  .skiplinkcolors, .skiplinks {
+  .invertedcolors, .skiplinks, .prevnext {
     background: #333;
   }
 }
+/* line 151, ../sass/styles.scss */
+.invertedcolors a:link, .skiplinks a:link, .prevnext a:link, .invertedcolors a:visited, .skiplinks a:visited, .prevnext a:visited {
+  color: inherit;
+  padding: .2em;
+  text-decoration: none;
+}
+/* line 156, ../sass/styles.scss */
+.invertedcolors a:hover, .skiplinks a:hover, .prevnext a:hover, .invertedcolors a:active, .skiplinks a:active, .prevnext a:active, .invertedcolors a:focus, .skiplinks a:focus, .prevnext a:focus {
+  text-decoration: underline;
+  outline: none;
+}
 
-/* line 152, ../sass/styles.scss */
+/* line 161, ../sass/styles.scss */
 .skiplinks {
   display: block;
   margin: 0;
   padding: .2em;
 }
-/* line 157, ../sass/styles.scss */
+/* line 166, ../sass/styles.scss */
 .skiplinks li {
   margin: 0;
   padding: 0;
   display: inline;
 }
-/* line 162, ../sass/styles.scss */
-.skiplinks a:link, .skiplinks a:visited {
-  color: inherit;
-  padding: .2em;
-  text-decoration: none;
-}
-/* line 167, ../sass/styles.scss */
-.skiplinks a:hover, .skiplinks a:active, .skiplinks a:focus {
-  text-decoration: underline;
+
+/*
+ = prev / next
+ */
+@media screen and (min-width: 30em) {
+  /* line 180, ../sass/styles.scss */
+  .prevnext {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  /* line 184, ../sass/styles.scss */
+  .prevnext ul, .prevnext li {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex: 1;
+  }
+  /* line 190, ../sass/styles.scss */
+  .prevnext ul {
+    margin: auto;
+  }
+  /* line 193, ../sass/styles.scss */
+  .prevnext a:link, .prevnext a:visited {
+    flex: 1;
+  }
+  /* line 196, ../sass/styles.scss */
+  .prevnext a[rel=prev] {
+    padding: .5em .5em .5em .2em;
+  }
+  /* line 199, ../sass/styles.scss */
+  .prevnext a[rel=next] {
+    padding: .5em .2em .5em .5em;
+    text-align: right;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

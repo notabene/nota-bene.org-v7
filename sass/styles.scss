@@ -142,23 +142,12 @@ hr {
 /*
  =skiplinks
  */
-.skiplinkcolors {
+.invertedcolors {
 	background:#000;
 	@media screen and (min-width: 30em) {
 		background: $fontcolor;
 	}
 	color: #fff;
-}
-.skiplinks {
-	display: block;
-	margin: 0;
-	padding:.2em;
-	@extend .skiplinkcolors;
-	li {
-		margin:0;
-		padding:0;
-		display: inline;
-	}
 	& a:link, & a:visited {
 		color:inherit;
 		padding:.2em;
@@ -166,5 +155,51 @@ hr {
 	}
 	& a:hover, & a:active, & a:focus {
 		text-decoration: underline;
+		outline: none;
+	}
+}
+.skiplinks {
+	display: block;
+	margin: 0;
+	padding:.2em;
+	@extend .invertedcolors;
+	li {
+		margin:0;
+		padding:0;
+		display: inline;
+	}
+}
+
+/*
+ = prev / next
+ */
+
+.prevnext {
+	@extend .invertedcolors;
+	@media screen and (min-width: 30em) {
+		& {
+			padding-top:0;
+			padding-bottom:0;
+		}
+		ul, li {
+			margin:0;
+			padding:0;
+			display: flex;
+			flex:1;
+		}
+		ul {
+			margin: auto;
+		}
+		& a:link, & a:visited {
+			flex:1;
+		}
+		& a[rel=prev] {
+			padding: .5em .5em .5em .2em;
+		}
+		& a[rel=next] {
+			padding: .5em .2em .5em .5em;
+			text-align: right;
+		}
+
 	}
 }
