@@ -19,14 +19,16 @@ Squelettes de base:
   ✔ Navigation top @done (15-04-02 18:06)
   ✔ Navigation bottom @done (15-04-02 18:06)
   ☐ article-15.html : photo (un skel à part finalement)
+  ☐ rubrique-15.html
 
 Addons:
   ✔ Prev / next @done (17-03-23 19:21)
   ☐ Style `.descriptif`
   ☐ Plugin Gravatar
+  ☐ RWD sommaire
+  ☐ RWD article
 
 Later:
-  ☐ RWD
   ☐ commentaires "répondre à" : vérifier que l'id parent est bien rempli + event https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
   ☐ pullquotes au-delà de https://developer.mozilla.org/en-US/docs/Web/API/window.matchMedia
   ☐ Dyslexie / Confort+ ?

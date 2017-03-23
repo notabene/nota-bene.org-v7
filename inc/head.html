@@ -31,20 +31,17 @@ COULEURS
 	.skiplinks, .prevnext {
 		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
 	}
-	h1, h2, li::before {
+	h1, h2, li::before, a:link, a:visited {
 		[color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
 	}
 	hr::after {
-		[border-color:#(#ENV{titrepourcouleur}|createHexFromText);]
-	}
-	a:link, a:visited {
-		[color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
+		[background:#(#ENV{titrepourcouleur}|createHexFromText);]
 	}
 	a:hover, a:active, a:focus {
 		color:#fff;
 		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
 	}
-	footer.outer {
+	footer.outer, blockquote {
 		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnBlack);]
 	}
 	.decoration {

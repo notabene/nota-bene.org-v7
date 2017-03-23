@@ -132,10 +132,10 @@ hr {
 		display:block;
 		visibility: visible;
 		content: " ";
-		height:0px;
+		height:0.5em;
 		overflow: hidden;
-		border-bottom:0.0625em solid $bordercolor;
-
+		background:$bordercolor;
+		width:5%;
 	}
 }
 
