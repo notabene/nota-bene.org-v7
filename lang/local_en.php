@@ -33,6 +33,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'repondre_a' => "Reply to",
 	'retour_accueil' => 'Back to the home page',
 	'short_url' => 'Short URL:',
+	'skiptocontent' => 'Skip to content',
+	'skiptonavigation' => 'Skip to navigation',
 	'sur' => 'on',
 	'sur_twitter' => 'On Twitter (<a href="http://twitter.com/notabene">@notabene</a>)',
 	'tags' => 'Tags',

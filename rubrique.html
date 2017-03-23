@@ -10,7 +10,7 @@
 
 <INCLURE(inc/body/prepend){id_rubrique}>
 
-<article class="outer">
+<main id="main" class="outer">
 	<div class="inner">
 <h1>#TITRE</h1>
 
@@ -23,7 +23,8 @@
 [<p class="pagine">[(#ANCRE_PAGINATION)](#PAGINATION)</p>]
 <ul>
 <BOUCLE_articles(ARTICLES){id_rubrique}{!par date}{pagination 20}>
-	<li><a href="#URL_ARTICLE">#TITRE</a></li>
+	<li><INCLURE(inc/listitem){id_article}{skel=#SQUELETTE}></li>
+	[(#REM) <li><a href="#URL_ARTICLE">#TITRE</a></li>]
 </BOUCLE_articles>
 </ul>
 [<p class="pagine cleanup">(#PAGINATION)</p>]
@@ -31,7 +32,7 @@
 </section>
 
 	</div><!-- /.inner -->
-</article><!-- /article principal -->
+</main><!-- /main -->
 
 <INCLURE(inc/body/append){id_rubrique}>
 </body>

@@ -294,8 +294,7 @@ function getContrastOnBlack($hexcolor){
 	$g = hexdec(substr($hexcolor,2,2));
 	$b = hexdec(substr($hexcolor,4,2));
 	$yiq = (($r*299)+($g*587)+($b*114))/1000;
-	$black = 0;
-	return (($yiq+0.05)/($black+0.05) > 14);
+	return (($yiq)/(0.05) > 8);
 }
 
 /**
@@ -325,11 +324,11 @@ function setContrastedColorOnBlack($hexcolor) {
  * @return (String)           Hexadecimal color
  */
 function darken($hexcolor) {
-	$steps = -10;
+	$steps = -5;
 	return shiftColor($hexcolor,$steps);
 }
 function lighten($hexcolor) {
-	$steps = 10;
+	$steps = 5;
 	return shiftColor($hexcolor,$steps);
 }
 

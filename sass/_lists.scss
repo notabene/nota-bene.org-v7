@@ -25,18 +25,3 @@ article ol li::before {
 	counter-increment: li;
 }
 
-.footer ul, .footer li { display:inline; }
-.footer li {
-	a:link, a:visited {
-		display: inline-block;
-		color:#fff;
-		background: #333;
-		padding:.5em;
-		margin:.5em;
-		border-radius: .5em;
-		text-decoration: none;
-	}
-	a:hover, a:active, a:focus {
-		background:#000 !important;
-	}
-}

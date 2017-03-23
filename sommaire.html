@@ -4,16 +4,14 @@
 <head>
 <title>#NOM_SITE_SPIP, chez Stéphane</title>
 [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|attribut_html)" />]
-<BOUCLE_premierarticle(ARTICLES){!par date}{0,1}>
-#SET{titrepourcouleur,{#TITRE}}
-</BOUCLE_premierarticle>
-<INCLURE(inc/head){skel=#SQUELETTE}{titrepourcouleur=#GET{titrepourcouleur}}>
+<INCLURE(inc/head){skel=#SQUELETTE}>
 
 </head>
 <body>
 
 <INCLURE(inc/body/prepend){skel=#SQUELETTE}>
 
+<main id="main">
 <section class="about outer"><div class="inner">
 <p lang="fr">Vous voilà chez
  <BOUCLE_auteurs(AUTEURS){" et "}><a href="#URL_AUTEUR">#NOM</a></BOUCLE_auteurs>.
@@ -51,7 +49,7 @@
 	</div><!-- /.inner -->
 </section><!-- /.outer -->
 
-
+</main>
 <INCLURE(inc/body/append){skel=#SQUELETTE}>
 
 </body>

@@ -1,0 +1,20 @@
+footer.outer {
+	background:#eee;
+	h1,h2,h3 {
+		color:#000;
+	}
+	ul, li { display:inline; }
+	li {
+		a:link, a:visited {
+			display: inline-block;
+			color:#000;
+			padding:.5em;
+			margin:.5em;
+			border-radius: .5em;
+			text-decoration: none;
+		}
+		a:hover, a:active, a:focus {
+			background:#fff !important;
+		}
+	}
+}

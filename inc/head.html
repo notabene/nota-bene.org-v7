@@ -28,16 +28,24 @@ COULEURS
 	body, blockquote {
 		[border-color:#(#ENV{titrepourcouleur}|createHexFromText);]
 	}
-	h1, h2, li::before, hr::after {
+	.skiplinks {
+		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
+	}
+	h1, h2, li::before {
 		[color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
+	}
+	hr::after {
 		[border-color:#(#ENV{titrepourcouleur}|createHexFromText);]
 	}
 	a:link, a:visited {
 		[color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
 	}
-	.footer li a:link, .footer li a:visited {
-		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);
-		color:#fff;]
+	a:hover, a:active, a:focus {
+		color:#fff;
+		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
+	}
+	footer.outer {
+		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnBlack);]
 	}
 	.decoration {
 		[fill:#(#ENV{titrepourcouleur}|createHexFromText);]

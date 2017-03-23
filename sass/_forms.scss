@@ -11,6 +11,7 @@ fieldset {
 	border:none;
 }
 legend {
+	@include fonts-showoff(2);
 	font-weight: bold;
 }
 form {

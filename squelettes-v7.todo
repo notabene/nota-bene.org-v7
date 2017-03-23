@@ -15,55 +15,19 @@ Squelettes de base:
   ✔ article si photo @done (15-04-03 09:53)
   ✔ Item de liste : photo + texte @done (15-12-03 10:13)
   ✔ sommaire une fois les items de liste faits : 1 bloc texte, 1 bloc photos, 1 bloc syndication @done (15-12-03 10:45)
-  ☐ harmoniser liste sommaire et liste rubrique et liste recherche
+  ✔ harmoniser liste sommaire et liste rubrique et liste recherche @done (17-03-23 18:22)
   ✔ Navigation top @done (15-04-02 18:06)
   ✔ Navigation bottom @done (15-04-02 18:06)
-  ☐ modeles/img → mettre des longdesc partout et arrêter figure/figcaption
   ☐ article-15.html : photo (un skel à part finalement)
 
-  Header HTTP Content-language:
-    ☐ Notifier spip-dev du manque ?
-    ✔ 404 @done (15-04-03 09:35)
-    ✔ article @done (15-03-25 15:31)
-    ✔ auteur @done (15-04-03 09:36)
-    ✔ forum @done (15-04-03 09:36)
-    ✔ longdesc @done (15-04-03 09:38)
-    ✔ mot @done (15-04-03 09:38)
-    ✔ recherche @done (15-04-03 09:56)
-    ✔ rubrique @done (15-04-03 09:56)
-    ✔ sommaire @done (15-03-25 15:31)
-    ✔ year @done (15-04-03 09:57)
-    ☐ article-15.html
+Addons:
+  ☐ Prev / next
+  ☐ Style `.descriptif`
+  ☐ Plugin Gravatar
 
-    ✔ Langue : sur la home attention les dates des items sont en français @done (15-04-03 10:17)
-    ☐ Header de cache…?
-
-
-Sémantique HTML:
-  ☐ sommaire
-  ☐ article
-  ☐ artice-15
-  ☐ inc/comments
-  ☐ forum
-  ☐ rubrique
-  ☐ 404
-  ☐ auteur
-  ☐ recherche + filtre "recherche_extrait"
-  ☐ longdesc
-  ☐ mot
-  ✔ blockquote → footer → cite CSS @done (15-11-12 09:40)
-  ☐ Archives par année
-  ☐ Twitter card / OpenGraph
-  ☐ footer page : retirer les `blockquote`
-
-JS:
+Later:
+  ☐ RWD
   ☐ commentaires "répondre à" : vérifier que l'id parent est bien rempli + event https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
   ☐ pullquotes au-delà de https://developer.mozilla.org/en-US/docs/Web/API/window.matchMedia
   ☐ Dyslexie / Confort+ ?
 
-Contrôler:
-  ☐ Brèves
-  ☐ A propos
-  ☐ image + alt
-  ☐ Fixer des caches conservateurs pour les squelettes
-  ☐ Si changement du portrait, changer le crédit dans auteur.html
