@@ -232,7 +232,7 @@ h1 {
     overflow: hidden;
     background: #ccc;
     width: 5%;
-    margin: 1em 0;
+    margin: 0.5em 0;
   }
 }
 
@@ -255,7 +255,7 @@ h2 {
     overflow: hidden;
     background: #ccc;
     width: 5%;
-    margin: 1em 0;
+    margin: 0.66667em 0;
   }
 }
 /* line 64, ../sass/styles.scss */
@@ -284,7 +284,7 @@ blockquote {
   margin-left: -5.5555556%;
   margin-right: -5.5555556%;
   overflow: hidden;
-  background: #fcfcfc;
+  background: #ccc;
 }
 /* line 85, ../sass/styles.scss */
 blockquote > * {
@@ -452,6 +452,39 @@ hr::after {
     padding: .5em .2em .5em .5em;
     text-align: right;
   }
+}
+
+/* line 214, ../sass/styles.scss */
+.descriptif {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+@media screen and (min-width: 30em) {
+  /* line 214, ../sass/styles.scss */
+  .descriptif {
+    font-style: italic;
+    font-family: 'aleo', Georgia, Times, serif;
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 45em) {
+  /* line 225, ../sass/styles.scss */
+  .spip_documents_left {
+    float: left;
+    margin-right: .5em;
+  }
+
+  /* line 229, ../sass/styles.scss */
+  .spip_documents_right {
+    float: right;
+    margin-left: .5em;
+  }
+}
+/* line 235, ../sass/styles.scss */
+figure {
+  font-size: .75em;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=styles.css.map */

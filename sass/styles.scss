@@ -86,7 +86,7 @@ blockquote {
 		margin-left: 5%;
 		margin-right: 5%;
 	}
-	background: #fcfcfc;
+	background: $lightbackground;
 	@media screen and (min-width: 30em) {
 		@include fonts-showoff(2);
 		border-left: (1/16)*1em solid $bordercolor;
@@ -209,4 +209,30 @@ hr {
 		}
 
 	}
+}
+
+.descriptif {
+	font-size: 1.2em;
+	font-weight: bold;
+	@media screen and (min-width: 30em) {
+		font-style: italic;
+		@include fonts-showoff(2);
+		font-size:1.5em;
+	}
+}
+
+@media screen and (min-width: 45em) {
+	.spip_documents_left {
+		float: left;
+		margin-right:.5em;
+	}
+	.spip_documents_right {
+		float: right;
+		margin-left:.5em;
+	}
+}
+
+figure {
+	font-size: .75em;
+	font-weight: bold;
 }

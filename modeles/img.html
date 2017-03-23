@@ -17,7 +17,7 @@
 		|?{' '}
 })][
 (#REM) avoidfigure : si oui ne rien faire, sinon inserer <figure> et <figcaption>
-on evite d'inserer les balises si on est en align left ou right, parce qu'on est dans du texte donc ça va mettre le bazar 
+on evite d'inserer les balises si on est en align left ou right, parce qu'on est dans du texte donc ça va mettre le bazar
 ][(#SET{avoidfigure,#ENV{align}|match{'left|right'}|?{' '}
 })][
 
@@ -25,11 +25,11 @@ on evite d'inserer les balises si on est en align left ou right, parce qu'on est
 
 ][(#GET{image}|oui)
 [(#GET{avoidfigure}|oui)
-<span class='spip_document_#ID_DOCUMENT spip_documents[ spip_documents_(#ENV{align})][ (#ENV{class})] spip_lien_ok'[ style='float:(#ENV{align}|match{left|right});[ width:(#LARGEUR)px;]']>
+<span class='spip_document_#ID_DOCUMENT spip_documents[ spip_documents_(#ENV{align})][ (#ENV{class})] spip_lien_ok' style='display:block;[ max-width:(#LARGEUR)px;]'>
 [<a href="(#ENV{lien})"[ class="(#ENV{lien_class})"]>]<img src='#URL_DOCUMENT'[ width="(#LARGEUR)"][ height="(#HAUTEUR)"] alt="[(#TITRE|texte_backend)]"[ title="(#TITRE|texte_backend)"] />[(#ENV{lien}|?{</a>})]</span>
 ][(#GET{avoidfigure}|non)
 <figure>
-<span class='spip_document_#ID_DOCUMENT spip_documents[ spip_documents_(#ENV{align})][ (#ENV{class})] spip_lien_ok'[ style='float:(#ENV{align}|match{left|right});[ width:(#LARGEUR)px;]']>
+<span class='spip_document_#ID_DOCUMENT spip_documents[ spip_documents_(#ENV{align})][ (#ENV{class})] spip_lien_ok' style='display:block;[ max-width:(#LARGEUR)px;]'>
 [<a href="(#ENV{lien})"[ class="(#ENV{lien_class})"]>]<img src='#URL_DOCUMENT'[ width="(#LARGEUR)"][ height="(#HAUTEUR)"] alt="" />[(#ENV{lien}|?{</a>})]</span>
 <figcaption>#TITRE</figcaption>
 </figure>

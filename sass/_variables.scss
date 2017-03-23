@@ -2,6 +2,7 @@
 
 $fontcolor:#333;
 $bordercolor:#ccc;
+$lightbackground:#ccc;
 
 @mixin fonts-showoff($mode:1) {
 	@if($mode == 2) { // on a choisi d'enrichir avec des webfonts
@@ -19,7 +20,7 @@ $bordercolor:#ccc;
 	overflow: hidden;
 	background:$bordercolor;
 	width:5%;
-	margin:1em 0;
+	margin:(1em / $fs * 1em) 0;
 }
 
 @mixin heading-decoration-smallscreen() {

@@ -37,12 +37,15 @@ COULEURS
 	hr::after {
 		[background:#(#ENV{titrepourcouleur}|createHexFromText);]
 	}
-	a:hover, a:active, a:focus {
-		color:#fff;
-		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
-	}
 	footer.outer, blockquote {
 		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnBlack);]
+	}
+	blockquote a:link, blockquote a:visited {
+		color:#000;
+	}
+	a:hover, a:active, a:focus, blockquote a:hover, blockquote a:active, blockquote a:focus {
+		color:#fff;
+		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
 	}
 	.decoration {
 		[fill:#(#ENV{titrepourcouleur}|createHexFromText);]
