@@ -10,3 +10,25 @@ $bordercolor:#ccc;
 		font-family: Georgia, Times, serif;
 	}
 }
+
+@mixin heading-decoration($fs:1em) {
+	display:block;
+	visibility: visible;
+	content: " ";
+	height: (0.5em / $fs * 1em);
+	overflow: hidden;
+	background:$bordercolor;
+	width:5%;
+	margin:1em 0;
+}
+
+@mixin heading-decoration-smallscreen() {
+	display:block;
+	visibility: visible;
+	content: " ";
+	height: 1px;
+	overflow: hidden;
+	background:$bordercolor;
+	width:20%;
+	margin:auto;
+}
