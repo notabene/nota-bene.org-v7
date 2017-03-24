@@ -29,11 +29,14 @@ body {
 	margin:auto;
 	max-width:60em;
 }
+#main {
+	line-height: 1.5;
+}
 
 /*
  =BLOCKS
  */
-h1,h2, h3 {
+h1,h2 {
 	@include fonts-showoff;
 	font-weight: bold;
 	& a:link, & a:visited {
@@ -53,6 +56,13 @@ h1 {
 }
 h2 {
 	font-size: 1.2em;
+	span.date {
+		display: block;
+		font-size:0.833333em;
+		font-weight: normal;
+		text-decoration: none;
+		color:$fontcolor;
+	}
 	@media screen and (min-width: 30em) {
 		@include fonts-showoff(2);
 		$fs:1.5em;
@@ -61,18 +71,18 @@ h2 {
 			@include heading-decoration($fs);
 		}
 	}
-	span.date {
-		display: block;
-		font-size:0.85em;
-		font-weight: normal;
-		text-decoration: none;
-		color:$fontcolor;
-	}
 }
 h3 {
 	font-size: 1.2em;
 	@media screen and (min-width: 30em) {
 		@include fonts-showoff(2);
+	}
+	span.meta {
+		display: block;
+		font-size:0.833333em;
+		font-weight: normal;
+		text-decoration: none;
+		color:$fontcolor;
 	}
 }
 
@@ -94,6 +104,7 @@ blockquote {
 		margin-right: 3em;
 		padding:0.5em 1em;
 		overflow: inherit;
+		background: none;
 		> * {
 			margin-left:auto;
 			margin-right:auto;
@@ -109,12 +120,11 @@ blockquote {
 			font-style: italic;
 		}
 	}
+	a:link, a:visited {
+		color:#000;
+	}
 }
 
-figure {
-	margin:1em 0;
-
-}
 
 p.compterforums {
 	display:none;
@@ -183,6 +193,10 @@ hr {
 
 .prevnext {
 	@extend .invertedcolors;
+	a:link, a:visited {
+		display:block;
+		padding: .5em;
+	}
 	@media screen and (min-width: 30em) {
 		& {
 			padding-top:0;
@@ -197,13 +211,13 @@ hr {
 		ul {
 			margin: auto;
 		}
-		& a:link, & a:visited {
+		a:link, a:visited {
 			flex:1;
 		}
-		& a[rel=prev] {
+		a[rel=prev] {
 			padding: .5em .5em .5em .2em;
 		}
-		& a[rel=next] {
+		a[rel=next] {
 			padding: .5em .2em .5em .5em;
 			text-align: right;
 		}
@@ -235,4 +249,5 @@ hr {
 figure {
 	font-size: .75em;
 	font-weight: bold;
+	margin:1em 0;
 }

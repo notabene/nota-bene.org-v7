@@ -33,15 +33,14 @@ COULEURS
 	}
 	h1, h2, li::before, a:link, a:visited {
 		[color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
+		[text-decoration-color:#(#ENV{titrepourcouleur}|createHexFromText);]
+
 	}
 	hr::after {
 		[background:#(#ENV{titrepourcouleur}|createHexFromText);]
 	}
-	footer.outer, blockquote {
+	footer.outer {
 		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnBlack);]
-	}
-	blockquote a:link, blockquote a:visited {
-		color:#000;
 	}
 	a:hover, a:active, a:focus, blockquote a:hover, blockquote a:active, blockquote a:focus {
 		color:#fff;

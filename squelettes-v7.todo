@@ -27,6 +27,7 @@ Addons:
   ☐ Plugin Gravatar
   ☐ RWD sommaire
   ☐ RWD article
+  ✔ Dates et "en réponse à" dans les commentaires : span.date dans le h3 @done (17-03-24 01:02)
 
 Later:
   ☐ commentaires "répondre à" : vérifier que l'id parent est bien rempli + event https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
