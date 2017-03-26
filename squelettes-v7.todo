@@ -24,13 +24,12 @@ Squelettes de base:
 Addons:
   ✔ Prev / next @done (17-03-23 19:21)
   ✔ Style `.descriptif` @done (17-03-24 00:01)
-  ☐ Plugin Gravatar
+  ✔ Plugin Gravatar @done (17-03-24 22:29)
   ☐ RWD sommaire
   ☐ RWD article
   ✔ Dates et "en réponse à" dans les commentaires : span.date dans le h3 @done (17-03-24 01:02)
 
 Later:
-  ☐ commentaires "répondre à" : vérifier que l'id parent est bien rempli + event https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
   ☐ pullquotes au-delà de https://developer.mozilla.org/en-US/docs/Web/API/window.matchMedia
   ☐ Dyslexie / Confort+ ?
 

@@ -34,7 +34,6 @@ COULEURS
 	h1, h2, li::before, a:link, a:visited {
 		[color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
 		[text-decoration-color:#(#ENV{titrepourcouleur}|createHexFromText);]
-
 	}
 	hr::after {
 		[background:#(#ENV{titrepourcouleur}|createHexFromText);]
