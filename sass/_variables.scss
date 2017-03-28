@@ -12,14 +12,14 @@ $lightbackground:#ccc;
 	}
 }
 
-@mixin heading-decoration($fs:1em) {
+@mixin heading-decoration($fs:1em,$width:5%) {
 	display:block;
 	visibility: visible;
 	content: " ";
 	height: (0.5em / $fs * 1em);
 	overflow: hidden;
 	background:$bordercolor;
-	width:5%;
+	width:$width;
 	margin:(1em / $fs * 1em) 0;
 }
 

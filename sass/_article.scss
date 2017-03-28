@@ -1,0 +1,21 @@
+article {
+	@media screen and (min-width: 45em) {
+		aside {
+			float:right;
+			width:15em;
+			margin-left:.5em;
+			&::before {
+				@include heading-decoration(1em,15%);
+				margin-top:0;
+			}
+		}
+	}
+	@media screen and (min-width: 62em) {
+		aside {
+			margin-left:0;
+		}
+		section {
+			margin-right:17em;
+		}
+	}
+}
