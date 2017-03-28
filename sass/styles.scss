@@ -241,7 +241,14 @@ hr {
 }
 
 figure {
+	margin:1em 0;
+}
+figcaption {
 	font-size: .75em;
 	font-weight: bold;
-	margin:1em 0;
+	@include fonts-showoff;
+	@media screen and (min-width: 30em) {
+		@include fonts-showoff(2);
+		font-size: .875em;
+	}
 }

@@ -535,9 +535,21 @@ hr::after {
 }
 /* line 243, ../sass/styles.scss */
 figure {
+  margin: 1em 0;
+}
+
+/* line 246, ../sass/styles.scss */
+figcaption {
   font-size: .75em;
   font-weight: bold;
-  margin: 1em 0;
+  font-family: Georgia, Times, serif;
+}
+@media screen and (min-width: 30em) {
+  /* line 246, ../sass/styles.scss */
+  figcaption {
+    font-family: 'aleo', Georgia, Times, serif;
+    font-size: .875em;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
