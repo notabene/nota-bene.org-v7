@@ -211,7 +211,7 @@ li.forum {
   margin-bottom: 1.33333em;
 }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 50em) {
   /* line 3, ../sass/_article.scss */
   article aside {
     float: right;
