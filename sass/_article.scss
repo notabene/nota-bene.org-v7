@@ -17,5 +17,9 @@ article {
 		section {
 			margin-right:17em;
 		}
+		section.descriptif {
+			margin-right:(17em / 1.5em *1em);
+		}
+
 	}
 }

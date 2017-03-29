@@ -210,6 +210,10 @@ li.forum {
   font-weight: bold;
   margin-bottom: 1.33333em;
 }
+/* line 33, ../sass/_forums.scss */
+.forum-repondre a:link, .forum-repondre a:visited {
+  color: #000;
+}
 
 @media screen and (min-width: 50em) {
   /* line 3, ../sass/_article.scss */
@@ -239,6 +243,10 @@ li.forum {
   /* line 17, ../sass/_article.scss */
   article section {
     margin-right: 17em;
+  }
+  /* line 20, ../sass/_article.scss */
+  article section.descriptif {
+    margin-right: 11.33333em;
   }
 }
 
