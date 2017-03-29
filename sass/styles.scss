@@ -24,7 +24,8 @@ body {
 	font-size: 1em;
 }
 .outer {
-	padding:1em 5%;
+	padding-left:5%;
+	padding-right:5%;
 }
 .inner {
 	width:auto;
@@ -215,6 +216,11 @@ hr {
 		a[rel=next] {
 			padding: .5em .2em .5em .5em;
 			text-align: right;
+		}
+		span {
+			display: block;
+			text-align: inherit;
+			font-weight: bold;
 		}
 
 	}

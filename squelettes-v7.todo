@@ -28,6 +28,7 @@ Addons:
   ☐ RWD sommaire
   ✔ RWD article @done (17-03-29 00:52)
   ✔ Dates et "en réponse à" dans les commentaires : span.date dans le h3 @done (17-03-24 01:02)
+  ☐ Style forms
 
 Later:
   ☐ pullquotes au-delà de https://developer.mozilla.org/en-US/docs/Web/API/window.matchMedia
