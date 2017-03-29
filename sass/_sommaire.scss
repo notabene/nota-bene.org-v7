@@ -1,0 +1,26 @@
+.sommaire-columns {
+
+	@supports(display:flex) {
+		@media screen and (min-width: 60em) {
+			display: flex;
+			.articles {
+				flex:2;
+				margin-right:2em;
+			}
+			.photos {
+				flex:1;
+			}
+
+		}
+	}
+
+
+}
+.sommaire p.descriptif {
+	&[lang=fr] {
+		margin-bottom: 0;
+	}
+	&[lang=en] {
+		margin-top: 0;
+	}
+}

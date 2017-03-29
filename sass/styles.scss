@@ -8,6 +8,8 @@
 @import "footer";
 @import "forums";
 @import "article";
+@import "sommaire";
+@import "photos";
 
 /*
  =LAYOUTS
@@ -52,9 +54,9 @@ h1 {
 		@include fonts-showoff(2);
 		$fs:2em;
 		font-size:$fs;
-		.sommaire section &::before {
-			@include heading-decoration($fs);
-		}
+		// .sommaire section &::before {
+		// 	@include heading-decoration($fs);
+		// }
 	}
 }
 h2 {

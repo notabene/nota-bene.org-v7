@@ -12,12 +12,12 @@
 <INCLURE(inc/body/prepend){skel=#SQUELETTE}>
 
 <main id="main">
-<section class="about outer"><div class="inner">
-<p lang="fr">Vous voilà chez
+<section class="outer"><div class="inner">
+<p class="descriptif" lang="fr">Vous voilà chez
  <BOUCLE_auteurs(AUTEURS){" et "}><a href="#URL_AUTEUR">#NOM</a></BOUCLE_auteurs>.
  Stéphane fait un peu d’accessibilité web, de temps en temps.
 </p>
-<p lang="en">This is the personal site of
+<p class="descriptif" lang="en">This is the personal site of
  <BOUCLE_auteurs2(AUTEURS){" and "}><a href="#URL_AUTEUR">#NOM</a></BOUCLE_auteurs2>.
  Stéphane does a bit of Web accessibility, from time to time.
 </p>
@@ -25,26 +25,24 @@
 </section><!-- /.about -->
 
 
-[(#REM) La une]
 <section class="outer">
-	<div class="inner">
+	<div class="inner sommaire-columns">
 
+[(#REM) La une]
+<div class="articles">
 <h1>Des articles</h1>
 <ul class="listitems"><BOUCLE_une(ARTICLES){!par date}{0,10}{id_rubrique!=15}>
 	<li><INCLURE(inc/listitem){id_article}{skel=#SQUELETTE}></li>
 </BOUCLE_une></ul>
-
-	</div><!-- /.inner -->
-</section><!-- /.outer -->
+</div> <!-- /.articles -->
 
 [(#REM) Photos]
-<section class="outer">
-	<div class="inner">
-
+<div class="photos">
 <h1>Des photos</h1>
-<ul class="listitems"><BOUCLE_photos(ARTICLES){!par date}{0,10}{id_rubrique=15}>
+<ul class="listitems"><BOUCLE_photos(ARTICLES){!par date}{0,5}{id_rubrique=15}>
 	<li><INCLURE(inc/listitem-15){id_article}{skel=#SQUELETTE}></li>
 </BOUCLE_photos></ul>
+</div> <!-- /.photos -->
 
 	</div><!-- /.inner -->
 </section><!-- /.outer -->
