@@ -3,26 +3,36 @@
 #formulaire_forum {
 	//@include heading-decoration();
 
-}
-
-fieldset {
-	padding:0;
-	margin:0;
-	border:none;
-}
-legend {
-	@include fonts-showoff(2);
-	font-weight: bold;
-}
-form {
+	fieldset {
+		padding:0;
+		margin:0;
+		border:none;
+	}
+	legend {
+		@include fonts-showoff(2);
+		font-weight: bold;
+	}
 	ul,li {
 		list-style-type: none;
 		margin:0;
 		padding:0;
 		margin-top:1em;
 	}
+	li.editer,p.boutons, .qui p {
+		width:80%;
+		margin-left:3.5em;
+	}
+	li.forum-fil {
+		width:100%;
+		margin:0;
+	}
+	li.editer::before, li.forum-fil::before, .previsu>ul>li::before {
+		content: none;
+	}
+	input[type=text], textarea {
+		width: 90%;
+		display: block;
+	}
+
 }
-input[type=text], textarea {
-	width: 90%;
-	display: block;
-}
+

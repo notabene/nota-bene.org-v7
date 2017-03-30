@@ -5,6 +5,9 @@
 	.listitem {
 		float:left;
 	}
+	h2 {
+		margin-top:0;
+	}
 	&::after {
 		clear:both;
 		display:block;
@@ -19,7 +22,7 @@
 		}
 		.listitem {
 			flex:1 0 auto;
-			margin:1em;
+			margin:0 1em 1em 1em;
 			line-height: 1;
 			text-align: center;
 			// width:320px;

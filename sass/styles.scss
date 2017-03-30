@@ -125,10 +125,6 @@ blockquote {
 }
 
 
-p.compterforums {
-	display:none;
-}
-
 /*
  =inline things
  */
@@ -217,5 +213,14 @@ figcaption {
 	@media screen and (min-width: 30em) {
 		@include fonts-showoff(2);
 		font-size: .875em;
+	}
+}
+
+.listitem {
+	h2 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
 	}
 }
