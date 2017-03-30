@@ -1,0 +1,15 @@
+// Photos
+
+.photos {
+	padding:1px 0;
+	background: $lightbackground;
+	width:100%;
+	div {
+		margin:1em auto;
+	}
+	img, span.date {
+		display:block;
+		margin:auto;
+		text-align: center;
+	}
+}

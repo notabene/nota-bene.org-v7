@@ -1,0 +1,117 @@
+<BOUCLE_principale(ARTICLES){id_article}>
+#HTTP_HEADER{Content-language:#LANG}
+<!doctype html>
+<html lang="#LANG" class="article rubrique#ID_RUBRIQUE">
+<head>
+<title>[(#TITRE|textebrut)] | #NOM_SITE_SPIP</title>
+[<meta name="description" content="(#INTRODUCTION|attribut_html)" />]
+<BOUCLE_extrairecouleur(DOCUMENTS){id_article}{extension==(png|jpg|gif)}{0,1}>
+#SET{couleur,#FICHIER|couleur_extraire{5,15}}
+</BOUCLE_extrairecouleur>
+
+<INCLURE(inc/head-15){skel=#SQUELETTE}{couleur=#GET{couleur}}>
+
+<!-- URL article : #URL_ARTICLE -->
+<link rel="canonical" href="http://nota-bene.org/#URL_ARTICLE" />
+</head>
+
+<body>
+
+<INCLURE(inc/body/prepend){skel=#SQUELETTE}{id_article}>
+
+
+<article id="main">
+
+	<div class="outer">
+		<div class="inner">
+			<h1>#TITRE</h1>
+		</div>
+	</div><!-- .outer -->
+
+	<B_photos>
+	<section class="photos">
+	<BOUCLE_photos(DOCUMENTS){id_article}{extension==(png|jpg|gif)}>
+	<div>
+	<img src="[(#FICHIER)]"[ width="(#LARGEUR)"][ height="(#HAUTEUR)"] alt="[(#TITRE|attribut_html)]"[(#DESCRIPTIF|attribut_html|oui) longdesc="/spip.php?page=longdesc&id_document=#ID_DOCUMENT"]>
+	[(#FICHIER|image_reduire{20})]
+	<span class="date"><span class="paren">(<:date_prise_de_vue:> </span>[(#FICHIER|exif_read_data|nb_dateexif)]<span class="paren">)</span>
+	</div>
+	</BOUCLE_photos>
+	</section>
+	</B_photos>
+
+	<div class="outer">
+		<div class="inner">
+			<aside class="about">
+				<h2 class="hideme"><:aproposdecetarticle:></h2>
+				<BOUCLE_auteurs(AUTEURS){id_article}{", "}>
+				<p><:an_article_by:>
+				<a href="#URL_AUTEUR">#NOM</a>
+				</p>
+				</BOUCLE_auteurs>
+				<p><:publishedon:> <span>[(#DATE|affdate)]</span></p>
+				<p><a href="http://nota-bene.org/#ID_ARTICLE"><:short_url:> (#ID_ARTICLE)</a></p>
+				<BOUCLE_traductions(ARTICLES){traduction}{exclus}>
+				<p lang="#LANG" ><:traduction:> <a rel="alternate" href="#URL_ARTICLE">#TITRE</a></p>
+				</BOUCLE_traductions>
+				<p class="compterforums"><BOUCLE_compterforums(FORUMS){plat}{id_article}></BOUCLE_compterforums>
+				<a href="#comments">#_compterforums:TOTAL_BOUCLE <:commentaire_min:>[(#_compterforums:TOTAL_BOUCLE|>{1}|?{s,""})]</a>
+				<//BOUCLE_compterforums></p>
+				<B_tags>
+					<h3><:tags:></h3>
+					<p><BOUCLE_tags(MOTS){id_article}{id_groupe!=2}{id_groupe!=5}{", "}><a href="#URL_MOT" rel="tag">#TITRE</a></BOUCLE_tags></p>
+				</B_tags>
+			</aside>[(#REM) /.about ]
+
+			[<section class="descriptif">
+			(#DESCRIPTIF)
+			</section>]
+
+			[<section class="#EDIT{texte} texte">
+
+			(#TEXTE|nb_abbr|image_reduire{1200})
+			</section>]
+
+			[<section class="ps">
+				<h2><:info_post_scriptum:></h2>
+				(#PS|paragrapher)
+			</section>]
+
+			[<section class="notes">
+				<h2><:info_notes:></h2>
+			(#NOTES)
+			</section>]
+
+			<section class="forum">
+			<INCLURE(inc/comments){id_article}>
+			</section>
+
+		</div>
+	</div><!-- .outer -->
+
+</article>
+
+[(#REM) on ne fait un prev/next que si on n'est pas en 19]
+<BOUCLE_prevnext(ARTICLES){id_article}{id_rubrique!=19}>
+<section class="outer prevnext">
+	<ul class="inner">
+
+	<BOUCLE_precedent(ARTICLES){id_secteur!=19}{age_relatif>=0}{par date}{inverse}{1,1}>
+	<li>
+	<a rel="prev" href="#URL_ARTICLE" lang="#LANG" title="<:article_precedent:> [(#TITRE|attribut_html)]"><:article_precedent:> <span>#TITRE</span></a>
+	</li>
+	</BOUCLE_precedent>
+
+	<BOUCLE_suivant(ARTICLES){id_secteur!=19}{age_relatif<0}{par date}{0,1}>
+	<li>
+	<a rel="next" href="#URL_ARTICLE" lang="#LANG" title="<:article_suivant:> [(#TITRE|attribut_html)]"><:article_suivant:> <span>#TITRE</span></a>
+	</li>
+	</BOUCLE_suivant>
+	</ul><!-- /.inner -->
+</section>
+</BOUCLE_prevnext>
+
+<INCLURE(inc/body/append){skel=#SQUELETTE}{id_article}>
+</body>
+</html>
+</BOUCLE_principale>

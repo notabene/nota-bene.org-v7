@@ -149,16 +149,17 @@ article ol li::before {
 footer.outer {
   background: #eee;
   padding-top: 1px;
+  padding-bottom: 1px;
 }
-/* line 4, ../sass/_footer.scss */
+/* line 5, ../sass/_footer.scss */
 footer.outer h1, footer.outer h2, footer.outer h3 {
   color: #000;
 }
-/* line 7, ../sass/_footer.scss */
+/* line 8, ../sass/_footer.scss */
 footer.outer ul, footer.outer li {
   display: inline;
 }
-/* line 9, ../sass/_footer.scss */
+/* line 10, ../sass/_footer.scss */
 footer.outer li a:link, footer.outer li a:visited {
   display: inline-block;
   color: #000;
@@ -167,7 +168,7 @@ footer.outer li a:link, footer.outer li a:visited {
   border-radius: .5em;
   text-decoration: none;
 }
-/* line 17, ../sass/_footer.scss */
+/* line 18, ../sass/_footer.scss */
 footer.outer li a:hover, footer.outer li a:active, footer.outer li a:focus {
   background: #fff !important;
 }
@@ -307,6 +308,23 @@ article .forum {
   }
 }
 
+/* line 3, ../sass/_article-15.scss */
+.photos {
+  padding: 1px 0;
+  background: #ccc;
+  width: 100%;
+}
+/* line 7, ../sass/_article-15.scss */
+.photos div {
+  margin: 1em auto;
+}
+/* line 10, ../sass/_article-15.scss */
+.photos img, .photos span.date {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
 @supports (display: flex) {
   @media screen and (min-width: 60em) {
     /* line 1, ../sass/_sommaire.scss */
@@ -367,7 +385,7 @@ article .forum {
 /*
  =LAYOUTS
  */
-/* line 17, ../sass/styles.scss */
+/* line 18, ../sass/styles.scss */
 body {
   font-family: Arial,Helvetica,sans-serif;
   color: #000;
@@ -377,26 +395,26 @@ body {
   font-size: 1em;
 }
 @media screen and (min-width: 30em) {
-  /* line 17, ../sass/styles.scss */
+  /* line 18, ../sass/styles.scss */
   body {
     color: #333;
   }
 }
 
-/* line 28, ../sass/styles.scss */
+/* line 29, ../sass/styles.scss */
 .outer {
   padding-left: 5%;
   padding-right: 5%;
 }
 
-/* line 32, ../sass/styles.scss */
+/* line 33, ../sass/styles.scss */
 .inner {
   width: auto;
   margin: auto;
   max-width: 60em;
 }
 
-/* line 37, ../sass/styles.scss */
+/* line 38, ../sass/styles.scss */
 #main {
   line-height: 1.5;
 }
@@ -404,33 +422,33 @@ body {
 /*
  =BLOCKS
  */
-/* line 44, ../sass/styles.scss */
+/* line 45, ../sass/styles.scss */
 h1, h2 {
   font-family: Georgia, Times, serif;
   font-weight: bold;
 }
-/* line 47, ../sass/styles.scss */
+/* line 48, ../sass/styles.scss */
 h1 a:link, h1 a:visited, h2 a:link, h2 a:visited {
   color: inherit;
 }
 
-/* line 51, ../sass/styles.scss */
+/* line 52, ../sass/styles.scss */
 h1 {
   font-size: 1.5em;
 }
 @media screen and (min-width: 30em) {
-  /* line 51, ../sass/styles.scss */
+  /* line 52, ../sass/styles.scss */
   h1 {
     font-family: 'aleo', Georgia, Times, serif;
     font-size: 2em;
   }
 }
 
-/* line 62, ../sass/styles.scss */
+/* line 63, ../sass/styles.scss */
 h2 {
   font-size: 1.2em;
 }
-/* line 64, ../sass/styles.scss */
+/* line 65, ../sass/styles.scss */
 h2 span.date {
   display: block;
   font-size: 0.833333em;
@@ -439,12 +457,12 @@ h2 span.date {
   color: #333;
 }
 @media screen and (min-width: 30em) {
-  /* line 62, ../sass/styles.scss */
+  /* line 63, ../sass/styles.scss */
   h2 {
     font-family: 'aleo', Georgia, Times, serif;
     font-size: 1.5em;
   }
-  /* line 75, ../sass/styles.scss */
+  /* line 76, ../sass/styles.scss */
   .notes h2::before, .forum h2::before {
     display: block;
     visibility: visible;
@@ -457,18 +475,18 @@ h2 span.date {
   }
 }
 
-/* line 80, ../sass/styles.scss */
+/* line 81, ../sass/styles.scss */
 h3 {
   font-size: 1.2em;
 }
 @media screen and (min-width: 30em) {
-  /* line 80, ../sass/styles.scss */
+  /* line 81, ../sass/styles.scss */
   h3 {
     font-family: 'aleo', Georgia, Times, serif;
   }
 }
 
-/* line 88, ../sass/styles.scss */
+/* line 89, ../sass/styles.scss */
 blockquote {
   font-style: italic;
   margin-left: -5.5555556%;
@@ -476,13 +494,13 @@ blockquote {
   overflow: hidden;
   background: #ccc;
 }
-/* line 93, ../sass/styles.scss */
+/* line 94, ../sass/styles.scss */
 blockquote > * {
   margin-left: 5%;
   margin-right: 5%;
 }
 @media screen and (min-width: 30em) {
-  /* line 88, ../sass/styles.scss */
+  /* line 89, ../sass/styles.scss */
   blockquote {
     font-family: 'aleo', Georgia, Times, serif;
     border-left: 0.0625em solid #ccc;
@@ -493,30 +511,30 @@ blockquote > * {
     background: none;
     color: #444;
   }
-  /* line 106, ../sass/styles.scss */
+  /* line 107, ../sass/styles.scss */
   blockquote > * {
     margin-left: auto;
     margin-right: auto;
   }
 }
-/* line 112, ../sass/styles.scss */
+/* line 113, ../sass/styles.scss */
 blockquote q, blockquote em, blockquote i {
   font-style: normal;
 }
-/* line 115, ../sass/styles.scss */
+/* line 116, ../sass/styles.scss */
 blockquote footer {
   font-style: normal;
 }
-/* line 117, ../sass/styles.scss */
+/* line 118, ../sass/styles.scss */
 blockquote footer q, blockquote footer em, blockquote footer i {
   font-style: italic;
 }
-/* line 121, ../sass/styles.scss */
+/* line 122, ../sass/styles.scss */
 blockquote a:link, blockquote a:visited {
   color: #000;
 }
 
-/* line 127, ../sass/styles.scss */
+/* line 128, ../sass/styles.scss */
 p.compterforums {
   display: none;
 }
@@ -524,28 +542,28 @@ p.compterforums {
 /*
  =inline things
  */
-/* line 134, ../sass/styles.scss */
+/* line 135, ../sass/styles.scss */
 a {
   transition: all 0.2s linear;
 }
 
-/* line 137, ../sass/styles.scss */
+/* line 138, ../sass/styles.scss */
 a:link, a:visited {
   color: #000;
 }
 
-/* line 140, ../sass/styles.scss */
+/* line 141, ../sass/styles.scss */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 144, ../sass/styles.scss */
+/* line 145, ../sass/styles.scss */
 hr {
   visibility: hidden;
   border: 0;
 }
-/* line 147, ../sass/styles.scss */
+/* line 148, ../sass/styles.scss */
 hr::after {
   display: block;
   visibility: visible;
@@ -557,7 +575,7 @@ hr::after {
   margin: auto;
 }
 @media screen and (min-width: 30em) {
-  /* line 151, ../sass/styles.scss */
+  /* line 152, ../sass/styles.scss */
   hr::after {
     display: block;
     visibility: visible;
@@ -573,49 +591,49 @@ hr::after {
 /*
  =skiplinks
  */
-/* line 160, ../sass/styles.scss */
+/* line 161, ../sass/styles.scss */
 .invertedcolors, .prevnext, .skiplinks {
   background: #000;
   color: #fff;
 }
 @media screen and (min-width: 30em) {
-  /* line 160, ../sass/styles.scss */
+  /* line 161, ../sass/styles.scss */
   .invertedcolors, .prevnext, .skiplinks {
     background: #333;
   }
 }
-/* line 166, ../sass/styles.scss */
+/* line 167, ../sass/styles.scss */
 .invertedcolors a:link, .prevnext a:link, .skiplinks a:link, .invertedcolors a:visited, .prevnext a:visited, .skiplinks a:visited {
   color: inherit;
   padding: .2em;
   text-decoration: none;
 }
-/* line 171, ../sass/styles.scss */
+/* line 172, ../sass/styles.scss */
 .invertedcolors a:hover, .prevnext a:hover, .skiplinks a:hover, .invertedcolors a:active, .prevnext a:active, .skiplinks a:active, .invertedcolors a:focus, .prevnext a:focus, .skiplinks a:focus {
   text-decoration: underline;
   outline: none;
 }
 
-/* line 176, ../sass/styles.scss */
+/* line 177, ../sass/styles.scss */
 .skiplinks {
   display: block;
   margin: 0;
   padding: .2em;
 }
-/* line 181, ../sass/styles.scss */
+/* line 182, ../sass/styles.scss */
 .skiplinks li {
   margin: 0;
   padding: 0;
   display: inline;
 }
 
-/* line 188, ../sass/styles.scss */
+/* line 189, ../sass/styles.scss */
 .descriptif {
   font-size: 1.2em;
   font-weight: bold;
 }
 @media screen and (min-width: 30em) {
-  /* line 188, ../sass/styles.scss */
+  /* line 189, ../sass/styles.scss */
   .descriptif {
     font-style: italic;
     font-family: 'aleo', Georgia, Times, serif;
@@ -624,31 +642,31 @@ hr::after {
 }
 
 @media screen and (min-width: 45em) {
-  /* line 199, ../sass/styles.scss */
+  /* line 200, ../sass/styles.scss */
   .spip_documents_left {
     float: left;
     margin-right: .5em;
   }
 
-  /* line 203, ../sass/styles.scss */
+  /* line 204, ../sass/styles.scss */
   .spip_documents_right {
     float: right;
     margin-left: .5em;
   }
 }
-/* line 209, ../sass/styles.scss */
+/* line 210, ../sass/styles.scss */
 figure {
   margin: 1em 0;
 }
 
-/* line 212, ../sass/styles.scss */
+/* line 213, ../sass/styles.scss */
 figcaption {
   font-size: .75em;
   font-weight: bold;
   font-family: Georgia, Times, serif;
 }
 @media screen and (min-width: 30em) {
-  /* line 212, ../sass/styles.scss */
+  /* line 213, ../sass/styles.scss */
   figcaption {
     font-family: 'aleo', Georgia, Times, serif;
     font-size: .875em;
