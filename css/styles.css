@@ -334,6 +334,36 @@ article .forum {
   margin-top: 0;
 }
 
+/* line 2, ../sass/_photos.scss */
+.photos ul, .photos li, .rubrique15 main ul, .rubrique15 main li {
+  display: inline;
+}
+/* line 5, ../sass/_photos.scss */
+.photos .listitem, .rubrique15 main .listitem {
+  float: left;
+}
+/* line 8, ../sass/_photos.scss */
+.photos::after, .rubrique15 main::after {
+  clear: both;
+  display: block;
+  content: ' ';
+}
+@supports (display: flex) {
+  /* line 14, ../sass/_photos.scss */
+  .photos ul, .rubrique15 main ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  /* line 20, ../sass/_photos.scss */
+  .photos .listitem, .rubrique15 main .listitem {
+    flex: 1 0 auto;
+    margin: 1em;
+    line-height: 1;
+    text-align: center;
+  }
+}
+
 /*
  =LAYOUTS
  */
