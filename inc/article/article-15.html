@@ -33,7 +33,6 @@
 	<BOUCLE_photos(DOCUMENTS){id_article}{extension==(png|jpg|gif)}>
 	<div>
 	<img src="[(#FICHIER)]"[ width="(#LARGEUR)"][ height="(#HAUTEUR)"] alt="[(#TITRE|attribut_html)]"[(#DESCRIPTIF|attribut_html|oui) longdesc="/spip.php?page=longdesc&id_document=#ID_DOCUMENT"]>
-	[(#FICHIER|image_reduire{20})]
 	<span class="date"><span class="paren">(<:date_prise_de_vue:> </span>[(#FICHIER|exif_read_data|nb_dateexif)]<span class="paren">)</span>
 	</div>
 	</BOUCLE_photos>
