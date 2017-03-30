@@ -252,48 +252,52 @@ li.forum {
     margin-right: 11.33333em;
   }
 }
+/* line 26, ../sass/_article.scss */
+article .forum {
+  clear: both;
+}
 
 /*
  = prev / next
  */
-/* line 33, ../sass/_article.scss */
+/* line 37, ../sass/_article.scss */
 .prevnext a:link, .prevnext a:visited {
   display: block;
   padding: .5em;
 }
 @media screen and (min-width: 30em) {
-  /* line 38, ../sass/_article.scss */
+  /* line 42, ../sass/_article.scss */
   .prevnext {
     padding-top: 0;
     padding-bottom: 0;
   }
-  /* line 42, ../sass/_article.scss */
+  /* line 46, ../sass/_article.scss */
   .prevnext ul, .prevnext li {
     margin: 0;
     padding: 0;
     display: flex;
     flex: 1;
   }
-  /* line 48, ../sass/_article.scss */
+  /* line 52, ../sass/_article.scss */
   .prevnext ul {
     margin: auto;
   }
-  /* line 51, ../sass/_article.scss */
+  /* line 55, ../sass/_article.scss */
   .prevnext a:link, .prevnext a:visited {
     flex: 1;
     text-transform: uppercase;
     font-size: .75em;
   }
-  /* line 56, ../sass/_article.scss */
+  /* line 60, ../sass/_article.scss */
   .prevnext a[rel=prev]:link, .prevnext a[rel=prev]:visited {
     padding: 1em 1em 1em .2em;
   }
-  /* line 59, ../sass/_article.scss */
+  /* line 63, ../sass/_article.scss */
   .prevnext a[rel=next]:link, .prevnext a[rel=next]:visited {
     padding: 1em .2em 1em 1em;
     text-align: right;
   }
-  /* line 63, ../sass/_article.scss */
+  /* line 67, ../sass/_article.scss */
   .prevnext span {
     display: block;
     text-align: inherit;
