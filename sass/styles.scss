@@ -185,49 +185,6 @@ hr {
 	}
 }
 
-/*
- = prev / next
- */
-
-.prevnext {
-	@extend .invertedcolors;
-	a:link, a:visited {
-		display:block;
-		padding: .5em;
-	}
-	@media screen and (min-width: 30em) {
-		& {
-			padding-top:0;
-			padding-bottom:0;
-		}
-		ul, li {
-			margin:0;
-			padding:0;
-			display: flex;
-			flex:1;
-		}
-		ul {
-			margin: auto;
-		}
-		a:link, a:visited {
-			flex:1;
-		}
-		a[rel=prev] {
-			padding: .5em .5em .5em .2em;
-		}
-		a[rel=next] {
-			padding: .5em .2em .5em .5em;
-			text-align: right;
-		}
-		span {
-			display: block;
-			text-align: inherit;
-			font-weight: bold;
-		}
-
-	}
-}
-
 .descriptif {
 	font-size: 1.2em;
 	font-weight: bold;
