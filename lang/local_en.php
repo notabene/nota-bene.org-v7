@@ -37,7 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'skiptonavigation' => 'Skip to navigation',
 	'sur' => 'on',
 	'sur_twitter' => 'On Twitter (<a href="http://twitter.com/notabene">@notabene</a>)',
-	'tags' => 'Tags',
+	'tags' => 'Tags:',
 	'traduction' => 'This article also exists in English:',
 	'year' => 'Year',
 

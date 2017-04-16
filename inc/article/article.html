@@ -23,23 +23,25 @@
 
 		<aside class="about">
 			<h2 class="hideme"><:aproposdecetarticle:></h2>
-			<BOUCLE_auteurs(AUTEURS){id_article}{", "}>
-			<p><:an_article_by:>
-			<a href="#URL_AUTEUR">#NOM</a>
-			</p>
-			</BOUCLE_auteurs>
-			<p><:publishedon:> <span>[(#DATE|affdate)]</span></p>
-			<p><a href="http://nota-bene.org/#ID_ARTICLE"><:short_url:> (#ID_ARTICLE)</a></p>
-			<BOUCLE_traductions(ARTICLES){traduction}{exclus}>
-			<p lang="#LANG" ><:traduction:> <a rel="alternate" href="#URL_ARTICLE">#TITRE</a></p>
-			</BOUCLE_traductions>
-			<p class="compterforums"><BOUCLE_compterforums(FORUMS){plat}{id_article}></BOUCLE_compterforums>
-			<a href="#comments">#_compterforums:TOTAL_BOUCLE <:commentaire_min:>[(#_compterforums:TOTAL_BOUCLE|>{1}|?{s,""})]</a>
-			<//BOUCLE_compterforums></p>
-			<B_tags>
-				<h3><:tags:></h3>
-				<p><BOUCLE_tags(MOTS){id_article}{id_groupe!=2}{id_groupe!=5}{", "}><a href="#URL_MOT" rel="tag">#TITRE</a></BOUCLE_tags></p>
-			</B_tags>
+			<ul>
+				<BOUCLE_auteurs(AUTEURS){id_article}{", "}>
+				<li><:an_article_by:>
+				<a href="#URL_AUTEUR">#NOM</a>
+				</li>
+				</BOUCLE_auteurs>
+				<li><:publishedon:> <span>[(#DATE|affdate)]</span></li>
+				<li><a href="http://nota-bene.org/#ID_ARTICLE"><:short_url:> (#ID_ARTICLE)</a></li>
+				<BOUCLE_traductions(ARTICLES){traduction}{exclus}>
+				<li lang="#LANG" ><:traduction:> <a rel="alternate" href="#URL_ARTICLE">#TITRE</ali</li>
+				</BOUCLE_traductions>
+				<li class="compterforums"><BOUCLE_compterforums(FORUMS){plat}{id_article}></BOUCLE_compterforums>
+				<a href="#comments">#_compterforums:TOTAL_BOUCLE <:commentaire_min:>[(#_compterforums:TOTAL_BOUCLE|>{1}|?{s,""})]</a>
+				<//BOUCLE_compterforums></li>
+				<B_tags>
+					<li><:tags:>
+					<BOUCLE_tags(MOTS){id_article}{id_groupe!=2}{id_groupe!=5}{", "}><a href="#URL_MOT" rel="tag">#TITRE</a></BOUCLE_tags></li>
+				</B_tags>
+			</ul>
 		</aside>[(#REM) /.about ]
 
 		[<section class="descriptif">
