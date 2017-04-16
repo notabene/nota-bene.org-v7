@@ -78,13 +78,13 @@
 <section class="outer prevnext">
 	<ul class="inner">
 
-	<BOUCLE_precedent(ARTICLES){id_secteur!=19}{age_relatif>=0}{par date}{inverse}{1,1}>
+	<BOUCLE_precedent(ARTICLES){id_secteur!=19}{par date}{precedent}>
 	<li>
 	<a rel="prev" href="#URL_ARTICLE" lang="#LANG" title="<:article_precedent:> [(#TITRE|attribut_html)]"><:article_precedent:> <span>#TITRE</span></a>
 	</li>
 	</BOUCLE_precedent>
 
-	<BOUCLE_suivant(ARTICLES){id_secteur!=19}{age_relatif<0}{par date}{0,1}>
+	<BOUCLE_suivant(ARTICLES){id_secteur!=19}{par date}{suivant}>
 	<li>
 	<a rel="next" href="#URL_ARTICLE" lang="#LANG" title="<:article_suivant:> [(#TITRE|attribut_html)]"><:article_suivant:> <span>#TITRE</span></a>
 	</li>
