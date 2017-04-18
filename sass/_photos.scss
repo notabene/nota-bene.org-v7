@@ -4,6 +4,9 @@
 	}
 	.listitem {
 		float:left;
+		a:link, a:visited,img {
+			display: block;
+		}
 	}
 	h2 {
 		margin-top:0;
@@ -17,12 +20,12 @@
 		ul {
 			display:flex;
 			flex-flow: row wrap;
-			justify-content: space-around;
+			// justify-content: space-around;
 
 		}
 		.listitem {
 			flex:1 0 auto;
-			margin:0 1em 1em 1em;
+			// margin:0 1em 1em 1em;
 			line-height: 1;
 			text-align: center;
 			// width:320px;

@@ -1,11 +1,6 @@
 [(#SET{reduction_image,320})]
 <BOUCLE_principale(ARTICLES){id_article}>
 <div class="listitem" lang="#LANG">
-<h2 class="plain photo">
-<BOUCLE_photos(DOCUMENTS){id_article}{extension==(png|jpg|gif)}{0,1}>
-<a href="#URL_ARTICLE" title="[(#_principale:TITRE|attribut_html)]">[(#FICHIER|image_reduire{#GET{reduction_image}}|alt_et_longdesc{[(#_principale:TITRE|attribut_html)]})]</a>
-</BOUCLE_photos>
-<span class="date"><span class="paren">(</span>[(#DATE|nb_FuzzyDate)]<span class="paren">)</span></span>
-</h2>
+<h2 class="plain photo"><BOUCLE_photos(DOCUMENTS){id_article}{extension==(png|jpg|gif)}{0,1}><a href="#URL_ARTICLE" title="[(#_principale:TITRE|attribut_html)][ — (#_principale:DATE|nb_FuzzyDate|attribut_html)]">[(#FICHIER|image_passe_partout{#GET{reduction_image},#GET{reduction_image}}|image_recadre{#GET{reduction_image},#GET{reduction_image}}|alt_et_longdesc{[(#_principale:TITRE|attribut_html)][ — (#_principale:DATE|nb_FuzzyDate|attribut_html)]})]</a></BOUCLE_photos></h2>
 </div>
 </BOUCLE_principale>
