@@ -24,11 +24,11 @@
 		<aside class="about">
 			<h2 class="hideme"><:aproposdecetarticle:></h2>
 			<ul>
-				<BOUCLE_auteurs(AUTEURS){id_article}{", "}>
 				<li><:an_article_by:>
+				<BOUCLE_auteurs(AUTEURS){id_article}{", "}>
 				<a href="#URL_AUTEUR">#NOM</a>
-				</li>
 				</BOUCLE_auteurs>
+				</li>
 				<li><:publishedon:> <span>[(#DATE|affdate)]</span></li>
 				<li><a href="http://nota-bene.org/#ID_ARTICLE"><:short_url:> (#ID_ARTICLE)</a></li>
 				<BOUCLE_traductions(ARTICLES){traduction}{exclus}>
