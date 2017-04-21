@@ -1,9 +1,7 @@
 <BOUCLE_principale(SYNDIC_ARTICLES){id_syndic_article}>
-<div class="listitem" lang="[(#TITRE|detecter_langue)]">
-<h2 class="plain"><a href="#URL_ARTICLE">#TITRE</a>
-<span class="date"><span class="paren">(</span>[(#DATE|nb_FuzzyDate)]<span class="paren">)</span></span>
-</h2>
-	[(#DESCRIPTIF|paragrapher)]
-	<p class="tags">#TAGS</p>
+<div class="listitem"[ lang="(#LANG)]">
+	[(#DESCRIPTIF|nb_propre|propre|paragrapher)]
+	<p class="tags" style="[color:#(#DESCRIPTIF|createHexFromText|setContrastedColorOnWhite);]"><a href="#URL_ARTICLE"><span class="date"><span class="paren">(</span>[(#DATE|nb_FuzzyDate)]<span class="paren">)</span></span></a></p>
 </div>
+
 </BOUCLE_principale>
