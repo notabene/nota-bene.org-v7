@@ -14,23 +14,23 @@
 	<BOUCLE_hier_art(HIERARCHIE){id_article}{id_rubrique != 19}>
 	<a href="#URL_RUBRIQUE" rel="up">#TITRE</a> &gt;
 	</BOUCLE_hier_art>
-	<span class="breadcrumb">#TITRE</span>
+	<span class="breadcrumb" aria-current="page">#TITRE</span>
 </BOUCLE_hier_article><B_hier_rubrique>
 <BOUCLE_hier_rubrique(RUBRIQUES){id_rubrique}>
 	<BOUCLE_hier_rub(HIERARCHIE){id_rubrique}>
 	<a href="#URL_RUBRIQUE">#TITRE</a> &gt;
 	</BOUCLE_hier_rub>
-	<span class="breadcrumb">#TITRE</span>
+	<span class="breadcrumb" aria-current="page">#TITRE</span>
 </BOUCLE_hier_rubrique><B_hier_auteur>
 <BOUCLE_hier_auteur(AUTEURS){id_auteur}>
-	<span class="breadcrumb">#NOM</span>
+	<span class="breadcrumb" aria-current="page">#NOM</span>
 </BOUCLE_hier_auteur><B_hier_mot>
 <BOUCLE_hier_mot(MOTS){id_mot}>
-	<span class="breadcrumb">#TITRE</span>
+	<span class="breadcrumb" aria-current="page">#TITRE</span>
 </BOUCLE_hier_mot>[(#ENV{skel}|match{recherche}|oui)
-	<span class="breadcrumb"><:info_rechercher:>[ <strong class="on">(#RECHERCHE)</strong>]</span>
+	<span class="breadcrumb" aria-current="page"><:info_rechercher:>[ <strong class="on">(#RECHERCHE)</strong>]</span>
 ][(#ENV{skel}|match{year}|oui)
-	<span class="breadcrumb"><:year:> #ENV{year}</span>
+	<span class="breadcrumb" aria-current="page"><:year:> #ENV{year}</span>
 ]
 [(#ENV{skel}|match{sommaire}|non)</div><!-- breadcrumb -->]
 	[(#REM)#FORMULAIRE_RECHERCHE]
