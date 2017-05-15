@@ -6,7 +6,7 @@
 			<li lang="#LANG"><a href="#URL_RUBRIQUE">#TITRE</a></li>
 		</BOUCLE_rub_fr>
 		</ul>
-	<h2><:par_annee:></h2>
+	<h2 class="sr-only"><:par_annee:></h2>
 		<ul class="year">
 		[(#REM) boucle par années
 		1. on récupère la dernière année où des articles sont publiés
@@ -24,7 +24,7 @@
 		</BOUCLE_annees>
 		</ul>
 
-	<h2><:a_propos_de_ce_site:></h2>
+	<h2 class="sr-only"><:a_propos_de_ce_site:></h2>
 	<BOUCLE_about(ARTICLES){id_article=312}>#TEXTE</BOUCLE_about>
 
 

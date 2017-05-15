@@ -5,8 +5,9 @@ footer.outer {
 	h1,h2,h3 {
 		color:#000;
 	}
-	ul, li { display:inline; }
+	ul { display:block; }
 	li {
+		display: inline;
 		a:link, a:visited {
 			display: inline-block;
 			color:#000;

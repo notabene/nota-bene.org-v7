@@ -166,10 +166,14 @@ footer.outer h1, footer.outer h2, footer.outer h3 {
   color: #000;
 }
 /* line 8, ../sass/_footer.scss */
-footer.outer ul, footer.outer li {
+footer.outer ul {
+  display: block;
+}
+/* line 9, ../sass/_footer.scss */
+footer.outer li {
   display: inline;
 }
-/* line 10, ../sass/_footer.scss */
+/* line 11, ../sass/_footer.scss */
 footer.outer li a:link, footer.outer li a:visited {
   display: inline-block;
   color: #000;
@@ -178,7 +182,7 @@ footer.outer li a:link, footer.outer li a:visited {
   border-radius: .5em;
   text-decoration: none;
 }
-/* line 18, ../sass/_footer.scss */
+/* line 19, ../sass/_footer.scss */
 footer.outer li a:hover, footer.outer li a:active, footer.outer li a:focus {
   background: #fff !important;
 }
@@ -691,6 +695,18 @@ figcaption {
 /* line 223, ../sass/styles.scss */
 .listitem p {
   margin-top: 0;
+}
+
+/* line 228, ../sass/styles.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
