@@ -123,6 +123,12 @@ blockquote {
 		color:#000;
 	}
 }
+q {
+	font-style: italic;
+	@media screen and (min-width: 30em) {
+		@include fonts-showoff(2);
+	}
+}
 
 
 /*
