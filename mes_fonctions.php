@@ -41,7 +41,7 @@ function nb_abbr($str) {
 		'/(XSL)([^A-Z])/' => '<abbr title="eXtensible Style Language">\\1</abbr>\\2'
 	);
 
-	if( !preg_match('<',$str)) { // premier test pour le cas des titres
+	if( !preg_match('/</',$str)) { // premier test pour le cas des titres
 		$str = preg_replace(array_keys($array_acronyms), array_values($array_acronyms) , $str);
 	} else {
 		$coll = explode('<',$str);
