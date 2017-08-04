@@ -147,7 +147,7 @@ function nb_gravatar($str,$size=48) {
 function nb_dateexif($array) {
 	$str = "";
 	if(is_array($array)) {
-		$str = $array['DateTime'];
+		$str = $array['DateTimeOriginal'];
 		// EXIF 2011:04:21 20:51:05
 		// format attendu : 2011-04-21 20:51:05
 		$str = substr($str,0,4) . "-" . substr($str,5,2) . "-" . substr($str,8,2) . " 00:00:00";
