@@ -15,9 +15,10 @@ path { fill:#000; }
 	#logo-big {display:inherit;}
 	#logo-small {display: none;}
 }
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 44em) {
 	#logo {
-		width:48em;
+		width:44em;
+		margin: auto;
 	}
 	#tagline,#breadcrumbs {
 		margin-top:-2.4em;
