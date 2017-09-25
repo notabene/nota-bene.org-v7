@@ -96,6 +96,16 @@ function nb_FuzzyDate($date) {
 	return $date;
 }
 
+function pubdate($date) {
+	// return date("Y-m-d")
+	return date(DATE_ATOM,
+		mktime(
+			heures($date), minutes($date), secondes($date),
+			mois($date), jour($date), annee($date) )
+		);
+	// |annee, |mois, |jour, |heures, |minutes, |secondes
+}
+
 /**
  * nb_commentaires_nofollow
  * ajouter un attribut nofollow aux liens en commentaires
