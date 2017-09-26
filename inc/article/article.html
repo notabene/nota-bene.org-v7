@@ -4,7 +4,7 @@
 <html lang="#LANG" class="article rubrique#ID_RUBRIQUE">
 <head>
 <title>[(#TITRE|textebrut)] | #NOM_SITE_SPIP</title>
-[<meta name="pubdate" content="(#DATE|pubdate)">]
+[<meta name="article:published_date" content="(#DATE|pubdate)">]
 [<meta name="description" content="(#INTRODUCTION|attribut_html)" />]
 #SET{titrepourcouleur,{#TITRE}}
 <INCLURE(inc/head){skel=#SQUELETTE}{titrepourcouleur=#GET{titrepourcouleur}}>

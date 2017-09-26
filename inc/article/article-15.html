@@ -4,7 +4,7 @@
 <html lang="#LANG" class="article rubrique#ID_RUBRIQUE">
 <head>
 <title>[(#TITRE|textebrut)] | #NOM_SITE_SPIP</title>
-[<meta name="pubdate" content="(#DATE|pubdate)">]
+[<meta name="article:published_date" content="(#DATE|pubdate)">]
 [<meta name="description" content="(#INTRODUCTION|attribut_html)" />]
 <BOUCLE_extrairecouleur(DOCUMENTS){id_article}{extension==(png|jpg|gif)}{0,1}>
 #SET{couleur,#FICHIER|couleur_extraire{5,15}}
