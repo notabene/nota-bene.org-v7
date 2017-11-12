@@ -21,9 +21,13 @@
 <section class="texte">
 <B_articles>
 [<p class="pagine">[(#ANCRE_PAGINATION)](#PAGINATION)</p>]
-<ul>
+<ul class="listitems">
 <BOUCLE_articles(ARTICLES){id_mot}{!par date}{pagination 20}>
-<li><a href="#URL_ARTICLE">#TITRE</a></li>
+	[(#ID_RUBRIQUE|=={15}|oui)
+	<li><INCLURE(inc/listitem-15){id_article}{skel=#SQUELETTE}></li>
+	][(#ID_RUBRIQUE|=={15}|non)
+	<li><INCLURE(inc/listitem){id_article}{skel=#SQUELETTE}></li>
+	][(#REM) <li><a href="#URL_ARTICLE">#TITRE</a></li>]
 </BOUCLE_articles>
 </ul>
 [<p class="pagine cleanup">(#PAGINATION)</p>]
