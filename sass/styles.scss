@@ -128,6 +128,9 @@ q {
 	@media screen and (min-width: 30em) {
 		@include fonts-showoff(2);
 	}
+	em, i {
+		font-style: normal;
+	}
 }
 
 
