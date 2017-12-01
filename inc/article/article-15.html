@@ -50,7 +50,7 @@
 					<a href="#URL_AUTEUR">#NOM</a>
 					</BOUCLE_auteurs>
 					</li>
-					<li><:publishedon:> <span>[(#DATE|affdate)]</span></li>
+					<li><:publishedon:> <time datetime="[(#DATE|pubdate)]" itemprop="datePublished">[(#DATE|affdate)]</time></li>
 					<li><a href="http://nota-bene.org/#ID_ARTICLE"><:short_url:> (#ID_ARTICLE)</a></li>
 					<BOUCLE_traductions(ARTICLES){traduction}{exclus}>
 					<li lang="#LANG" ><:traduction:> <a rel="alternate" href="#URL_ARTICLE">#TITRE</ali</li>
