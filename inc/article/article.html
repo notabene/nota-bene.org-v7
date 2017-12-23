@@ -26,7 +26,7 @@
 			<ul>
 				<li><:an_article_by:>
 				<BOUCLE_auteurs(AUTEURS){id_article}{", "}>
-				<a href="#URL_AUTEUR">#NOM</a>
+				<a href="#URL_AUTEUR?lang=#_principale:LANG">#NOM</a>
 				</BOUCLE_auteurs>
 				</li>
 				<li><:publishedon:> <time datetime="[(#DATE|pubdate)]" itemprop="datePublished">[(#DATE|affdate)]</time></li>
