@@ -1,11 +1,3 @@
-@import "variables";
-@import "structure";
-@import "citations";
-@import "focusable";
-@import "headings";
-@import "images";
-@import "selections";
-
 * {
 	box-sizing: border-box;
 }
@@ -20,3 +12,12 @@
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
+
+@import "variables";
+@import "structure";
+@import "citations";
+@import "focusable";
+@import "headings";
+@import "images";
+@import "selections";
+

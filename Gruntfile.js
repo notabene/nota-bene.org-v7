@@ -19,8 +19,8 @@ module.exports = function(grunt) {
       },
       build: {
         options: {
-          style: 'compact'// ,
-          // sourcemap:'none'
+          style: 'compact',
+          sourcemap:'none'
         },
         files: [{
                 expand: true,
