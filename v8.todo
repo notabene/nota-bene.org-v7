@@ -2,8 +2,8 @@ Cleanup:
   ✔ Remove all CSS/Sass @done (19-09-08 13:20)
   ✔ Remove all insert head: colors @done (19-09-08 16:35)
   ✔ Remove most includes @done (19-09-08 17:12)
-  ☐ Remove Jquery
-  ☐ Remove JS and come back later
+  ✔ Remove Jquery @done (19-09-08 17:25)
+  ✔ Remove JS and come back later @done (19-09-08 17:26)
 
 CSS:
   ☐ no WOFF
@@ -39,6 +39,7 @@ Addons:
   ☐ Plugin Gravatar
   ☐ Print CSS
   ☐ Dates et "en réponse à" dans les commentaires : span.date dans le h3
+  ☐ scripts.js
   ☐ Style forms
 
 Later:
