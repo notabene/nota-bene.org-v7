@@ -3,9 +3,9 @@
   --color-bg: #fff;
   --color-text: #333;
   --color-text-stronger: #000;
-  --color-bg-default: #eee;
+  --color-bg-subdued: #eee;
   --color-base: #333;
-  --color-base-light: var(--color-bg-default);
+  --color-base-light: var(--color-bg-subdued);
   --color-base-dark: #333;
 }
 
@@ -24,7 +24,7 @@ body {
 /* line 5, ../sass/_citations.scss */
 blockquote {
   font-style: italic;
-  background: var(--color-bg-default);
+  background: var(--color-bg-subdued);
   margin: 0 -.5em;
   padding: .5em .5em .5em 2em;
 }
