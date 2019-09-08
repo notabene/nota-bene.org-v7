@@ -1,0 +1,207 @@
+[(#REM)<style>/*
+
+  Nouveau markup identique pour le mode étroit et large dans body.html :
+  - #conteneur
+      - #contenu
+      - #navigation
+      - #extra
+
+  On fait du mobile-first : pas de colonne à la base, puis on en met 2 ou 3 selon la largeur.
+  On met du float comme en 40 pour les vieux navigateurs, 
+  et du CSS grid pour les nouveaux.
+
+*/]#CACHE{3600*100,cache-client}
+#HTTP_HEADER{Content-Type: text/css;charset=utf-8}
+#HTTP_HEADER{Vary: Accept-Encoding}
+
+/*
+  ======
+  LAYOUT
+  ======
+  Placement et dimensions des blocs principaux
+*/
+
+/* Containers en pleine largeur */
+body,
+body.large {
+  min-width: auto;
+}
+.largeur,
+#conteneur,
+.table_page,
+.large .largeur,
+.large #conteneur,
+.large .table_page {
+  width: auto;
+}
+.largeur,
+.large .largeur {
+  padding: 0 1.5vw;
+}
+
+/* Pas de colonne
+   Obligé de mettre des !important à moins de cibler 50 variantes différentes
+   (.large #contenu, body.large .edition #contenu, etc.)
+*/
+#contenu,
+#navigation,
+#extra {
+  width: 100% !important;
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Moyen écran : 2 colonnes */ 
+@media (min-width: 780px) {
+
+  /* D'abord le fallback pour les vieux navigateurs */
+  /* [TODO] */
+  
+  /* Ensuite le layout en CSS grid : 2 colonnes */
+  @supports (display: grid) {
+    #conteneur {
+      display: grid;
+      grid-gap: 0 1.5vw;
+      grid-template-columns: auto repeat(3, 1fr);
+      grid-template-rows: auto 1fr; /* la 1ère ligne doit se collapser */
+      grid-template-areas:
+        "navigation contenu contenu contenu"
+        "extra      contenu contenu contenu";
+    }
+    #contenu {
+      grid-area: contenu;
+    }
+    #navigation {
+      grid-area: navigation;
+    }
+    #extra {
+      grid-area: extra;
+    }
+    /* Hack : on met une largeur au contenu des colonnes latérales,
+    ainsi quand elles sont vides, elles se collapsent */
+    #navigation > .ajaxbloc > *,
+    #navigation > :not(.ajaxbloc),
+    #extra > .ajaxbloc > *,
+    #extra > :not(.ajaxbloc) {
+      width: 20vw;
+    }
+  }
+}
+
+/* Grand écran : 3 colonnes */
+@media (min-width: 1200px) {
+
+  @supports (display: grid) {
+    #conteneur {
+      grid-template-columns: auto repeat(3, 1fr) auto;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "navigation contenu contenu contenu extra"
+        "navigation contenu contenu contenu extra";
+    }
+  }
+
+}
+
+
+/*
+  ===========
+  Formulaires
+  ===========
+*/
+
+.formulaire_spip .editer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-left: 10px;
+}
+.formulaire_spip .editer > * {
+  flex: 0 1 40rem;
+}
+.formulaire_spip .editer > label {
+  display: block;
+  margin-left: 0;
+  margin-bottom: 0.25em;
+  float: none;
+}
+.formulaire_spip .editer .explication {
+  display: block;
+}
+
+.formulaire_spip .edition, /* conteneur markitup */
+.formulaire_spip .choix,
+.formulaire_spip textarea,
+.formulaire_spip input,
+.formulaire_spip select,
+.formulaire_spip .editer > label ~ * {
+  max-width: 40rem;
+  box-sizing: border-box;
+}
+
+/* Grand écran */
+@media (min-width: 1200px) {
+
+  .formulaire_spip .editer {
+    display: block;
+    padding-left: 15vw; /* padding proportionnel à l'écran pour centrer la saisie */
+  }
+  .formulaire_spip .editer > label {
+    display: inline;
+    float: left;
+    max-width: calc(15vw - 20px);
+    margin-left: calc(-15vw + 10px);
+  }
+  /* Pleine largeur */
+  .formulaire_spip .editer.pleine_largeur {
+    padding-left: 10px;
+    flex-direction: column;
+  }
+  .formulaire_spip .editer.pleine_largeur > label {
+    float: none;
+    display: block;
+    margin-left: 0;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+  .formulaire_spip .editer.pleine_largeur > label ~ * {
+    max-width: 100%;
+  }
+
+}
+
+/*
+  ======
+  Divers
+  ======
+  Des petits ajustements divers
+*/
+
+/* Limiter en largeur pour obtenir ~80 caractères max par ligne */
+#wysiwyg {
+  display: block;
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Polices */
+@font-face {
+  font-family: 'Lato';
+  src: url('#CHEMIN{prive/themes/spip/webfonts/lato-regular-webfont.woff2}') format('woff2'),
+  url('#CHEMIN{webfonts/lato-regular-webfont.woff}') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('#CHEMIN{prive/themes/spip/webfonts/lato-bold-webfont.woff2}') format('woff2'),
+  url('#CHEMIN{webfonts/lato-regular-webfont.woff}') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  font-size: calc(0.8em + 0.133vw); /* mobile => 14px, 1920px => 15px */
+  font-family: "Lato", sans-serif;
+}
