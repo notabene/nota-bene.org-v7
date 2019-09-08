@@ -7,6 +7,7 @@ blockquote {
 	background: var(--color-bg-subdued);
 	margin:0 -.5em;
 	padding:.5em .5em .5em 2em;
+	border-left:.2em solid var(--color-base-dark);
 	.forum & {
 		background: inherit;
 		margin: 0;

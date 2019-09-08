@@ -1,3 +1,20 @@
+/* line 1, ../sass/styles.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, ../sass/styles.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 /* line 3, ../sass/_variables.scss */
 :root {
   --color-bg: #fff;
@@ -16,10 +33,33 @@ body {
   font-family: Arial,Helvetica,sans-serif;
   color: var(--color-text-stronger);
   background: var(--color-bg);
-  margin: .5em;
+  margin: 0;
   padding: 0;
 }
 
+/* line 12, ../sass/_structure.scss */
+.outer {
+  padding: 0 .5em;
+}
+
+/* ========================= Header */
+@media screen and (min-width: 44em) {
+  /* line 19, ../sass/_structure.scss */
+  #logo {
+    max-width: 44em;
+    margin: auto;
+    position: relative;
+  }
+
+  /* line 24, ../sass/_structure.scss */
+  #tagline, #breadcrumbs {
+    position: relative;
+    margin-top: -3.4em;
+    margin-bottom: 1.3em;
+    width: 37em;
+    padding: 1em 1em 1em 0;
+  }
+}
 /* =========== Citations */
 /* line 5, ../sass/_citations.scss */
 blockquote {
@@ -27,26 +67,27 @@ blockquote {
   background: var(--color-bg-subdued);
   margin: 0 -.5em;
   padding: .5em .5em .5em 2em;
+  border-left: 0.2em solid var(--color-base-dark);
 }
-/* line 10, ../sass/_citations.scss */
+/* line 11, ../sass/_citations.scss */
 .forum blockquote {
   background: inherit;
   margin: 0;
 }
-/* line 15, ../sass/_citations.scss */
+/* line 16, ../sass/_citations.scss */
 blockquote q, blockquote em, blockquote i {
   font-style: normal;
 }
-/* line 18, ../sass/_citations.scss */
+/* line 19, ../sass/_citations.scss */
 blockquote footer {
   font-style: normal;
 }
-/* line 20, ../sass/_citations.scss */
+/* line 21, ../sass/_citations.scss */
 blockquote footer q, blockquote footer em, blockquote footer i {
   font-style: italic;
 }
 
-/* line 27, ../sass/_citations.scss */
+/* line 28, ../sass/_citations.scss */
 cite {
   font-style: italic;
 }
@@ -151,23 +192,6 @@ img {
 ::selection {
   background-color: var(--color-base-dark);
   color: var(--color-bg);
-}
-
-/* line 9, ../sass/styles.scss */
-* {
-  box-sizing: border-box;
-}
-
-/* line 13, ../sass/styles.scss */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
