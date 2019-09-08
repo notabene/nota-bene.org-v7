@@ -1,35 +1,31 @@
-/* line 3, ../sass/colors.scss */
-:root {
-  --color-bg: #fff;
-  --color-text: #333;
-  --color-text-mobile: #000;
-  --color-link: #00C;
-  --color-link-visited: #C0C;
-}
+:root { --color-bg: #fff; --color-text: #333; --color-text-mobile: #000; --color-bg-default: #eee; --color-base: #333; --color-base-light: var(--color-bg-default); --color-base-dark: #333; }
 
-/* line 3, ../sass/typography.scss */
-body {
-  font-size: 1em;
-  font-family: Arial,Helvetica,sans-serif;
-  color: var(--color-text-mobile);
-  background: var(--color-bg);
-}
+/* ========= Structure */
+body { font-size: 1em; font-family: Arial,Helvetica,sans-serif; color: var(--color-text-mobile); background: var(--color-bg); margin: 0; padding: 0; }
 
-/* line 10, ../sass/typography.scss */
-h1, h2, h3 {
-  font-family: Garamond, "Times New Roman", serif;
-}
+/* =========== Citations */
+blockquote { font-style: italic; background: var(--color-bg-default); }
+blockquote q, blockquote em, blockquote i { font-style: normal; }
+blockquote footer { font-style: normal; }
+blockquote footer q, blockquote footer em, blockquote footer i { font-style: italic; }
 
-/* line 14, ../sass/typography.scss */
-a:link {
-  text-decoration: underline;
-  color: var(--color-link);
-}
+/* ================ Links */
+a:link { text-decoration: underline; color: var(--color-base-dark); }
 
-/* line 19, ../sass/typography.scss */
-a:visited {
-  text-decoration: underline;
-  color: var(--color-link-visited);
-}
+a:visited { text-decoration: underline; color: var(--color-base-dark); }
+
+a, button, input, select, submit, textarea, [tabindex]:not([tabindex="-1"]) { outline: 2px solid transparent; outline-offset: 5px; -webkit-transition: outline-offset .2s linear; transition: outline-offset .2s linear; }
+
+a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, [tabindex]:not([tabindex="-1"]):focus { outline-color: currentColor; outline-offset: 2px; }
+
+/* =============== Headings */
+h1 { font-family: Garamond, "Times New Roman", serif; }
+
+h2 { font-family: Garamond, "Times New Roman", serif; }
+
+h3 { font-family: Garamond, "Times New Roman", serif; }
+
+/* Images */
+img { max-width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

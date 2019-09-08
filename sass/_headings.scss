@@ -1,0 +1,16 @@
+
+
+/* =============== Headings */
+@mixin headings {
+	font-family: Garamond, "Times New Roman", serif;
+}
+
+h1 {
+	@include headings;
+}
+h2 {
+	@include headings;
+}
+h3 {
+	@include headings;
+}

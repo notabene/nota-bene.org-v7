@@ -1,0 +1,19 @@
+
+
+/* =========== Citations */
+
+blockquote {
+	font-style: italic;
+	background: var(--color-bg-default);
+
+	q, em, i {
+		font-style: normal;
+	}
+	footer {
+		font-style: normal;
+		q, em, i {
+			font-style: italic;
+		}
+	}
+
+}
