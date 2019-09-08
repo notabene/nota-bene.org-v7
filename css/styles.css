@@ -1,31 +1,173 @@
-:root { --color-bg: #fff; --color-text: #333; --color-text-mobile: #000; --color-bg-default: #eee; --color-base: #333; --color-base-light: var(--color-bg-default); --color-base-dark: #333; }
+/* line 3, ../sass/_variables.scss */
+:root {
+  --color-bg: #fff;
+  --color-text: #333;
+  --color-text-stronger: #000;
+  --color-bg-default: #eee;
+  --color-base: #333;
+  --color-base-light: var(--color-bg-default);
+  --color-base-dark: #333;
+}
 
 /* ========= Structure */
-body { font-size: 1em; font-family: Arial,Helvetica,sans-serif; color: var(--color-text-mobile); background: var(--color-bg); margin: 0; padding: 0; }
+/* line 3, ../sass/_structure.scss */
+body {
+  font-size: 1em;
+  font-family: Arial,Helvetica,sans-serif;
+  color: var(--color-text-stronger);
+  background: var(--color-bg);
+  margin: .5em;
+  padding: 0;
+}
 
 /* =========== Citations */
-blockquote { font-style: italic; background: var(--color-bg-default); }
-blockquote q, blockquote em, blockquote i { font-style: normal; }
-blockquote footer { font-style: normal; }
-blockquote footer q, blockquote footer em, blockquote footer i { font-style: italic; }
+/* line 5, ../sass/_citations.scss */
+blockquote {
+  font-style: italic;
+  background: var(--color-bg-default);
+  margin: 0 -.5em;
+  padding: .5em .5em .5em 2em;
+}
+/* line 10, ../sass/_citations.scss */
+.forum blockquote {
+  background: inherit;
+  margin: 0;
+}
+/* line 15, ../sass/_citations.scss */
+blockquote q, blockquote em, blockquote i {
+  font-style: normal;
+}
+/* line 18, ../sass/_citations.scss */
+blockquote footer {
+  font-style: normal;
+}
+/* line 20, ../sass/_citations.scss */
+blockquote footer q, blockquote footer em, blockquote footer i {
+  font-style: italic;
+}
+
+/* line 27, ../sass/_citations.scss */
+cite {
+  font-style: italic;
+}
+
+/* =========== Focus states */
+/* line 3, ../sass/_focusable.scss */
+a, button, input, select, submit, textarea, [tabindex]:not([tabindex="-1"]) {
+  outline: .2em solid transparent;
+  outline-offset: .3em;
+  -webkit-transition: outline-offset .2s linear;
+  transition: outline-offset .2s linear;
+}
+
+/* line 10, ../sass/_focusable.scss */
+a:focus, a:not([tabindex="-1"]):focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, [tabindex]:not([tabindex="-1"]):focus {
+  outline-color: currentColor;
+  outline-offset: .1em;
+}
 
 /* ================ Links */
-a:link { text-decoration: underline; color: var(--color-base-dark); }
+/* line 17, ../sass/_focusable.scss */
+a:link {
+  text-decoration: underline;
+  color: var(--color-base-dark);
+}
 
-a:visited { text-decoration: underline; color: var(--color-base-dark); }
+/* line 22, ../sass/_focusable.scss */
+a:visited {
+  text-decoration: underline;
+  color: var(--color-base-dark);
+}
 
-a, button, input, select, submit, textarea, [tabindex]:not([tabindex="-1"]) { outline: 2px solid transparent; outline-offset: 5px; -webkit-transition: outline-offset .2s linear; transition: outline-offset .2s linear; }
+/* ============= Form elements */
+/* line 28, ../sass/_focusable.scss */
+button, input, select, submit, textarea {
+  border: 1px solid var(--color-base-dark);
+  padding: .5em;
+}
 
-a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, [tabindex]:not([tabindex="-1"]):focus { outline-color: currentColor; outline-offset: 2px; }
+/* line 32, ../sass/_focusable.scss */
+button, input, submit {
+  background: var(--color-base-light);
+  color: var(--color-text-stronger);
+  cursor: pointer;
+}
+
+/* line 38, ../sass/_focusable.scss */
+textarea, input[type="text"] {
+  padding: .5em;
+  display: block;
+  width: 100%;
+  background: var(--color-bg);
+  color: var(--color-text-stronger);
+  border: 1px solid var(--color-base-dark);
+}
 
 /* =============== Headings */
-h1 { font-family: Garamond, "Times New Roman", serif; }
+/* line 8, ../sass/_headings.scss */
+h1 {
+  font-family: Garamond, "Times New Roman", serif;
+  font-size: 2em;
+}
 
-h2 { font-family: Garamond, "Times New Roman", serif; }
+/* line 12, ../sass/_headings.scss */
+h2 {
+  font-family: Garamond, "Times New Roman", serif;
+  font-size: 1.5em;
+}
 
-h3 { font-family: Garamond, "Times New Roman", serif; }
+/* line 16, ../sass/_headings.scss */
+h3 {
+  font-family: Garamond, "Times New Roman", serif;
+  font-size: 1.2em;
+}
 
 /* Images */
-img { max-width: 100%; }
+/* line 3, ../sass/_images.scss */
+img {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 45em) {
+  /* line 8, ../sass/_images.scss */
+  .spip_documents_left {
+    float: left;
+    margin-right: .5em;
+  }
+
+  /* line 12, ../sass/_images.scss */
+  .spip_documents_right {
+    float: right;
+    margin-left: .5em;
+  }
+}
+/* line 2, ../sass/_selections.scss */
+::-moz-selection {
+  background-color: var(--color-base-dark);
+  color: var(--color-bg);
+}
+
+/* line 7, ../sass/_selections.scss */
+::selection {
+  background-color: var(--color-base-dark);
+  color: var(--color-bg);
+}
+
+/* line 9, ../sass/styles.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 13, ../sass/styles.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
 /*# sourceMappingURL=styles.css.map */

@@ -7,10 +7,13 @@
 
 h1 {
 	@include headings;
+	font-size:2em;
 }
 h2 {
 	@include headings;
+	font-size:1.5em;
 }
 h3 {
 	@include headings;
+	font-size:1.2em;
 }

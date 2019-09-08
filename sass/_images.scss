@@ -3,3 +3,14 @@
 img {
 	max-width:100%;
 }
+
+@media screen and (min-width: 45em) {
+	.spip_documents_left {
+		float: left;
+		margin-right:.5em;
+	}
+	.spip_documents_right {
+		float: right;
+		margin-left:.5em;
+	}
+}

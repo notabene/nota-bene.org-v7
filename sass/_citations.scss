@@ -5,6 +5,12 @@
 blockquote {
 	font-style: italic;
 	background: var(--color-bg-default);
+	margin:0 -.5em;
+	padding:.5em .5em .5em 2em;
+	.forum & {
+		background: inherit;
+		margin: 0;
+	}
 
 	q, em, i {
 		font-style: normal;
@@ -16,4 +22,8 @@ blockquote {
 		}
 	}
 
+}
+
+cite {
+	font-style: italic;
 }

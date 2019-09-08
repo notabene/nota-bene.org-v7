@@ -1,4 +1,18 @@
 
+/* =========== Focus states */
+a, button, input, select, submit, textarea, [tabindex]:not([tabindex="-1"]) {
+	outline: .2em solid transparent;
+	outline-offset: .3em;
+	-webkit-transition: outline-offset .2s linear;
+	transition: outline-offset .2s linear;
+}
+
+a:focus, a:not([tabindex="-1"]):focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, [tabindex]:not([tabindex="-1"]):focus {
+	outline-color: currentColor;
+	outline-offset: .1em;
+}
+
+
 /* ================ Links */
 a:link {
 	text-decoration:underline;
@@ -10,14 +24,22 @@ a:visited {
 	color: var(--color-base-dark);
 }
 
-a, button, input, select, submit, textarea, [tabindex]:not([tabindex="-1"]) {
-	outline: 2px solid transparent;
-	outline-offset: 5px;
-	-webkit-transition: outline-offset .2s linear;
-	transition: outline-offset .2s linear;
+/* ============= Form elements */
+button, input, select, submit, textarea {
+	border:1px solid var(--color-base-dark);
+	padding:.5em;
+}
+button, input, submit {
+	background: var(--color-base-light);
+	color: var(--color-text-stronger);
+	cursor: pointer;
 }
 
-a:focus, button:focus, input:focus, select:focus, submit:focus, textarea:focus, [tabindex]:not([tabindex="-1"]):focus {
-	outline-color: currentColor;
-	outline-offset: 2px;
+textarea,input[type="text"] {
+	padding:.5em;
+	display:block;
+	width:100%;
+	background:var(--color-bg);
+	color: var(--color-text-stronger);
+	border:1px solid var(--color-base-dark);
 }
