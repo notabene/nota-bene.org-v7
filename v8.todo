@@ -1,0 +1,46 @@
+Cleanup:
+  ☐ Remove all CSS/Sass
+  ☐ Remove all insert head: colors
+  ☐ Remove most includes
+  ☐ Remove Jquery
+  ☐ Remove JS and come back later
+
+CSS:
+  ☐ no WOFF
+  ☐ RWD by element?
+
+Squelettes de base:
+  ☐ article
+  ☐ inc/comments
+  ☐ forum
+  ☐ rubrique
+  ☐ 404
+  ☐ RSS2 - RSS2 comments (juste à copier) + inc-rss-item
+  ☐ auteur
+  ☐ recherche + filtre "recherche_extrait"
+  ☐ longdesc
+  ☐ modeles/img
+  ☐ favicon.ico
+  ☐ mot
+  ☐ Archives par année
+  ☐ article si photo
+  ☐ Item de liste : photo + texte
+  ☐ sommaire une fois les items de liste faits : 1 bloc texte, 1 bloc photos, 1 bloc syndication
+  ☐ harmoniser liste sommaire et liste rubrique et liste recherche
+  ☐ Navigation top
+  ☐ Navigation bottom
+  ☐ article-15.html : photo
+  ☐ rubrique-15.html
+
+Addons:
+  ☐ Prev / next
+  ☐ Style `.descriptif`
+  ☐ Plugin Gravatar
+  ☐ Print CSS
+  ☐ Dates et "en réponse à" dans les commentaires : span.date dans le h3
+  ☐ Style forms
+
+Later:
+  ☐ pullquotes au-delà de https://developer.mozilla.org/en-US/docs/Web/API/window.matchMedia
+  ☐ Dyslexie / Confort+ ?
+
