@@ -1,12 +1,7 @@
 <BOUCLE_principale(ARTICLES){id_article}>
 <div class="listitem" lang="#LANG">
 
-[(#REM)
-<h2 class="plain"><a href="#URL_ARTICLE">#TITRE</a>
-<span class="date"><span class="paren">(</span>[(#DATE|nb_FuzzyDate)]<span class="paren">)</span></span>
-</h2>
-]
-<h2 style="[color:#(#TITRE|createHexFromText|setContrastedColorOnWhite);]"><a href="#URL_ARTICLE">#TITRE</a>
+<h2><a href="#URL_ARTICLE">#TITRE</a>
 <span class="date"><span class="paren">(</span>[(#DATE|nb_FuzzyDate)]<span class="paren">)</span></span>
 </h2>
 	[(#INTRODUCTION|nb_propre|propre|paragrapher)]

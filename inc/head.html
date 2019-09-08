@@ -21,33 +21,14 @@
 <!--
 COULEURS
 [couleur de base : #(#ENV{titrepourcouleur}|createHexFromText)]
-[couleur de fond très claire : #(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnBlack)]
-[couleur de texte contrasté : #(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite)]
+[couleur claire contrastée sur noir : #(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnBlack)]
+[couleur sombre contrastée sur blanc : #(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite)]
 -->
 <style>
-	body, blockquote {
-		[border-color:#(#ENV{titrepourcouleur}|createHexFromText);]
-	}
-	.skiplinks, .prevnext {
-		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
-	}
-	h1, h2, li::before, a:link, a:visited {
-		[color:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
-	        [-webkit-text-decoration-color:#(#ENV{titrepourcouleur}|createHexFromText);]
-		[text-decoration-color:#(#ENV{titrepourcouleur}|createHexFromText);]
-	}
-	hr::after {
-		[background:#(#ENV{titrepourcouleur}|createHexFromText);]
-	}
-	footer.outer {
-		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnBlack);]
-	}
-	a:hover, a:active, a:focus, blockquote a:hover, blockquote a:active, blockquote a:focus {
-		color:#fff;
-		[background:#(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
-	}
-	.decoration {
-		[fill:#(#ENV{titrepourcouleur}|createHexFromText);]
-	}
+body {
+	[--color-base : #(#ENV{titrepourcouleur}|createHexFromText);]
+	[--color-base-light : #(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnBlack);]
+	[--color-base-dark : #(#ENV{titrepourcouleur}|createHexFromText|setContrastedColorOnWhite);]
+}
 </style>
 ]

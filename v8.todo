@@ -1,12 +1,13 @@
 Cleanup:
   ✔ Remove all CSS/Sass @done (19-09-08 13:20)
-  ☐ Remove all insert head: colors
+  ✔ Remove all insert head: colors @done (19-09-08 16:35)
   ☐ Remove most includes
   ☐ Remove Jquery
   ☐ Remove JS and come back later
 
 CSS:
   ☐ no WOFF
+  ☐ SVG RWD logic inside SVG
   ☐ RWD by element?
 
 Squelettes de base:
