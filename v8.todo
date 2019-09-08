@@ -1,5 +1,5 @@
 Cleanup:
-  ☐ Remove all CSS/Sass
+  ✔ Remove all CSS/Sass @done (19-09-08 13:20)
   ☐ Remove all insert head: colors
   ☐ Remove most includes
   ☐ Remove Jquery
