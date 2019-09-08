@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Tests SVG RWD</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+		body {
+			background-image:url("bg.jpg");
+		}
+		object {
+			border:1px solid green;
+		}
+	</style>
+</head>
+<body>
+
+<h1>Tests SVG RWD</h1>
+
+<h2>insertion du <code>object</code></h2>
+
+<object type="image/svg+xml" data="logo.svg" id="logo" style="background:#fff;"></object>
+
+<h2>SVG avec use et appel de l'id="object"</h2>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1086" height="291" viewBox="0 0 1086 291" preserveAspectRatio="xMidYMid">
+	<use href="#logo" />
+</svg>
+
+<hr>
+
+<h2>SVG contraint à <code>320px</code></h2>
+
+<object type="image/svg+xml" data="logo.svg" style="width:320px"></object>
+
+<h2>SVG contraint à <code>340px</code></h2>
+
+<object type="image/svg+xml" data="logo.svg" style="width:340px"></object>
+
+<h2>SVG contraint à <code>max-width:100%</code></h2>
+
+<object type="image/svg+xml" data="logo.svg" style="max-width:100%"></object>
+
+<h2>SVG contraint à <code>max-width:50%</code></h2>
+
+<object type="image/svg+xml" data="logo.svg" style="max-width:50%"></object>
+</body>
+</html>

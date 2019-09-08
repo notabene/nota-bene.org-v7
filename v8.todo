@@ -7,8 +7,7 @@ Cleanup:
 
 CSS:
   ✔ no WOFF @done (19-09-08 17:27)
-  ☐ SVG RWD logic inside SVG
-  ☐ RWD by element?
+  ✔ SVG RWD logic inside SVG @done (19-09-08 19:17)
 
 Squelettes de base:
   ☐ article
