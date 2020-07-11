@@ -30,7 +30,7 @@
 /* line 3, ../sass/_structure.scss */
 body {
   font-size: 1em;
-  font-family: Arial,Helvetica,sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--color-text-stronger);
   background: var(--color-bg);
   margin: 0;
@@ -147,19 +147,19 @@ textarea, input[type="text"] {
 /* =============== Headings */
 /* line 8, ../sass/_headings.scss */
 h1 {
-  font-family: Garamond, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 2em;
 }
 
 /* line 12, ../sass/_headings.scss */
 h2 {
-  font-family: Garamond, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.5em;
 }
 
 /* line 16, ../sass/_headings.scss */
 h3 {
-  font-family: Garamond, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.2em;
 }
 

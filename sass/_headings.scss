@@ -2,7 +2,7 @@
 
 /* =============== Headings */
 @mixin headings {
-	font-family: Garamond, "Times New Roman", serif;
+	font-family: $font-headings;
 }
 
 h1 {
