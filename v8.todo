@@ -9,6 +9,13 @@ CSS:
   ✔ no WOFF @done (19-09-08 17:27)
   ✔ SVG RWD logic inside SVG @done (19-09-08 19:17)
 
+Récupération du zip:
+  ☐ renommer squelettes → squelettes-8
+  ☐ renommer squelettes-7-final → squelettes
+  ☐ dézipper la nouvelle sauvegarde
+  ☐ synchroniser git avant la suite : on en est où sur git ? OU PAS
+  ☐ refaire la manip pour remettre squelettes-8 → squelettes
+
 Squelettes de base:
   ☐ article
   ☐ inc/comments
@@ -20,7 +27,7 @@ Squelettes de base:
   ☐ recherche + filtre "recherche_extrait"
   ☐ longdesc
   ☐ modeles/img
-  ☐ favicon.ico
+  ☐ favicon.ico <link href='/favicon.ico' rel='icon' type='image/x-icon'><link href='/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'>
   ☐ mot
   ☐ Archives par année
   ☐ article si photo
@@ -31,6 +38,8 @@ Squelettes de base:
   ☐ Navigation bottom
   ☐ article-15.html : photo
   ☐ rubrique-15.html
+  ☐ liens RSS visibles
+  ☐ CSS : ne pas oublier l'inversion de l'italique aussi sur <blockquote>→<cite> et <blockquote>→<blockquote>
 
 Addons:
   ☐ Prev / next
